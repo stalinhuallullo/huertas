@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>404 Page not found</title>
+	<link rel="stylesheet" href="./assets/css/main.css">
+	<style>
+		body{
+			background-color: #101010;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+			color: 	#fff;
+		}
+		h1{
+			
+			font-size: 450px;
+			line-height: 450px;
+			margin: 0;
+		}
+		img{
+			margin-bottom: 20px;
+		}
+		strong{
+			color: #ACD313;
+			font-size: 45px;
+			display: block;
+		}
+		p{
+			font-size: 20px;
+			max-width: 560px;
+			text-align: center;
+		}
+		.links-404{
+			display: flex;
+			justify-content: center;
+		}
+		.links-404 a{
+			color: #ACD313;
+			margin: 0 10px;
+			display: inline-block;		
+		}
+		@media screen and (max-width:768px){
+			h1{
+				font-size:180px; 
+				line-height: 250px;
+			}
+			img{
+				height: 80px;
+			}
+		}
+	</style>
+</head>
+<body>
+
+    <p>Backtrace:</p>
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+            <p style="margin-left:10px">
+            File: /var/www/menorca.pe/html/index.php<br />
+            Line: 339<br />
+            Function: require_once            </p>
+
+        
+    
+
+	<img src="./assets/web/img/logo-menorca-white.svg" height="100px;" alt="">
+	<p>404 Page Not Found</p>
+    <p><p>The page you requested was not found.</p></p>
+	<p><strong>¡Oops!</strong> No pudimos encontrar la página que buscas, intenta con alguno de estos links:</p>
+	<div class="links-404">
+		<a href="./casas">Casas</a>
+		<a href="./terrenos">Terrenos</a>
+		<a href="./edition">Edition</a>
+		<a href="./collection">Collection</a>
+	</div>
+</body>
+</html>

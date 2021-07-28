@@ -1,0 +1,89 @@
+:root {
+    --color-blue: #93C989;
+    --color-orange: #F3C164;
+    --color-white: #ffffff;
+    /*--color-light-blue: #3caae1;*/
+
+    --color-blue-dark: #7eac76;
+
+    --color-white-opacity-4: #ffffff66;
+
+    --color-orange-opacity-4: #f3c16466;
+}
+
+.submenu{
+    background-color: var(--color-blue);
+}
+.menorca-title--yellow {
+    color:  var(--color-blue-dark);
+}
+.menorca-title--orange:after, .menorca-title--yellow:after, .menorca-title-light:after, .menorca-title:after {
+    background: var(--color-blue-dark);
+}
+.boton-falso:after, .btn-menorca-light, .btn-popup-heroes {
+    background: var(--color-blue);
+}
+.boton-falso:hover:after, .btn-menorca--red:hover, .btn-menorca-cole:hover, .btn-menorca-conoce:hover, .btn-menorca-light:hover, .btn-menorca-orange:hover, .btn-menorca-yellow:hover, .btn-menorca:hover, .btn-popup-heroes:hover {
+    background-color: var(--color-blue-dark);
+    color: #fff;
+}
+.beneficios {
+    background-color: var(--color-blue);
+}
+.beneficios .item-beneficio.active {
+    background-color: var(--color-white-opacity-4);
+}
+.menorca-title-light:after {
+    background: var(--color-white);
+}
+.contact-buttons{
+    background-color: var(--color-orange);
+    -webkit-box-shadow: -5px 5px 20px var(--color-orange-opacity-4);
+    box-shadow: -5px 5px 20px var(--color-orange-opacity-4);
+}
+.respaldo{
+    background-color: var(--color-blue);
+}
+.menorca-subtitle {
+    color: var(--color-blue-dark);
+}
+#ubicacion .tarjeta-box .tarjeta-item .tit {
+    color: var(--color-blue-dark);
+}
+.phone-link{
+    border: solid 1px var(--color-blue-dark);
+}
+#ubicacion .tarjeta-box .tarjeta-item a {
+    color: var(--color-blue-dark);
+}
+#ubicacion .tarjeta-box .tarjeta-item a svg path{
+    fill: var(--color-blue-dark);
+}
+footer{
+    background-color: var(--color-blue);
+}
+footer .title__footer{
+    color: var(--color-white);
+}
+.respaldo .item-respaldo strong{
+    color: var(--color-blue-dark);
+}
+footer .footer__sociales .sociales__link:hover svg path{
+    fill: var(--color-blue);
+}
+.menu .menu__box .menu__item .menu__link:hover, .menu .menu__box .menu__item .menu__link:hover svg path{
+    color: var(--color-blue);
+    text-decoration: none;
+    fill: var(--color-blue);
+}
+.menu__box .menu__item ul a:hover{
+    color: var(--color-blue);
+}
+@media(max-width:992px) {
+    .menu {
+        background-color: var(--color-blue-dark);
+    }
+    .menu .menu__box{
+        background: var(--color-blue-dark);
+    }
+}
