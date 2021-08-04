@@ -126,13 +126,13 @@ function initStreet(pro_coordenada, ofi_coordenada) {
 
     var myIcon = L.icon({
         //iconUrl: path + "public/web/files/proyecto/marker_" + alias + ".svg",
-        iconUrl: path + "public/web/images/cropped-icon-huertas.png",
+        iconUrl: path + "public/web/images/ICONO-HUERTAS.png",
         iconSize: [100, 100], // size of the icon
     });
 
     var myIcon2 = L.icon({
         //iconUrl: path + "public/web/images/marker-menorca.svg",
-        iconUrl: path + "public/web/images/cropped-icon-huertas.png",
+        iconUrl: path + "public/web/images/ICONO-HUERTAS.png",
         iconSize: [100, 100], // size of the icon
     });
 

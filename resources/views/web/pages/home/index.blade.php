@@ -15,20 +15,20 @@
         </section>
 
         <section class="full-buttons">
-            <a href="{{route('web.proyect.index')}}">
+            <a href="javascript:void(0);">
                 <strong>Inversión Segura</strong>
                 <span>¡Tu terreno, tu mejor inversión!</span>
             </a>
 
-            <a href="{{route('web.novelties.index')}}">
+            <!--<a href="javascript:void(0);">
                 <strong>Aprendamos Juntos</strong>
                 <span>Novedades</span>
             </a>
 
-            <a href="{{route('web.us.index')}}">
+            <a href="javascript:void(0);">
                 <strong>Conoce más</strong>
                 <span>de Nosotros</span>
-            </a>
+            </a>-->
 
         </section>
 
@@ -45,25 +45,7 @@
         </section>
 
         <section class="referidos-home">
-            <div class="container">
-                <!--<img class="title-referidos" src="https://menorca.pe/assets/web/img/ref-title.svg"
-                     alt="Canal de Referidos">-->
-                <div class="row pt-4">
-                    <div class="col-12 col-lg-6">
-                        <img class="image-all" src="{{asset('public/web/images/all-referidos2.svg')}}" height="300px">
-                        <br>
-                        <!--<h4>Ahora todos <span>los referidos</span> <br>
-                            valen <span> más </span></h4>
-                        <br>-->
-                        <!--<a href="javascript:;" class="btn-menorca--red">Empieza a referir</a><br>
-
-                        <a href="javascript:;" class="legales mb-4 pl-md-4 pl-0">VER LEGAL</a><br>-->
-                    </div>
-                    <div class="col-lg-6 d-none d-md-none d-lg-block">
-                        <img width="400px" src="{{asset('public/web/images/sorprendida-morado.png')}}" alt="">
-                    </div>
-                </div>
-            </div>
+            <img class="image-all" src="{{asset('public/web/images/APOLO-.png')}}" style="width: 100%">
         </section>
 
         <!--<section class="referidos-home">
@@ -79,7 +61,7 @@
             <div class="container">
                 <div class="row">
                     @include("web.includes.form-contact-proyect")
-                    <div class="col-md-6 imagen" style="background-image: url({{asset('public/web/images/banner-1.jpg')}})">
+                    <div class="col-md-6 imagen" style="background-image: url({{asset('public/web/images/banner-2.jpg')}})">
                     </div>
                 </div>
             </div>
@@ -109,7 +91,6 @@
                                 <img src="{{asset('public/web/images/client/'.$item)}}" alt="">
                             </div>
                         @endforeach
-
                     </div>
                 </div>
             </div>
@@ -119,5 +100,5 @@
 @endsection
 
 @section("scripts")
-<script type="text/javascript" src="{{asset('public/web/js/home.js')}}"></script>
+    <script type="text/javascript" src="{{asset('public/web/js/home.js')}}"></script>
 @endsection

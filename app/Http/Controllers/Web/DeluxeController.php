@@ -5,7 +5,8 @@ namespace App\Http\Controllers\Web;
 use App\Http\Controllers\Controller;
 use App\Models\PageEnum;
 
-class UsController extends Controller
+
+class DeluxeController extends Controller
 {
     public function __construct()
     {
@@ -14,10 +15,12 @@ class UsController extends Controller
 
     public function index()
     {
+
         $data = [
-            "menu" => PageEnum::Us,
+            "menu" => PageEnum::Deluxe,
             "sub_menu" => "",
         ];
-        return view('web.pages.us.index', $data);
+        return view('web.pages.deluxe.index', $data);
     }
+
 }

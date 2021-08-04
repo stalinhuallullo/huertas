@@ -28,7 +28,7 @@ function initStreet(ofi_coordenada) {
     });
 
     var myIcon2 = L.icon({
-        iconUrl: path + "public/web/images/marker-menorca.svg",
+        iconUrl: path + "public/web/images/ICONO-HUERTAS.png",
         iconSize: [100, 100],
     });
 

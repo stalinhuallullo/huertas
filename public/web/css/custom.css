@@ -596,7 +596,7 @@ section#formulario select {
     -webkit-box-shadow: 0px 10px 20px rgb(0 0 0 / 5%);
     box-shadow: 0px 10px 20px rgb(0 0 0 / 5%);
 }
-section#formulario textarea {
+#formulario textarea {
     padding: 20px;
     font-weight: 500;
     font-family: 'Poppins', sans-serif;

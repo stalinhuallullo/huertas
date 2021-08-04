@@ -2,7 +2,8 @@
     <div class="container navbar">
 
         <a href="{{route('web.home.index')}}" class="menu__brand">
-            <img class="d-none d-lg-block" src="{{asset('public/web/images/logo-huertas.png')}}" alt="Logotipo">
+            <img class="logotipo-color" src="{{asset('public/web/images/logo-huertas.png')}}" alt="Logotipo">
+            <img class="logotipo-blanco" src="{{asset('public/web/images/logo-huertas-white.png')}}" alt="Logotipo">
         <!--<img class="d-none d-lg-block logotipo-verde" src="{{asset('public/web/images/logotipo.svg')}}" alt="Logotipo ">
             <img class="d-none d-lg-block logotipo-blue" src="{{asset('public/web/images/logotipo-blue.svg')}}" alt="Logotipo ">
             <img class="d-block d-lg-none logotipo-blanco" src="{{asset('public/web/images/logotipo-white.svg')}}" alt="Logotipo ">-->
@@ -36,6 +37,7 @@
                     @endif
                 </ul>
             </li>
+            <li class="menu__item"><a class="menu__link @if(isset($menu) && $menu == $global_page_enum::Deluxe) active @endif" href="{{route('web.deluxe.index')}}">Deluxe</a></li>
             <li class="menu__item"><a class="menu__link @if(isset($menu) && $menu == $global_page_enum::Service) active @endif" href="{{route('web.services.index')}}">Servicios</a></li>
 
             <li class="menu__item"><a class="menu__link @if(isset($menu) && $menu == $global_page_enum::Novelties) active @endif" href="{{route('web.novelties.index')}}">Novedades</a></li>

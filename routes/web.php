@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 // USER
 use App\Http\Controllers\Web\HomeController;
 use App\Http\Controllers\Web\ProyectController;
+use App\Http\Controllers\Web\DeluxeController;
 use App\Http\Controllers\Web\NoveltiesController;
 use App\Http\Controllers\Web\UsController;
 use App\Http\Controllers\Web\ServicesController;
@@ -45,6 +46,11 @@ Route::get('/nosotros', [UsController::class, 'index'])->name('web.us.index');
 Route::get('/proyectos', [ProyectController::class, 'index'])->name('web.proyect.index');
 Route::get('/proyectos/{slug}', [ProyectController::class, 'detail'])->name('web.proyect.detail');
 Route::post('/proyectos/coordinar-visita', [ProyectController::class, 'coordinateVisit'])->name('web.proyect.coordinateVisit');
+
+
+// ************************************ DELUXE SECTION **********************************************
+Route::get('/deluxe', [DeluxeController::class, 'index'])->name('web.deluxe.index');
+
 
 // ************************************ SERVICES SECTION **********************************************
 Route::get('/servicios', [ServicesController::class, 'index'])->name('web.services.index');
