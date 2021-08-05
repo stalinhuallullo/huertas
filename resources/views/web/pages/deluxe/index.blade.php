@@ -13,7 +13,6 @@
                     <div class="b17-left-wrap">
                         <!--<div class="b17-figura-left"><img src="http://localhost/web/inmobiliariahuertas/public/web/images/hljlogo-01.png" alt="" width="155" height="85"></div>-->
                         <div class="b17-texto">
-                            <h3>EN VENTA</h3>
                             <h4>APOLO CONDOMINIO</h4>
                         </div>
                         <div class="b17-direccion">
@@ -23,7 +22,7 @@
                     </div>
                 </div>
                 <div class="b17-right">
-                    <div class="b17-inner" style="background-image: url({{asset('public/web/images/deluxe-banner/hlj-julio3.jpg')}})"></div>
+                    <div class="b17-inner" style="background-image: url({{asset('public/web/images/prueba-2.png')}})"></div>
                 </div>
             </div>
             <div class="b17-wrap-caracteristicas">
@@ -33,26 +32,14 @@
                             <div class="b17-figura-item"><img src="{{asset('public/web/images/lanzamiento-1.png')}}" height="25"></div>
                             <div class="b17-texto-item">
                                 <p>Desde</p>
-                                <span>150m2</span>
+                                <span>120 m²</span>
                             </div>
                         </div>
                         <div class="b17-item-wrap">
                             <div class="b17-figura-item"><img src="{{asset('public/web/images/lanzamiento-1.png')}}" height="25"></div>
                             <div class="b17-texto-item">
                                 <p>Hasta</p>
-                                <span>200m2</span>
-                            </div>
-                        </div>
-                        <!--<div class="b17-item-wrap">
-                            <div class="b17-texto-item">
-                                <p>Cuotas desde</p>
-                                <span>US$ 865 o S/ 3,114</span>
-                            </div>
-                        </div>-->
-                        <div class="b17-item-wrap">
-                            <div class="b17-texto-item">
-                                <p>Precio desde</p>
-                                <span>US$ 35,000</span>
+                                <span>180 m²</span>
                             </div>
                         </div>
                     </div>
@@ -66,63 +53,35 @@
                     <div class="b24-slider">
                         <ul class="b24-ctn-slider">
                             <li class="b24-slider-item">
-                                <a class="b24-big-img" style="background-image: url({{asset('public/web/images/deluxe-banner/img1-hlj.jpg')}})">
+                                <a class="b24-big-img" style="background-image: url({{asset('public/web/images/prueba/1.jpg')}})">
                                     <div class="wancho">
                                         <h3 class="b24-title"></h3>
                                     </div>
                                 </a>
                             </li>
                             <li class="b24-slider-item">
-                                <a class="b24-big-img" style="background-image: url({{asset('public/web/images/deluxe-banner/img2-hlj.jpg')}})">
+                                <a class="b24-big-img" style="background-image: url({{asset('public/web/images/prueba/2.jpg')}})">
                                     <div class="wancho">
                                         <h3 class="b24-title"></h3>
                                     </div>
                                 </a>
                             </li>
                             <li class="b24-slider-item">
-                                <a class="b24-big-img" style="background-image: url({{asset('public/web/images/deluxe-banner/img3-hlj.jpg')}})">
+                                <a class="b24-big-img" style="background-image: url({{asset('public/web/images/prueba/3.jpg')}})">
                                     <div class="wancho">
                                         <h3 class="b24-title"></h3>
                                     </div>
                                 </a>
                             </li>
                             <li class="b24-slider-item">
-                                <a class="b24-big-img" style="background-image: url({{asset('public/web/images/deluxe-banner/imag4-hlj.jpg')}})">
+                                <a class="b24-big-img" style="background-image: url({{asset('public/web/images/prueba/4.jpg')}})">
                                     <div class="wancho">
                                         <h3 class="b24-title"></h3>
                                     </div>
                                 </a>
                             </li>
                             <li class="b24-slider-item">
-                                <a class="b24-big-img" style="background-image: url({{asset('public/web/images/deluxe-banner/reservorio.jpg')}})">
-                                    <div class="wancho">
-                                        <h3 class="b24-title"></h3>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="b24-slider-item">
-                                <a class="b24-big-img" style="background-image: url({{asset('public/web/images/deluxe-banner/img5-hlj.jpg')}})">
-                                    <div class="wancho">
-                                        <h3 class="b24-title"></h3>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="b24-slider-item">
-                                <a class="b24-big-img" style="background-image: url({{asset('public/web/images/deluxe-banner/img6-hlj.jpg')}})">
-                                    <div class="wancho">
-                                        <h3 class="b24-title"></h3>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="b24-slider-item">
-                                <a class="b24-big-img" style="background-image: url({{asset('public/web/images/deluxe-banner/img7-hlj.jpg')}})">
-                                    <div class="wancho">
-                                        <h3 class="b24-title"></h3>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="b24-slider-item">
-                                <a class="b24-big-img" style="background-image: url({{asset('public/web/images/deluxe-banner/club3.jpg')}})">
+                                <a class="b24-big-img" style="background-image: url({{asset('public/web/images/prueba/5.jpg')}})">
                                     <div class="wancho">
                                         <h3 class="b24-title"></h3>
                                     </div>
@@ -134,31 +93,19 @@
                         <div class="b24-carousel">
                             <ul class="b24-ctn-carousel">
                                 <li class="b24-carousel-item">
-                                    <div class="b24-figura-small"><img src="{{asset('public/web/images/deluxe-banner/img1-hlj.jpg')}}" width="214" height="99"></div>
+                                    <div class="b24-figura-small"><img src="{{asset('public/web/images/prueba/1.jpg')}}" width="214" height="99"></div>
                                 </li>
                                 <li class="b24-carousel-item">
-                                    <div class="b24-figura-small"><img src="{{asset('public/web/images/deluxe-banner/img2-hlj.jpg')}}" width="214" height="99"></div>
+                                    <div class="b24-figura-small"><img src="{{asset('public/web/images/prueba/2.jpg')}}" width="214" height="99"></div>
                                 </li>
                                 <li class="b24-carousel-item">
-                                    <div class="b24-figura-small"><img src="{{asset('public/web/images/deluxe-banner/img3-hlj.jpg')}}" width="214" height="99"></div>
+                                    <div class="b24-figura-small"><img src="{{asset('public/web/images/prueba/3.jpg')}}" width="214" height="99"></div>
                                 </li>
                                 <li class="b24-carousel-item">
-                                    <div class="b24-figura-small"><img src="{{asset('public/web/images/deluxe-banner/imag4-hlj.jpg')}}" width="214" height="99"></div>
+                                    <div class="b24-figura-small"><img src="{{asset('public/web/images/prueba/4.jpg')}}" width="214" height="99"></div>
                                 </li>
                                 <li class="b24-carousel-item">
-                                    <div class="b24-figura-small"><img src="{{asset('public/web/images/deluxe-banner/reservorio.jpg')}}" width="214" height="99"></div>
-                                </li>
-                                <li class="b24-carousel-item">
-                                    <div class="b24-figura-small"><img src="{{asset('public/web/images/deluxe-banner/img5-hlj.jpg')}}" width="214" height="99"></div>
-                                </li>
-                                <li class="b24-carousel-item">
-                                    <div class="b24-figura-small"><img src="{{asset('public/web/images/deluxe-banner/img6-hlj.jpg')}}" width="214" height="99"></div>
-                                </li>
-                                <li class="b24-carousel-item">
-                                    <div class="b24-figura-small"><img src="{{asset('public/web/images/deluxe-banner/img7-hlj.jpg')}}" width="214" height="99"></div>
-                                </li>
-                                <li class="b24-carousel-item">
-                                    <div class="b24-figura-small"><img src="{{asset('public/web/images/deluxe-banner/club3.jpg')}}" width="214" height="99"></div>
+                                    <div class="b24-figura-small"><img src="{{asset('public/web/images/prueba/5.jpg')}}" width="214" height="99"></div>
                                 </li>
                             </ul>
                         </div>
@@ -213,7 +160,7 @@
             </div>
         </section>
 
-        <section class="b21 terreno" id="sec-ubication">
+        <!--<section class="b21 terreno" id="sec-ubication">
             <div class="wancho b21-main">
                 <h3 class="b21-title">Ubicación del proyecto</h3>
                 <div class="b21-right">
@@ -222,20 +169,19 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section>-->
 
 
         <section class="b22 b22-terreno"  id="sec-planos">
             <div class="b22-wrap">
                 <div class="wancho">
                     <div class="b22-left">
-                        <h3 class="b22-title-left">Escoge tu terreno</h3>
                         <div class="b22-slider-carousel">
                             <div class="b22-slider">
                                 <ul class="b22-ctn-slider">
                                     <li class="b22-slider-item">
-                                        <a href="{{asset('public/web/images/deluxe-banner/hlj-nuevo.jpg')}}" target="_blank" class="b22-big-img b22-gallery">
-                                            <img src="{{asset('public/web/images/deluxe-banner/hlj-nuevo.jpg')}}" style="width: 100%">
+                                        <a href="{{asset('public/web/images/prueba/4.jpg')}}" target="_blank" class="b22-big-img b22-gallery">
+                                            <img src="{{asset('public/web/images/prueba/4.jpg')}}" style="width: 100%">
                                         </a>
                                     </li>
                                 </ul>
@@ -256,5 +202,5 @@
 @endsection
 
 @section("scripts")
-    <script type="text/javascript" src="{{asset('public/web/js/deluxe.js')}}"></script>
+    <script type="text/javascript" src="{{asset('public/web/js/deluxe.js?version=1.0.0')}}"></script>
 @endsection

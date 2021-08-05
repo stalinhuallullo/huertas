@@ -5804,14 +5804,7 @@ select:-webkit-autofill:focus {
 .b22 .g0-btn.blue:hover {
     background-color: #99e136;
 }
-.b22.proyecto-1 .b22-left,
-.b22.b22-terreno .b22-left {
-    padding-top: 40px;
-}
-.b22.proyecto-1 .b22-title-left,
-.b22.b22-terreno .b22-title-left {
-    margin-bottom: 30px;
-}
+
 .b22.proyecto-1 .g5-terminos,
 .b22.b22-terreno .g5-terminos {
     margin-bottom: 20px;
@@ -5875,14 +5868,8 @@ select:-webkit-autofill:focus {
 .b22.b22-terreno .b22-title-left {
     margin-bottom: 35px;
 }
-.b22.b22-terreno .b22-left {
-    padding-top: 45px;
-}
-@media screen and (max-width: 768px) {
-    .b22.b22-terreno .b22-left {
-        padding-top: 20px;
-    }
-}
+
+
 .b22.b22-terreno .b22-slider {
     margin-bottom: 0;
     padding-top: 10px;
@@ -6578,7 +6565,8 @@ select:-webkit-autofill:focus {
 }
 .b24-figura-small img {
     max-width: 100%;
-    height: auto;
+    height: 99px;
+    object-fit: cover;
 }
 .b24-figura-small:after {
     content: "";

@@ -1,9 +1,12 @@
 @extends('web.layouts.index')
 
+@section('styles')
+    <!--<link rel="stylesheet" href="{{asset('public/web/vendor/component.css')}}">-->
+@endsection
+
 @section('content')
 
     <div class="wraper">
-
         <section class="blog-banner">
             <h1 class="menorca-title">Novedades</h1>
         </section>
@@ -111,13 +114,10 @@
 
 
 
-@section('styles')
-    <!--<link rel="stylesheet" href="{{asset('public/web/vendor/component.css')}}">-->
-@endsection
+
 
 @section('scripts')
     <script src="{{asset('public/web/vendor/lazyload/lazyload.js')}}"></script>
     <script src="{{asset('public/web/vendor/masonry.js')}}"></script>
-    <!--<script type="text/javascript" src="{{asset('public/web/js/main.js')}}"></script>-->
     <script type="text/javascript" src="{{asset('public/web/js/blog.js')}}"></script>
 @endsection
