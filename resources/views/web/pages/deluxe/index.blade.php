@@ -22,7 +22,7 @@
                     </div>
                 </div>
                 <div class="b17-right">
-                    <div class="b17-inner" style="background-image: url({{asset('public/web/images/prueba-2.png')}})"></div>
+                    <div class="b17-inner" style="background-image: url({{asset('public/web/images/prueba/APOLO-DELEX-04.png')}})"></div>
                 </div>
             </div>
             <div class="b17-wrap-caracteristicas">
@@ -47,66 +47,41 @@
             </div>
         </section>
 
+        @php
+            $listDeluxe = [
+                                "APOLO-DELEX-01.png",
+                                "APOLO-DELEX-02.png",
+                                "APOLO-DELEX-03.png",
+                                "APOLO-DELEX-05.png",
+                                "APOLO.jpg",
+                            ];
+
+        @endphp
+
         <section class="b24 terreno" id="sec-galeria">
             <div class="b24-left">
                 <div class="b24-slider-carousel">
                     <div class="b24-slider">
                         <ul class="b24-ctn-slider">
+                            @foreach($listDeluxe as $item2)
                             <li class="b24-slider-item">
-                                <a class="b24-big-img" style="background-image: url({{asset('public/web/images/prueba/1.jpg')}})">
+                                <a class="b24-big-img" style="background-image: url({{asset('public/web/images/prueba/'.$item2)}})">
                                     <div class="wancho">
                                         <h3 class="b24-title"></h3>
                                     </div>
                                 </a>
                             </li>
-                            <li class="b24-slider-item">
-                                <a class="b24-big-img" style="background-image: url({{asset('public/web/images/prueba/2.jpg')}})">
-                                    <div class="wancho">
-                                        <h3 class="b24-title"></h3>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="b24-slider-item">
-                                <a class="b24-big-img" style="background-image: url({{asset('public/web/images/prueba/3.jpg')}})">
-                                    <div class="wancho">
-                                        <h3 class="b24-title"></h3>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="b24-slider-item">
-                                <a class="b24-big-img" style="background-image: url({{asset('public/web/images/prueba/4.jpg')}})">
-                                    <div class="wancho">
-                                        <h3 class="b24-title"></h3>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="b24-slider-item">
-                                <a class="b24-big-img" style="background-image: url({{asset('public/web/images/prueba/5.jpg')}})">
-                                    <div class="wancho">
-                                        <h3 class="b24-title"></h3>
-                                    </div>
-                                </a>
-                            </li>
+                            @endforeach
                         </ul>
                     </div>
                     <div class="wancho">
                         <div class="b24-carousel">
                             <ul class="b24-ctn-carousel">
-                                <li class="b24-carousel-item">
-                                    <div class="b24-figura-small"><img src="{{asset('public/web/images/prueba/1.jpg')}}" width="214" height="99"></div>
-                                </li>
-                                <li class="b24-carousel-item">
-                                    <div class="b24-figura-small"><img src="{{asset('public/web/images/prueba/2.jpg')}}" width="214" height="99"></div>
-                                </li>
-                                <li class="b24-carousel-item">
-                                    <div class="b24-figura-small"><img src="{{asset('public/web/images/prueba/3.jpg')}}" width="214" height="99"></div>
-                                </li>
-                                <li class="b24-carousel-item">
-                                    <div class="b24-figura-small"><img src="{{asset('public/web/images/prueba/4.jpg')}}" width="214" height="99"></div>
-                                </li>
-                                <li class="b24-carousel-item">
-                                    <div class="b24-figura-small"><img src="{{asset('public/web/images/prueba/5.jpg')}}" width="214" height="99"></div>
-                                </li>
+                                @foreach($listDeluxe as $item)
+                                    <li class="b24-carousel-item">
+                                        <div class="b24-figura-small"><img src="{{asset('public/web/images/prueba/'.$item)}}" width="214" height="99"></div>
+                                    </li>
+                                @endforeach
                             </ul>
                         </div>
                     </div>
