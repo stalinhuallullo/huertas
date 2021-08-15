@@ -5,7 +5,7 @@
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  
+
     @if(isset($property_single) && isset($cache_company))
         <title>{{ $property_single->name }} | {{ $cache_company->name }}</title>
         <meta name="description" content="{{ $property_single->description }}">
@@ -17,7 +17,7 @@
     @elseif(isset($cache_pageseo))
         <title>{{ $cache_pageseo->title }}</title>
         <meta name="description" content="{{ $cache_pageseo->description }}">
-
+ 
         <meta property="og:title" content="{{ $cache_pageseo->title }}">
         <meta property="og:url" content="{{ route('web.home.index') }}">
         <meta property="og:description" content="{{ $cache_pageseo->description }}">
