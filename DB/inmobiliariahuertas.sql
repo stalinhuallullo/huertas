@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: localhost:3306
--- Tiempo de generación: 05-08-2021 a las 03:14:56
+-- Tiempo de generación: 15-08-2021 a las 07:43:15
 -- Versión del servidor: 10.4.16-MariaDB
 -- Versión de PHP: 7.4.12
 
@@ -181,7 +181,7 @@ CREATE TABLE `company` (
 --
 
 INSERT INTO `company` (`id`, `name`, `icon`, `logo`, `phone`, `facebook`, `instagram`, `tiktok`, `office_latitud`, `office_longitud`, `office_address`) VALUES
-(1, 'Inmobiliaria Huertas', 46, 1, '+51 984 403 239', 'https://www.facebook.com/', 'https://www.instagram.com/', 'https://www.tiktok.com/', '-12.69175', '-76.635918', 'Av. Marchand mz 21 lote 21. A media cuadra del Mercado Principal de Mala.');
+(1, 'Inmobiliaria Huertas', 46, 1, '+51 984 403 239', 'https://www.facebook.com/huertas.inmobiliaria', 'https://instagram.com/huertas.inmobiliaria?utm_medium=copy_link', 'https://www.tiktok.com/', '-12.69175', '-76.635918', 'Av. Marchand mz 21 lote 21. A media cuadra del Mercado Principal de Mala.');
 
 -- --------------------------------------------------------
 
