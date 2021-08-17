@@ -5,6 +5,17 @@
     <form id="contactoproyecto" action="{{ route('web.proyect.coordinateVisit') }}" method="POST">
         @csrf
         <div class="row">
+            <div class="col-md-12">
+                <select class="form-control mb-25" name="proyect">
+                    <option value="" selected="">Selecciones un proyecto</option>
+
+                    @foreach($cache_nav_propertys as $nav_item)
+                        <option value="{{ $nav_item["id"] }}">{{ $nav_item["name"] }}</option>
+                    @endforeach
+                </select>
+            </div>
+        </div>
+        <div class="row">
             <div class="col-md-6">
                 <input class="form-control mb-25" type="text" name="names" value="" placeholder="Nombres *" required>
             </div>
@@ -12,21 +23,18 @@
                 <input class="form-control mb-25" type="text" name="surnames" value="" placeholder="Apellidos *" required>
             </div>
         </div>
+
         <div class="row">
-            <div class="col-md-6">
-                <input class="form-control mb-25" type="text" name="dni" value="" placeholder="DNI *" pattern="[0-9]{8}" maxlength="8" required>
-            </div>
             <div class="col-md-6">
                 <input class="form-control mb-25" type="text" name="phone" value="" placeholder="Celular *" pattern="[0-9]{9}" maxlength="9" required>
             </div>
-        </div>
-
-
-        <div class="row">
-            <div class="col-md-12">
+            <div class="col-md-6">
                 <input class="form-control mb-25" type="email" name="email" value="" placeholder="Email *" required>
             </div>
         </div>
+
+
+
 
         <textarea class="form-control mb-25" name="message" rows="5"placeholder="Mensaje"></textarea>
 

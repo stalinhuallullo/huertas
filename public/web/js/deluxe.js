@@ -45,4 +45,20 @@ $(document).ready(function() {
             ]
         });
     }
+
+    /* YOUTUBE
+    *****************************/
+    $(".js-video-button").click(function () {
+        $('#videoModal').modal('dispose');
+        urlvideo = "https://www.youtube.com/embed/" + $(this).attr("data-video-id") + "?autoplay=1";
+
+        $('#videoModal .embed-container iframe').attr('src', urlvideo);
+        $('#videoModal').on('hidden.bs.modal', function () {
+            $('#videoModal .embed-container iframe').attr('src', '');
+        });
+    });
+
+    $('.goto-contacto').on('click',function () {
+        $('body, html').animate({scrollTop: $('#formulario').offset().top - 65},300);
+    });
 });

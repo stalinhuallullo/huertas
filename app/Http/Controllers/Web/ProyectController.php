@@ -71,9 +71,13 @@ class ProyectController extends Controller
                 "coverPage.name as coverPage_name",
                 "coverPage.type as coverPage_type",
                 "coverPage.rute as coverPage_rute",
+                "coverIcon.name as coverIcon_name",
+                "coverIcon.type as coverIcon_type",
+                "coverIcon.rute as coverIcon_rute",
             )
             ->join('picture as cover', 'cover.id', '=', 'property.idPictureCover')
             ->join('picture as coverPage', 'coverPage.id', '=', 'property.idPictureCoverPage')
+            ->join('picture as coverIcon', 'coverIcon.id', '=', 'property.idIconMap')
             ->where("property.slug", $slug)
             ->where("property.status", "1")
             ->first();

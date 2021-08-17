@@ -17,6 +17,7 @@ class DeluxeController extends Controller
     {
 
         $data = [
+            "contactFloat" => true,
             "menu" => PageEnum::Deluxe,
             "sub_menu" => "",
         ];

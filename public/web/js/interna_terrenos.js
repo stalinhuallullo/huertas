@@ -105,6 +105,8 @@ function initStreet(pro_coordenada, ofi_coordenada) {
     let oflat = parseFloat(ofi_coordenada[0]);
     let oflong = parseFloat(ofi_coordenada[1]);
 
+    let imageIco = $("#inputHiddenIcon").val();
+
 
     //var map = L.map('map').setView([lat,long], 13);
 
@@ -119,7 +121,7 @@ function initStreet(pro_coordenada, ofi_coordenada) {
 
     var map = L.map('map', {
         center: [lat, long],
-        zoom: 13,
+        zoom: 10,
         layers: [grayscale]
     });
 
@@ -132,8 +134,8 @@ function initStreet(pro_coordenada, ofi_coordenada) {
 
     var myIcon2 = L.icon({
         //iconUrl: path + "public/web/images/marker-menorca.svg",
-        iconUrl: path + "public/web/images/ICONO-HUERTAS.png",
-        iconSize: [100, 100], // size of the icon
+        iconUrl: path + imageIco,
+        iconSize: [65, 65], // size of the icon
     });
 
 
@@ -148,7 +150,7 @@ function initStreet(pro_coordenada, ofi_coordenada) {
 
     var layergroup = L.featureGroup().addTo(map);
 
-    var marker = L.marker([lat, long], {icon: myIcon}).addTo(layergroup).bindPopup(contentString);
+    //var marker = L.marker([lat, long], {icon: myIcon}).addTo(layergroup).bindPopup(contentString);
 
     var marker2 = L.marker([oflat, oflong], {icon: myIcon2}).addTo(layergroup).bindPopup(contentString2);
 

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: localhost:3306
--- Tiempo de generación: 15-08-2021 a las 07:43:15
+-- Tiempo de generación: 17-08-2021 a las 17:35:07
 -- Versión del servidor: 10.4.16-MariaDB
 -- Versión de PHP: 7.4.12
 
@@ -40,8 +40,10 @@ CREATE TABLE `banners` (
 --
 
 INSERT INTO `banners` (`id`, `idPictureBanner`, `status`, `dateCreate`, `idCompany`) VALUES
-(1, 8, '1', '2021-06-30 22:31:53', 1),
-(2, 9, '1', '2021-06-30 23:23:03', 1);
+(1, 47, '1', '2021-06-30 22:31:53', 1),
+(2, 48, '1', '2021-06-30 23:23:03', 1),
+(3, 49, '1', '2021-08-16 09:54:55', 1),
+(4, 50, '1', '2021-08-16 09:54:55', 1);
 
 -- --------------------------------------------------------
 
@@ -168,9 +170,10 @@ CREATE TABLE `company` (
   `icon` int(11) NOT NULL,
   `logo` int(11) NOT NULL,
   `phone` varchar(15) COLLATE utf8mb4_spanish2_ci NOT NULL,
-  `facebook` varchar(250) COLLATE utf8mb4_spanish2_ci NOT NULL,
-  `instagram` varchar(250) COLLATE utf8mb4_spanish2_ci NOT NULL,
-  `tiktok` varchar(250) COLLATE utf8mb4_spanish2_ci NOT NULL,
+  `facebook` varchar(250) COLLATE utf8mb4_spanish2_ci DEFAULT NULL,
+  `instagram` varchar(250) COLLATE utf8mb4_spanish2_ci DEFAULT NULL,
+  `tiktok` varchar(250) COLLATE utf8mb4_spanish2_ci DEFAULT NULL,
+  `linkedin` varchar(250) COLLATE utf8mb4_spanish2_ci DEFAULT NULL,
   `office_latitud` varchar(50) COLLATE utf8mb4_spanish2_ci NOT NULL,
   `office_longitud` varchar(50) COLLATE utf8mb4_spanish2_ci NOT NULL,
   `office_address` varchar(250) COLLATE utf8mb4_spanish2_ci NOT NULL
@@ -180,8 +183,8 @@ CREATE TABLE `company` (
 -- Volcado de datos para la tabla `company`
 --
 
-INSERT INTO `company` (`id`, `name`, `icon`, `logo`, `phone`, `facebook`, `instagram`, `tiktok`, `office_latitud`, `office_longitud`, `office_address`) VALUES
-(1, 'Inmobiliaria Huertas', 46, 1, '+51 984 403 239', 'https://www.facebook.com/huertas.inmobiliaria', 'https://instagram.com/huertas.inmobiliaria?utm_medium=copy_link', 'https://www.tiktok.com/', '-12.69175', '-76.635918', 'Av. Marchand mz 21 lote 21. A media cuadra del Mercado Principal de Mala.');
+INSERT INTO `company` (`id`, `name`, `icon`, `logo`, `phone`, `facebook`, `instagram`, `tiktok`, `linkedin`, `office_latitud`, `office_longitud`, `office_address`) VALUES
+(1, 'Inmobiliaria Huertas', 46, 1, '+51 984 403 239', 'https://www.facebook.com/huertas.inmobiliaria', 'https://instagram.com/huertas.inmobiliaria?utm_medium=copy_link', 'https://vm.tiktok.com/ZMdogLs77/', 'https://www.linkedin.com/company/huertas-inmobiliaria', '-12.69175', '-76.635918', 'Av. Marchand mz 21 lote 21. A media cuadra del Mercado Principal de Mala.');
 
 -- --------------------------------------------------------
 
@@ -257,7 +260,7 @@ INSERT INTO `picture` (`id`, `name`, `type`, `rute`, `nameRute`, `description`, 
 (4, 'CONDOMINIO OASIS.png', 'png', 'public/web/images/proyect/CONDOMINIO OASIS.png', 'public/web/images/proyect/', '', '2021-06-27 18:23:36', '1'),
 (5, 'MERCADO-SANTA ROSA.png', 'png', 'public/web/images/proyect/MERCADO-SANTA ROSA.png', 'public/web/images/proyect/', '', '2021-06-27 18:23:36', '1'),
 (6, 'PLANICIE SUR.png', 'png', 'public/web/images/proyect/PLANICIE SUR.png', 'public/web/images/proyect/', '', '2021-06-27 18:23:36', '1'),
-(7, 'PORTADA.png', 'png', 'public/web/images/proyect-banner/PORTADA.png', 'public/web/images/proyect-banner/', '', '2021-06-27 23:43:48', '1'),
+(7, 'PORTADA-palmar-de-surco.png', 'png', 'public/web/images/proyect-banner/PORTADA-palmar-de-surco.png', 'public/web/images/proyect-banner/', '', '2021-06-27 23:43:48', '1'),
 (8, 'banner-olivar.png', 'png', 'public/web/images/banner/banner-olivar.png', 'public/web/images/banner/', 'ddddd', '2021-06-30 22:37:21', '1'),
 (9, 'falcon-banner.png', 'png', 'public/web/images/banner/falcon-banner.png', 'public/web/images/banner/', 'dd', '2021-06-30 22:37:21', '1'),
 (10, 'AREA.png', 'png', 'public/web/images/proyect-icon/AREA.png', 'public/web/images/proyect-icon/', '', '2021-07-11 14:59:07', '1'),
@@ -296,7 +299,31 @@ INSERT INTO `picture` (`id`, `name`, `type`, `rute`, `nameRute`, `description`, 
 (43, 'IMG-3.png', 'png', 'public/web/images/proyect-gallery/IMG-3.png', 'public/web/images/proyect-gallery/', '', '2021-07-12 22:13:16', '1'),
 (44, 'IMG-4.png', 'png', 'public/web/images/proyect-gallery/IMG-4.png', 'public/web/images/proyect-gallery/', '', '2021-07-12 22:13:16', '1'),
 (45, 'IMG-5.png', 'png', 'public/web/images/proyect-gallery/IMG-5.png', 'public/web/images/proyect-gallery/', '', '2021-07-12 22:13:16', '1'),
-(46, 'ICONO-HUERTAS.png', 'png', 'public/web/images/ICONO-HUERTAS.png', 'public/web/images/', '', '2021-08-04 19:56:19', '1');
+(46, 'ICONO-HUERTAS.png', 'png', 'public/web/images/ICONO-HUERTAS.png', 'public/web/images/', '', '2021-08-04 19:56:19', '1'),
+(47, '1-BANNER.png', 'png', 'public/web/images/banner/1-BANNER.png', 'public/web/images/banner/', '', '2021-08-16 09:51:31', '1'),
+(48, '2-BANNER.png', 'png', 'public/web/images/banner/2-BANNER.png', 'public/web/images/banner/', '', '2021-08-16 09:51:31', '1'),
+(49, '3-BANNER.png', 'png', 'public/web/images/banner/3-BANNER.png', 'public/web/images/banner/', '', '2021-08-16 09:51:31', '1'),
+(50, '4-BANNER.png', 'png', 'public/web/images/banner/4-BANNER.png', 'public/web/images/banner/', '', '2021-08-16 09:51:31', '1'),
+(51, 'PORTADA-condominio-falcon.png', 'png', 'public/web/images/proyect-banner/PORTADA-condominio-falcon.png', 'public/web/images/proyect-banner/', '', '2021-08-16 10:57:28', '1'),
+(52, 'PORTADA-mercado-santa-rosa.png', 'png', 'public/web/images/proyect-banner/PORTADA-mercado-santa-rosa.png', 'public/web/images/proyect-banner/', '', '2021-08-16 10:57:28', '1'),
+(53, 'PORTADA-PLANICIE.png', 'png', 'public/web/images/proyect-banner/PORTADA-PLANICIE.png', 'public/web/images/proyect-banner/', '', '2021-08-16 10:57:28', '1'),
+(54, 'oasis-1.jpg', 'jpg', 'public/web/images/proyect-gallery/oasis-1.jpg', 'public/web/images/proyect-gallery/', '', '2021-08-16 10:57:28', '1'),
+(55, 'oasis-2.jpg', 'jpg', 'public/web/images/proyect-gallery/oasis-2.jpg', 'public/web/images/proyect-gallery/', '', '2021-08-16 10:57:28', '1'),
+(56, 'planicie-sur-1.jpg', 'jpg', 'public/web/images/proyect-gallery/planicie-sur-1.jpg', 'public/web/images/proyect-gallery/', '', '2021-08-16 10:57:28', '1'),
+(57, 'planicie-sur-2.jpg', 'jpg', 'public/web/images/proyect-gallery/planicie-sur-2.jpg', 'public/web/images/proyect-gallery/', '', '2021-08-16 10:57:28', '1'),
+(58, 'mercado-1.jpg', 'jpg', 'public/web/images/proyect-gallery/mercado-1.jpg', 'public/web/images/proyect-gallery/', '', '2021-08-16 10:57:28', '1'),
+(59, 'mercado-2.jpg', 'jpg', 'public/web/images/proyect-gallery/mercado-2.jpg', 'public/web/images/proyect-gallery/', '', '2021-08-16 10:57:28', '1'),
+(60, 'palmar-1.jpg', 'jpg', 'public/web/images/proyect-gallery/palmar-1.jpg', 'public/web/images/proyect-gallery/', '', '2021-08-16 10:57:28', '1'),
+(61, 'palmar-2.jpg', 'jpg', 'public/web/images/proyect-gallery/palmar-2.jpg', 'public/web/images/proyect-gallery/', '', '2021-08-16 10:57:28', '1'),
+(62, 'palmar-3.jpg', 'jpg', 'public/web/images/proyect-gallery/palmar-3.jpg', 'public/web/images/proyect-gallery/', '', '2021-08-16 10:57:28', '1'),
+(63, 'olivar.png', 'png', 'public/web/images/proyect-banner/olivar.png', 'public/web/images/proyect-banner/', '', '2021-08-16 10:57:28', '1'),
+(64, 'PORTADA-OASIS.png', 'png', 'public/web/images/proyect-banner/PORTADA-OASIS.png', 'public/web/images/proyect-banner/', '', '2021-08-16 10:57:28', '1'),
+(65, 'OLIVAR.png', 'png', 'public/web/images/proyect-icon/OLIVAR.png', 'public/web/images/proyect-icon/', '', '2021-08-16 10:57:28', '1'),
+(66, 'FALCON.png', 'png', 'public/web/images/proyect-icon/FALCON.png', 'public/web/images/proyect-icon/', '', '2021-08-16 10:57:28', '1'),
+(67, 'OASIS.png', 'png', 'public/web/images/proyect-icon/OASIS.png', 'public/web/images/proyect-icon/', '', '2021-08-16 10:57:28', '1'),
+(68, 'PLANICIE.png', 'png', 'public/web/images/proyect-icon/PLANICIE.png', 'public/web/images/proyect-icon/', '', '2021-08-16 10:57:28', '1'),
+(69, 'MERCADO-SANTA-ROSA.png', 'png', 'public/web/images/proyect-icon/MERCADO-SANTA-ROSA.png', 'public/web/images/proyect-icon/', '', '2021-08-16 10:57:28', '1'),
+(70, 'PALMAR-DEL-SUR.png', 'png', 'public/web/images/proyect-icon/PALMAR-DEL-SUR.png', 'public/web/images/proyect-icon/', '', '2021-08-16 10:57:28', '1');
 
 -- --------------------------------------------------------
 
@@ -328,6 +355,7 @@ CREATE TABLE `property` (
   `status` enum('0','1') COLLATE utf8mb4_spanish2_ci NOT NULL DEFAULT '1',
   `idColor` int(11) NOT NULL,
   `idPictureCoverPage` int(11) NOT NULL,
+  `idIconMap` int(11) NOT NULL,
   `province` varchar(100) COLLATE utf8mb4_spanish2_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish2_ci;
 
@@ -335,14 +363,14 @@ CREATE TABLE `property` (
 -- Volcado de datos para la tabla `property`
 --
 
-INSERT INTO `property` (`id`, `idCategory`, `idUser`, `name`, `slug`, `description`, `youtube`, `idPictureCover`, `initialFeeSoles`, `initialFeeDollars`, `spotPriceSoles`, `cashPriceDollars`, `monthlyFees`, `idNovelty`, `latitude`, `longitude`, `officeAddress`, `projectAddress`, `phone`, `dateCreate`, `status`, `idColor`, `idPictureCoverPage`, `province`) VALUES
-(1, 1, 1, 'Condominio Campestre El Olivar', 'condominio-campestre-el-olivar', 'Vivir en un ambiente tranquilo y con increíbles oportunidades para disfrutar en familia es una\r\nde las mejores cosas que se puede invertir y tener: ciclovías, parques temáticos, canchas deportivas, área de ejercicio, club house y mucho más. Todo esto lo encuentras en nuestro Condominio Campestre El Olivar.', 'lVSGylDJzeM', 2, '1500', '650', '300000', '120000', '36', 1, '-12.0476351', '-76.9237588', 'Calle Luis Espejo 1097, Cercado de Lima 15034', 'Av. Camino real con Av. Tres (A 100 metros)', '987654321', '2021-06-26 13:33:02', '1', 2, 7, 'Cañete'),
-(2, 1, 1, 'Condominio Falcon', 'condominio-falcon', 'Un lugar moderno y seguro, ubicado en San Juan de Lurigancho, uno de los distritos con mayor desarrollo comercial y social. Si te inquieta la seguridad, Condominio Falcon posee un pórtico de ingreso y cerco que rodea todo el perímetro, te invitamos a conocer más sobre nuestro proyecto y darte la oportunidad de construir tu hogar con nosotros.', 'lVSGylDJzeM', 3, '1500', '650', '300000', '120000', '36', 1, '-12.0476351', '-76.9237588', 'Calle Luis Espejo 1097, Cercado de Lima 15034', 'Av. Camino real con Av. Tres (A 100 metros)', '987654321', '2021-06-26 20:16:47', '1', 1, 7, 'Lima'),
-(3, 1, 1, 'Condominio Oasis', 'condominio-oasis', 'Nuestro Oasis Condominio tiene todo lo que buscas de una gran oportunidad de invertir en el mejor lugar.\r\nEl proyecto cuenta con una excelente ubicación cerca de la ciudad de Cañete, donde podrás vivir en armonía con la naturaleza y el mar.\r\nUn proyecto seguro y rentable ¿Qué esperas para cumplir el sueño de la casa propia?', 'OrxWcQB4ueg', 4, '1500', '650', '300000', '150000', '40', 1, '-12.0476351', '-76.9237588', 'Calle Luis Espejo 1097, Cercado de Lima 15034', 'Av. Camino real con Av. Tres (A 100 metros)', '987654321', '2021-06-26 20:16:47', '1', 0, 7, 'Cusco'),
-(6, 1, 1, 'Planicie Sur', 'planicie-sur', 'Este es el momento indicado. Planicie Sur de Cañete, es el lugar ideal para construir ese hogar que anhelas, respirar aire puro y disfrutar de la tranquilidad y naturaleza. Contamos con lotes ecológicos a precios de súper oferta ¿Qué esperas para cumplir tus sueños?', 'OrxWcQB4ueg', 6, '1500', '650', '300000', '120000', '45', 1, '-12.0476351', '-76.9237588', 'Calle Luis Espejo 1097, Cercado de Lima 15034', 'Av. Camino real con Av. Tres (A 100 metros)', '987654321', '2021-06-26 20:35:05', '1', 3, 7, 'Cañete'),
-(7, 1, 1, 'Mega Mercado Santa Rosa', 'mega-mercado-santa-rosa', 'Diseñado con un estilo totalmente innovador y sorprendente, nuestro mega mercado reúne la más completa oferta comercial del sector, acorde a las preferencias del público de su zona de influencia.\r\nEn el Mega Mercado Santa Rosa podrás encontrar la más amplia gama de ofertas y afines. Cuenta con la mayor cantidad de espacios abiertos y áreas verdes, siguiendo las últimas tendencias mundiales en diseño, arquitectura y construcción.', 'OrxWcQB4ueg', 5, '1500', '650', '350000', '150000', '55', 1, '-12.0476351', '-76.9237588', 'Calle Luis Espejo 1097, Cercado de Lima 15034', 'Av. Camino real con Av. Tres (A 100 metros)', '987654321', '2021-06-26 20:36:52', '1', 5, 7, 'Arequipa'),
-(8, 1, 1, 'El Palmar de Surco', 'el-palmar-de-surco', 'Tu nuevo departamento te espera, El Palmar de Surco ubicado a un paso de la base aérea Las Palmas. Vivirás rodeado de parques, supermercados, colegios, hospitales y más.', 'EszBkjtG7wA', 1, '1500', '650', '350000', '150000', '55', 1, '-12.0476351', '-76.9237588', 'Calle Luis Espejo 1097, Cercado de Lima 15034', 'Av. Camino real con Av. Tres (A 100 metros)', '987654321', '2021-06-27 11:46:30', '1', 4, 7, 'Cañete'),
-(9, 1, 1, 'Condominio Apolo', 'condominio-apolo', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.', 'EszBkjtG7wA', 1, '1500', '650', '350000', '150000', '55', 1, '-12.0476351', '-76.9237588', 'Calle Luis Espejo 1097, Cercado de Lima 15034', 'Av. Camino real con Av. Tres (A 100 metros)', '987654321', '2021-06-27 11:48:57', '1', 0, 7, 'Amazonas');
+INSERT INTO `property` (`id`, `idCategory`, `idUser`, `name`, `slug`, `description`, `youtube`, `idPictureCover`, `initialFeeSoles`, `initialFeeDollars`, `spotPriceSoles`, `cashPriceDollars`, `monthlyFees`, `idNovelty`, `latitude`, `longitude`, `officeAddress`, `projectAddress`, `phone`, `dateCreate`, `status`, `idColor`, `idPictureCoverPage`, `idIconMap`, `province`) VALUES
+(1, 1, 1, 'Condominio Campestre El Olivar', 'condominio-campestre-el-olivar', 'Vivir en un ambiente tranquilo y con increíbles oportunidades para disfrutar en familia es una\r\nde las mejores cosas que se puede invertir y tener: ciclovías, parques temáticos, canchas deportivas, área de ejercicio, club house y mucho más. Todo esto lo encuentras en nuestro Condominio Campestre El Olivar.', 'aprXPqp4D7A', 2, '1500', '650', '300000', '120000', '36', 1, '-12.0476351', '-76.9237588', 'Calle Luis Espejo 1097, Cercado de Lima 15034', 'Av. Camino real con Av. Tres (A 100 metros)', '987654321', '2021-06-26 13:33:02', '1', 2, 63, 65, 'Cañete'),
+(2, 1, 1, 'Condominio Falcon', 'condominio-falcon', 'Un lugar moderno y seguro, ubicado en San Juan de Lurigancho, uno de los distritos con mayor desarrollo comercial y social. Si te inquieta la seguridad, Condominio Falcon posee un pórtico de ingreso y cerco que rodea todo el perímetro, te invitamos a conocer más sobre nuestro proyecto y darte la oportunidad de construir tu hogar con nosotros.', 'bQpYV3WZ47I', 3, '1500', '650', '300000', '120000', '36', 1, '-12.0476351', '-76.9237588', 'Calle Luis Espejo 1097, Cercado de Lima 15034', 'Av. Camino real con Av. Tres (A 100 metros) ffff', '987654321', '2021-06-26 20:16:47', '1', 1, 51, 66, 'Lima'),
+(3, 1, 1, 'Condominio Oasis', 'condominio-oasis', 'Nuestro Oasis Condominio tiene todo lo que buscas de una gran oportunidad de invertir en el mejor lugar.\r\nEl proyecto cuenta con una excelente ubicación cerca de la ciudad de Cañete, donde podrás vivir en armonía con la naturaleza y el mar.\r\nUn proyecto seguro y rentable ¿Qué esperas para cumplir el sueño de la casa propia?', 'OrxWcQB4ueg', 4, '1500', '650', '300000', '150000', '40', 1, '-12.0476351', '-76.9237588', 'Calle Luis Espejo 1097, Cercado de Lima 15034', 'Av. Camino real con Av. Tres (A 100 metros)', '987654321', '2021-06-26 20:16:47', '1', 0, 64, 67, 'Cusco'),
+(6, 1, 1, 'Planicie Sur', 'planicie-sur', 'Este es el momento indicado. Planicie Sur de Cañete, es el lugar ideal para construir ese hogar que anhelas, respirar aire puro y disfrutar de la tranquilidad y naturaleza. Contamos con lotes ecológicos a precios de súper oferta ¿Qué esperas para cumplir tus sueños?', 'OrxWcQB4ueg', 6, '1500', '650', '300000', '120000', '45', 1, '-12.0476351', '-76.9237588', 'Calle Luis Espejo 1097, Cercado de Lima 15034', 'Av. Camino real con Av. Tres (A 100 metros)', '987654321', '2021-06-26 20:35:05', '1', 3, 53, 68, 'Cañete'),
+(7, 1, 1, 'Mega Mercado Santa Rosa', 'mega-mercado-santa-rosa', 'Diseñado con un estilo totalmente innovador y sorprendente, nuestro mega mercado reúne la más completa oferta comercial del sector, acorde a las preferencias del público de su zona de influencia.\r\nEn el Mega Mercado Santa Rosa podrás encontrar la más amplia gama de ofertas y afines. Cuenta con la mayor cantidad de espacios abiertos y áreas verdes, siguiendo las últimas tendencias mundiales en diseño, arquitectura y construcción.', 'OrxWcQB4ueg', 5, '1500', '650', '350000', '150000', '55', 1, '-12.0476351', '-76.9237588', 'Calle Luis Espejo 1097, Cercado de Lima 15034', 'Av. Camino real con Av. Tres (A 100 metros)', '987654321', '2021-06-26 20:36:52', '1', 5, 52, 69, 'Arequipa'),
+(8, 1, 1, 'El Palmar de Surco', 'el-palmar-de-surco', 'Tu nuevo departamento te espera, El Palmar de Surco ubicado a un paso de la base aérea Las Palmas. Vivirás rodeado de parques, supermercados, colegios, hospitales y más.', 'EszBkjtG7wA', 1, '1500', '650', '350000', '150000', '55', 1, '-12.0476351', '-76.9237588', 'Calle Luis Espejo 1097, Cercado de Lima 15034', 'Av. Camino real con Av. Tres (A 100 metros)', '987654321', '2021-06-27 11:46:30', '1', 4, 7, 70, 'Cañete'),
+(9, 1, 1, 'Condominio Apolo', 'condominio-apolo', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.', 'EszBkjtG7wA', 1, '1500', '650', '350000', '150000', '55', 1, '-12.0476351', '-76.9237588', 'Calle Luis Espejo 1097, Cercado de Lima 15034', 'Av. Camino real con Av. Tres (A 100 metros)', '987654321', '2021-06-27 11:48:57', '1', 0, 7, 0, 'Amazonas');
 
 -- --------------------------------------------------------
 
@@ -446,7 +474,16 @@ INSERT INTO `propertygallery` (`id`, `idProperty`, `idPicture`, `number_order`) 
 (7, 1, 37, 2),
 (8, 1, 38, 3),
 (9, 1, 39, 4),
-(10, 1, 40, 5);
+(10, 1, 40, 5),
+(11, 3, 54, 1),
+(12, 3, 55, 2),
+(13, 6, 56, 1),
+(14, 6, 57, 2),
+(15, 7, 58, 1),
+(16, 7, 59, 2),
+(17, 8, 60, 1),
+(18, 8, 61, 2),
+(19, 8, 62, 3);
 
 -- --------------------------------------------------------
 
@@ -618,7 +655,7 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT de la tabla `banners`
 --
 ALTER TABLE `banners`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT de la tabla `benefit`
@@ -678,7 +715,7 @@ ALTER TABLE `pageseo`
 -- AUTO_INCREMENT de la tabla `picture`
 --
 ALTER TABLE `picture`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=47;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=71;
 
 --
 -- AUTO_INCREMENT de la tabla `property`
@@ -696,7 +733,7 @@ ALTER TABLE `propertybenefits`
 -- AUTO_INCREMENT de la tabla `propertygallery`
 --
 ALTER TABLE `propertygallery`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
 -- AUTO_INCREMENT de la tabla `propertyteam`

@@ -9,31 +9,11 @@
 
 @section('content')
 
+    <input type="hidden" id="inputHiddenIcon" value="{{ $property_single->coverIcon_rute }}">
+
     <div class="wraper">
         <div class="banner-interna">
-            <div class="top-img" style="background-image: url({{asset($property_single->coverPage_rute)}});">
-                <figure class="promo-images">
-                    <!--<div>
-                        <img class="image-top-1" src="{{asset('public/web/images/icon_abril-logo.svg')}}" alt="Logo Promo interna">
-                        <img class="image-top-2" src="{{asset('public/web/images/icon_abril-terrenos.svg')}}" alt="">
-                    </div>-->
-                    <!--<a href="#" class="legal-interna">VER LEGAL</a>-->
-
-                    <img class="image-top-2" src="{{asset('public/web/images/logo-huertas-white.png')}}" alt="" style="opacity: 0;">
-                        <br>
-                        <br>
-                    <h1 class="text-white text-shadow-50">{{ $property_single->name }}</h1>
-                    <!--<br>
-                    <div class="alcontado text-center">
-                        <h4 class="text-white-50">Precio al contado desde</h4>
-                        <h2 class="text-warning"><strong>$ 13,063 ó S/ 47,025</strong></h2>
-                    </div>-->
-                </figure>
-
-                <!--<div class="logo">
-                    <a href="#" onclick="abrirLegal()"  data-toggle="modal" data-target="#legalmodal" class="menorca-link text-light" >ver legal</a>
-                </div>-->
-            </div>
+            <div class="top-img" style="background-image: url({{asset($property_single->coverPage_rute)}});"></div>
 
             <div class="container pt-5 pb-5">
                 <h1 class="menorca-title--yellow">Respira paz rodeado de áreas verdes</h1>
@@ -263,6 +243,6 @@
 @section('scripts')
     <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"></script>
     <script type="text/javascript" src="{{asset('public/web/vendor/spotlight/js/spotlight.bundle.js')}}"></script>
-    <script type="text/javascript" src="{{asset('public/web/js/interna_terrenos.js')}}"></script>
+    <script type="text/javascript" src="{{asset('public/web/js/interna_terrenos.js?version=1.000')}}"></script>
 @endsection
 

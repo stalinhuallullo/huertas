@@ -899,18 +899,6 @@ html {
     top: 50px
 }
 
-@media (max-width:992px) {
-    .menu {
-        background-color: #158A2F;
-        position: fixed;
-        top: 40px;
-        left: 0;
-        z-index: 22;
-        width: 100%;
-        text-align: center;
-    }
-}
-
 
 .menu .logotipo-blue {
     display: none!important
@@ -4749,15 +4737,6 @@ figure.promo-images a {
     align-items: center
 }
 
-@media (max-width:768px) {
-    .submenu {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        z-index: 99
-    }
-}
 
 .submenu .container {
     display: -webkit-box;
@@ -5183,31 +5162,12 @@ figure.promo-images a {
     width: 100%
 }
 
-@media (min-width:769px) and (max-width:992px) {
-    .banner {
-        /*min-height: 380px;*/
-        margin-top: 56px
+@media (max-width:992px) {
+    .menu {
+        background-color: #0c6d31;
     }
 }
 
-@media (min-width:993px) and (max-width:1200px) {
-    .banner {
-        /*min-height: 475px*/
-    }
-}
-
-@media (max-width:768px) {
-    .banner {
-        margin-top: 110px;
-        /*min-height: 450px*/
-    }
-}
-
-@media (max-width:330px) {
-    .banner {
-        min-height: auto
-    }
-}
 
 .banner__slick{
     overflow: hidden;
@@ -5278,24 +5238,31 @@ figure.promo-images a {
     min-height: 812px;
 }
 
-@media (min-width:769px) and (max-width:992px) {
+
+@media (max-width:1200px) {
     .banner__slick .banner__item.banner__promo img {
-        width: 100%;
-        height: auto
+        min-height: 512px;
     }
 }
-
-@media (min-width:993px) and (max-width:1200px) {
+@media (max-width:992px) {
     .banner__slick .banner__item.banner__promo img {
-        width: 100%;
-        height: auto
+        min-height: 412px;
     }
 }
 
 @media (max-width:768px) {
     .banner__slick .banner__item.banner__promo img {
-        height: auto;
-        width: 100%
+        min-height: 340px;
+    }
+}
+@media (max-width: 550px) {
+    .banner__slick .banner__item.banner__promo img {
+        min-height: 270px;
+    }
+}
+@media (max-width: 400px) {
+    .banner__slick .banner__item.banner__promo img {
+        min-height: 215px;
     }
 }
 

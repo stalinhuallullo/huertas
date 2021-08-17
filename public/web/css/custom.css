@@ -738,7 +738,17 @@ section#formulario select {
         padding: 50px 20px;
     }
     section#formulario .imagen {
-        display: none;
+        left: 0;
+        position: initial;
+        width: 100vw;
+    }
+    section#formulario .imagen,
+    .map-h100{
+        height: 450px;
+        max-height: 450px;
+    }
+    #formulario{
+        padding-bottom: 30px;
     }
     .titulos {
         -webkit-box-align: center!important;

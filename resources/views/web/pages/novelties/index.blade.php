@@ -6,7 +6,8 @@
 
 @section('content')
 
-    <div class="wraper">
+    @include("web.erros.in-construction")
+    <!--<div class="wraper">
         <section class="blog-banner">
             <h1 class="menorca-title">Novedades</h1>
         </section>
@@ -106,7 +107,7 @@
                 </svg>
             </div>
             <img class="image-view-novelties" src="" alt="">
-        </div>
+        </div>-->
 
     </div>
 

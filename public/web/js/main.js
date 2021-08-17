@@ -165,16 +165,14 @@ $(document).ready(function(){
 
     llenardatosFormulario();
 
-    $( window ).scroll(function() {
+    /*$( window ).scroll(function() {
         $('.menu').addClass('scroll');
 
         if($(this).scrollTop() == 0){
             $('.menu').removeClass('scroll');
 
         }
-
-
-    }) ;
+    }) ;*/
 
 
 
@@ -203,73 +201,6 @@ $(document).ready(function(){
         flecha1 = 'flecha-1.svg';
         flecha2 = 'flecha-2.svg';
      }
-
-
-     if( page != 'blog'){
-      $('.beneficios__slick').slick({
-        dots: false,
-        infinite: true,
-        prevArrow: '<button type="button" class="slick-prev"><img src="'+path+'assets/web/img/'+flecha1+'" alt="flecha izquierda" /></button>',
-        nextArrow: '<button type="button" class="slick-next"><img src="'+path+'assets/web/img/'+flecha2+'" alt="flecha derecha"/></button>',
-      });
-
-
-      $('.tipos-slick').slick({
-        dots: false,
-        infinite: true,
-        slidesToShow: 4,
-        slidesToScroll: 1,
-        prevArrow: '<button type="button" class="slick-prev"><img src="'+path+'assets/web/img/flecha-1.svg" alt="flecha izquierda"></button>',
-        nextArrow: '<button type="button" class="slick-next"><img src="'+path+'assets/web/img/flecha-2.svg" alt="flecha izquierda"></button>',
-
-        responsive: [
-            {
-                breakpoint: 1024,
-                settings: {
-                    slidesToShow: 3,
-                    slidesToScroll: 3,
-                    infinite: true,
-
-                }
-            },
-            {
-                breakpoint: 992,
-                settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 2
-                }
-            },
-            {
-                breakpoint: 480,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1
-                }
-            }
-        ]
-      });
-
-      $('.big-carousel').owlCarousel({
-        loop: true,
-        nav: true,
-        center: true,
-        margin: 10,
-        items: 1,
-        navText: ["<img src='"+path+"assets/web/img/flecha-1.svg'>","<img src='"+path+"assets/web/img/flecha-2.svg' alt='flecha izquierda'>"],
-      });
-
-    }
-
-
-
-
-  $('.volver-form').click(function(){
-
-      $('#signup-form').fadeIn();
-      $('.resultados').hide();
-  });
-
-
 
   $('.close-link').click(function(e){
       e.preventDefault();

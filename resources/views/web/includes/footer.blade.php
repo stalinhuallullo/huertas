@@ -3,7 +3,7 @@
         <div class="row">
             <div class="col-lg-12">
                 <div class="row b-bottom">
-                    <div class="col-lg-4">
+                    <div class="col-lg-3">
                         <div class="title__footer">Menú</div>
                         <ul class="footer__links" id="accordion">
                             <li class="ter_icon"><a href="{{route('web.proyect.index')}}">Proyectos</a></li>
@@ -12,13 +12,23 @@
                             <li class="cas_icon"><a href="{{route('web.us.index')}}">Nosotros</a></li>
                         </ul>
                     </div>
-                    <div class="col-lg-4">
+                    <div class="col-lg-3">
                         <div class="title__footer">
                             Política
                         </div>
                         <ul class="footer__links">
                             <li><a href="javascript:void(0);">Políticas de Privacidad</a></li>
                             <li><a href="javascript:void(0);">Términos y condiciones</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="title__footer">
+                            Proyectos
+                        </div>
+                        <ul class="footer__links">
+                            @foreach($cache_nav_propertys as $nav_item)
+                                <li><a href="{{route('web.proyect.detail', ['slug' => $nav_item["slug"]])}}">{{ $nav_item["name"] }}</a></li>
+                            @endforeach
                         </ul>
                     </div>
                     <!--<div class="col-lg-3">
@@ -29,12 +39,18 @@
                             <li><a href="{{route('web.contact.index')}}">Contacto</a></li>
                         </ul>
                     </div>-->
-                    <div class="col-lg-4">
+                    <div class="col-lg-3">
                         <div class="title__footer">Llámanos</div>
                         <ul class="footer__links">
                             @if(isset($cache_company))
-                                <li><a href="tel: {{ $cache_company->phone }}">{{ $cache_company->phone }}</a></li>
+                                <li><a href="tel: (01) 6624437">(01) 6624437</a></li>
+                                <li><a href="tel: +51 984403239">+51 984403239</a></li>
+                                <li><a href="tel: +51 926067496">+51 926067496</a></li>
                             @endif
+                        </ul>
+                        <div class="title__footer">Contáctanos</div>
+                        <ul class="footer__links">
+                            <li><a href="mailto: ventas@inmobiliariahuertas.com">ventas@inmobiliariahuertas.com</a></li>
                         </ul>
                         <div class="title__footer">Síguenos</div>
                         <div class="footer__sociales">
@@ -65,12 +81,16 @@
                                         <path fill="#ffffff" d="m480.32 128.39c-29.22 0-56.18-9.68-77.83-26.01-24.83-18.72-42.67-46.18-48.97-77.83-1.56-7.82-2.4-15.89-2.48-24.16h-83.47v228.08l-.1 124.93c0 33.4-21.75 61.72-51.9 71.68-8.75 2.89-18.2 4.26-28.04 3.72-12.56-.69-24.33-4.48-34.56-10.6-21.77-13.02-36.53-36.64-36.93-63.66-.63-42.23 33.51-76.66 75.71-76.66 8.33 0 16.33 1.36 23.82 3.83v-62.34-22.41c-7.9-1.17-15.94-1.78-24.07-1.78-46.19 0-89.39 19.2-120.27 53.79-23.34 26.14-37.34 59.49-39.5 94.46-2.83 45.94 13.98 89.61 46.58 121.83 4.79 4.73 9.82 9.12 15.08 13.17 27.95 21.51 62.12 33.17 98.11 33.17 8.13 0 16.17-.6 24.07-1.77 33.62-4.98 64.64-20.37 89.12-44.57 30.08-29.73 46.7-69.2 46.88-111.21l-.43-186.56c14.35 11.07 30.04 20.23 46.88 27.34 26.19 11.05 53.96 16.65 82.54 16.64v-60.61-22.49c.02.02-.22.02-.24.02z"/>
                                     </svg>
                                 </a>
+                                <a class="sociales__link" href="{{ $cache_company->linkedin }}" target="_blank">
+                                    <svg height="16px" width="16px" viewBox="0 0 310 310">
+                                        <path fill="#ffffff" d="M72.16,99.73H9.927c-2.762,0-5,2.239-5,5v199.928c0,2.762,2.238,5,5,5H72.16c2.762,0,5-2.238,5-5V104.73C77.16,101.969,74.922,99.73,72.16,99.73z"/>
+                                        <path fill="#ffffff" d="M41.066,0.341C18.422,0.341,0,18.743,0,41.362C0,63.991,18.422,82.4,41.066,82.4c22.626,0,41.033-18.41,41.033-41.038C82.1,18.743,63.692,0.341,41.066,0.341z"/>
+                                        <path fill="#ffffff" d="M230.454,94.761c-24.995,0-43.472,10.745-54.679,22.954V104.73c0-2.761-2.238-5-5-5h-59.599c-2.762,0-5,2.239-5,5v199.928c0,2.762,2.238,5,5,5h62.097c2.762,0,5-2.238,5-5v-98.918c0-33.333,9.054-46.319,32.29-46.319c25.306,0,27.317,20.818,27.317,48.034v97.204c0,2.762,2.238,5,5,5H305c2.762,0,5-2.238,5-5V194.995C310,145.43,300.549,94.761,230.454,94.761z"/>
+                                    </svg>
+                                </a>
                             @endif
                         </div>
 
-                        <!--<ul class="footer__links">
-                            <li><a href="javascript:void(0);" target="_blank"><img src="{{asset('public/web/images/libro.png')}}" width="30px" alt=""> Libro de reclamaciones</a></li>
-                        </ul>-->
                     </div>
                 </div>
 

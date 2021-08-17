@@ -13,7 +13,8 @@
                     <div class="b17-left-wrap">
                         <!--<div class="b17-figura-left"><img src="http://localhost/web/inmobiliariahuertas/public/web/images/hljlogo-01.png" alt="" width="155" height="85"></div>-->
                         <div class="b17-texto">
-                            <h4>APOLO CONDOMINIO</h4>
+                            <!--<h4>APOLO CONDOMINIO</h4>-->
+                            <img src="{{asset('public/web/images/LOGO-APOLO.png')}}" style="width: 100%">
                         </div>
                         <div class="b17-direccion">
                             <div class="b17-figura-direccion"><img src="{{asset('public/web/images/ubicacion.png')}}" width="22" height="25"></div>
@@ -22,21 +23,19 @@
                     </div>
                 </div>
                 <div class="b17-right">
-                    <div class="b17-inner" style="background-image: url({{asset('public/web/images/prueba/APOLO-DELEX-04.png')}})"></div>
+                    <div class="b17-inner" style="background-image: url({{asset('public/web/images/prueba/APOLO.jpg')}})"></div>
                 </div>
             </div>
             <div class="b17-wrap-caracteristicas">
                 <div class="wancho proyecto-2">
                     <div class="b17-list-wrap">
                         <div class="b17-item-wrap">
-                            <div class="b17-figura-item"><img src="{{asset('public/web/images/lanzamiento-1.png')}}" height="25"></div>
                             <div class="b17-texto-item">
                                 <p>Desde</p>
                                 <span>120 m²</span>
                             </div>
                         </div>
                         <div class="b17-item-wrap">
-                            <div class="b17-figura-item"><img src="{{asset('public/web/images/lanzamiento-1.png')}}" height="25"></div>
                             <div class="b17-texto-item">
                                 <p>Hasta</p>
                                 <span>180 m²</span>
@@ -52,8 +51,8 @@
                                 "APOLO-DELEX-01.png",
                                 "APOLO-DELEX-02.png",
                                 "APOLO-DELEX-03.png",
+                                "APOLO-DELEX-04.png",
                                 "APOLO-DELEX-05.png",
-                                "APOLO.jpg",
                             ];
 
         @endphp
@@ -94,23 +93,23 @@
             <div class="wancho">
                 <div class="b27-list-left">
                     <div class="b27-item">
-                        <div class="b27-figura-item"><img src="{{asset('public/web/images/areas-1.png')}}" alt="Zona de parrilla"></div>
+                        <div class="b27-figura-item"><img src="{{asset('public/web/images/proyect-icon/CLUB-HOUSE-.png')}}"></div>
                         <div class="b27-title-item">CLUB HOUSE</div>
                     </div>
                     <div class="b27-item">
-                        <div class="b27-figura-item"><img src="{{asset('public/web/images/areas-1.png')}}" alt="Ciclovías"></div>
+                        <div class="b27-figura-item"><img src="{{asset('public/web/images/proyect-icon/AREA-.png')}}"></div>
                         <div class="b27-title-item">ZONA DE PARRILLAS</div>
                     </div>
                     <div class="b27-item">
-                        <div class="b27-figura-item"><img src="{{asset('public/web/images/ciclovia.png')}}" alt="19 Parques"></div>
+                        <div class="b27-figura-item"><img src="{{asset('public/web/images/proyect-icon/SEGURIDAD-DELUXE.png')}}"></div>
                         <div class="b27-title-item">CICLOVÍAS</div>
                     </div>
                     <div class="b27-item">
-                        <div class="b27-figura-item"><img src="{{asset('public/web/images/iconos-nuevo.png')}}" alt="Luz eléctrica"></div>
+                        <div class="b27-figura-item"><img src="{{asset('public/web/images/proyect-icon/PARQUES-Y-JARDINES.png')}}"></div>
                         <div class="b27-title-item">PARQUES</div>
                     </div>
                     <div class="b27-item">
-                        <div class="b27-figura-item"><img src="{{asset('public/web/images/areas-1.png')}}" alt="Membresía"></div>
+                        <div class="b27-figura-item"><img src="{{asset('public/web/images/proyect-icon/TITULO-DE-PROPIEDAD-.png')}}"></div>
                         <div class="b27-title-item">SERVICIOS BÁSICOS</div>
                     </div>
                 </div>
@@ -127,7 +126,7 @@
                 </div>
             </div>
             <div class="b7-right" style="background-image: url({{asset('public/web/images/deluxe-banner/hlj.jpg')}})">
-                <a href="javascript:void(0);" data-type="video-youtube" class="b7-image-button b7-play open-boxlight" id="b7-open-video">
+                    <a href="#videoModal" data-toggle="modal" data-target="#videoModal" data-video-id='bQpYV3WZ47I' class="b7-image-button b7-play open-boxlight js-video-button" >
                     <div class="b30-wrap-zoom video">
                         <div class="b31-zoom"><span class="b30-play"></span></div>
                     </div>
@@ -172,10 +171,31 @@
         </section>
 
 
+        <div class="modal fade" id="videoModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <button type="button" class="close cursor-pointer mb-3" data-dismiss="modal" aria-label="Close">
+                    <svg width="24px" height="24px" viewBox="0 0 365.696 365.696">
+                        <path fill="#ffffff" d="m243.1875 182.859375 113.132812-113.132813c12.5-12.5 12.5-32.765624 0-45.246093l-15.082031-15.082031c-12.503906-12.503907-32.769531-12.503907-45.25 0l-113.128906 113.128906-113.132813-113.152344c-12.5-12.5-32.765624-12.5-45.246093 0l-15.105469 15.082031c-12.5 12.503907-12.5 32.769531 0 45.25l113.152344 113.152344-113.128906 113.128906c-12.503907 12.503907-12.503907 32.769531 0 45.25l15.082031 15.082031c12.5 12.5 32.765625 12.5 45.246093 0l113.132813-113.132812 113.128906 113.132812c12.503907 12.5 32.769531 12.5 45.25 0l15.082031-15.082031c12.5-12.503906 12.5-32.769531 0-45.25zm0 0"/>
+                    </svg>
+                </button>
+
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <div class="embed-container">
+                            <iframe width="100%" height="500" src="" frameborder="0"
+                                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                    allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
     </div>
 
 @endsection
 
 @section("scripts")
-    <script type="text/javascript" src="{{asset('public/web/js/deluxe.js?version=1.0.0')}}"></script>
+    <script type="text/javascript" src="{{asset('public/web/js/deluxe.js?version=1.0.1')}}"></script>
 @endsection
