@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: localhost:3306
--- Tiempo de generación: 17-08-2021 a las 17:35:07
+-- Tiempo de generación: 24-08-2021 a las 05:32:43
 -- Versión del servidor: 10.4.16-MariaDB
 -- Versión de PHP: 7.4.12
 
@@ -198,12 +198,24 @@ CREATE TABLE `novelties` (
   `idCoverImagen` int(11) NOT NULL,
   `title` varchar(200) COLLATE utf8mb4_spanish2_ci NOT NULL,
   `slug` varchar(200) COLLATE utf8mb4_spanish2_ci NOT NULL,
-  `resume` varchar(300) COLLATE utf8mb4_spanish2_ci NOT NULL,
+  `resume` text COLLATE utf8mb4_spanish2_ci NOT NULL,
   `youtube` varchar(200) COLLATE utf8mb4_spanish2_ci NOT NULL,
   `text` text COLLATE utf8mb4_spanish2_ci NOT NULL,
   `dateCreate` datetime NOT NULL,
   `status` enum('0','1') COLLATE utf8mb4_spanish2_ci NOT NULL DEFAULT '1'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish2_ci;
+
+--
+-- Volcado de datos para la tabla `novelties`
+--
+
+INSERT INTO `novelties` (`id`, `idCategory`, `idCoverImagen`, `title`, `slug`, `resume`, `youtube`, `text`, `dateCreate`, `status`) VALUES
+(1, 1, 71, 'Lanzamiento de nuestro Proyecto Apolo Condominio', 'lanzamiento-de-nuestro-proyecto-apolo-condominio', 'Huertas inmobiliaria el día 4 de agosto llevó acabo su primer evento de lanzamiento del proyecto “Apolo Condominio”, el cual congregó a más de 60 personas. Contamos con los siguientes beneficios: parques y jardines, título de propiedad, club house, vigilancia las 24 horas, área de desde 120m2 y zona de ejercicios.  Apolo Condominio está ubicado en la carretera Panamericana Sur Km. 92.5, Playa Chocaya Asia, Perú. ', '', 'Huertas inmobiliaria el día 4 de agosto llevó acabo su primer evento de lanzamiento del proyecto “Apolo Condominio”, el cual congregó a más de 60 personas. Contamos con los siguientes beneficios: parques y jardines, título de propiedad, club house, vigilancia las 24 horas, área de desde 120m2 y zona de ejercicios.  Apolo Condominio está ubicado en la carretera Panamericana Sur Km. 92.5, Playa Chocaya Asia, Perú. ', '2021-08-23 14:55:33', '1'),
+(2, 1, 72, '¿Eres Cliente de Huertas Inmobiliaria?', 'eres-cliente-de-huertas-inmobiliaria', 'Aprovecha tu cupón de descuento de S/. 3,000 soles en la compra de tu LOTE en nuestro proyecto “El Condominio Oasis”. \r\nHuertas Inmobiliaria tiene el gusto de presentar su nuevo proyecto “El Condominio Oasis”, el cual cuenta con la mejor ubicación, donde podrás disfrutar de áreas verdes, zona comercial, gimnasio, juegos, club house   y seguridad permanente. \r\n\r\n Válido solo por el mes de agosto.\r\n', '', 'Aprovecha tu cupón de descuento de S/. 3,000 soles en la compra de tu LOTE en nuestro proyecto “El Condominio Oasis”. \r\nHuertas Inmobiliaria tiene el gusto de presentar su nuevo proyecto “El Condominio Oasis”, el cual cuenta con la mejor ubicación, donde podrás disfrutar de áreas verdes, zona comercial, gimnasio, juegos, club house   y seguridad permanente. \r\n\r\n Válido solo por el mes de agosto.\r\n', '2021-08-23 15:11:57', '1'),
+(3, 1, 73, 'Reserva tu visita guía con nosotros', 'reserva-tu-visita-guía-con-nosotros', '¡Cada vez son más los clientes satisfechos que se unen a la familia Huertas Inmobiliaria! ¿Qué esperas para tomar la mejor decisión de inversión en nuestro Condominio Campestre El Olivar?  Reserva tu cita y aprovecha los precios de lanzamiento. \r\n¡Envíanos tu número de teléfono directamente al inbox! \r\nContáctenos al (01) 732-0806 / 984 403 329 / 926 403 239 o visita nuestras oficinas en Calle Luis Espejo 1097 Urb. Santa Catalina, La Victoria.\r\n', '', '¡Cada vez son más los clientes satisfechos que se unen a la familia Huertas Inmobiliaria! ¿Qué esperas para tomar la mejor decisión de inversión en nuestro Condominio Campestre El Olivar?  Reserva tu cita y aprovecha los precios de lanzamiento. \r\n¡Envíanos tu número de teléfono directamente al inbox! \r\nContáctenos al (01) 732-0806 / 984 403 329 / 926 403 239 o visita nuestras oficinas en Calle Luis Espejo 1097 Urb. Santa Catalina, La Victoria.\r\n', '2021-08-23 15:46:38', '1'),
+(4, 1, 74, 'Huertas Inmobiliaria asociados de la CCL', 'huertas-inmobiliaria-asociados-de-la-ccl', 'Tenemos el agrado de poder compartir con nuestros clientes la presencia de HUERTAS INMOBILIARIA, dentro de la Cámara de Comercio de Lima como asociados.  Ahora podremos estar más cerca de ustedes informándolos de nuestras novedades, eventos y nuestros principales proyectos.', '', 'Tenemos el agrado de poder compartir con nuestros clientes la presencia de HUERTAS INMOBILIARIA, dentro de la Cámara de Comercio de Lima como asociados.  Ahora podremos estar más cerca de ustedes informándolos de nuestras novedades, eventos y nuestros principales proyectos.', '2021-08-23 15:48:23', '1'),
+(5, 1, 75, 'Los beneficios de nuestro Proyecto OASIS CONDOMINIO', 'los-beneficios-de-nuestro-proyecto-oasis-condominio', '\r\nNuestro proyecto OASIS CONDOMINIO cuenta con la mejor ubicación donde podrás disfrutar de nuestras áreas verdes, zona comercial, gimnasio, juegos, club house y seguridad permanente . Asimismo, podrás contar con los siguientes beneficios:\r\n \r\nÁrea de lotes desde los 120 m² (Stock limitado).\r\nInicial: s/5,000 Precio desde total: s/19,999 (Precio único y al contado).\r\nZonas aledañas: Playa Huachama, Cerro Azul, Plaza de Cañete, Asia y Camisea.\r\nUbicación: Carretera Panamericana Sur Km. 152.\r\nDocumentación en regla.\r\n', '', '\r\nNuestro proyecto OASIS CONDOMINIO cuenta con la mejor ubicación donde podrás disfrutar de nuestras áreas verdes, zona comercial, gimnasio, juegos, club house y seguridad permanente . Asimismo, podrás contar con los siguientes beneficios:\r\n \r\nÁrea de lotes desde los 120 m² (Stock limitado).\r\nInicial: s/5,000 Precio desde total: s/19,999 (Precio único y al contado).\r\nZonas aledañas: Playa Huachama, Cerro Azul, Plaza de Cañete, Asia y Camisea.\r\nUbicación: Carretera Panamericana Sur Km. 152.\r\nDocumentación en regla.\r\n', '2021-08-23 15:52:47', '1'),
+(6, 1, 76, 'Los beneficios de nuestro Proyecto CONDOMINIO CAMPESTRE EL OLIVAR ', 'los-beneficios-de-nuestro-proyecto-condominio-campestre-el-olivar ', 'Nuestro proyecto CONDOMINIO CAMPESTRE EL OLIVAR cuenta con la mejor ubicación donde podrás disfrutar de nuestras áreas verdes, ciclovía, zona de   parrilla, club house, gimnasio y seguridad permanente. Asimismo, podrás contar con los siguientes beneficios:\r\n \r\nÁrea de lotes desde los 200 m² (Stock limitado).\r\nPrecio desde: s/13,000.\r\nZonas aledañas: Cerro Azul, Plaza de Cañete, Asia y Camisea.\r\nUbicación: Carretera Panamericana Sur Km. 163.\r\n', '', 'Nuestro proyecto CONDOMINIO CAMPESTRE EL OLIVAR cuenta con la mejor ubicación donde podrás disfrutar de nuestras áreas verdes, ciclovía, zona de   parrilla, club house, gimnasio y seguridad permanente. Asimismo, podrás contar con los siguientes beneficios:\r\n \r\nÁrea de lotes desde los 200 m² (Stock limitado).\r\nPrecio desde: s/13,000.\r\nZonas aledañas: Cerro Azul, Plaza de Cañete, Asia y Camisea.\r\nUbicación: Carretera Panamericana Sur Km. 163.\r\n', '2021-08-23 15:56:51', '1');
 
 -- --------------------------------------------------------
 
@@ -323,7 +335,13 @@ INSERT INTO `picture` (`id`, `name`, `type`, `rute`, `nameRute`, `description`, 
 (67, 'OASIS.png', 'png', 'public/web/images/proyect-icon/OASIS.png', 'public/web/images/proyect-icon/', '', '2021-08-16 10:57:28', '1'),
 (68, 'PLANICIE.png', 'png', 'public/web/images/proyect-icon/PLANICIE.png', 'public/web/images/proyect-icon/', '', '2021-08-16 10:57:28', '1'),
 (69, 'MERCADO-SANTA-ROSA.png', 'png', 'public/web/images/proyect-icon/MERCADO-SANTA-ROSA.png', 'public/web/images/proyect-icon/', '', '2021-08-16 10:57:28', '1'),
-(70, 'PALMAR-DEL-SUR.png', 'png', 'public/web/images/proyect-icon/PALMAR-DEL-SUR.png', 'public/web/images/proyect-icon/', '', '2021-08-16 10:57:28', '1');
+(70, 'PALMAR-DEL-SUR.png', 'png', 'public/web/images/proyect-icon/PALMAR-DEL-SUR.png', 'public/web/images/proyect-icon/', '', '2021-08-16 10:57:28', '1'),
+(71, 'lanzamiento-de-nuestro-proyecto-apolo-condominio.png', 'png', 'public/web/images/novelties/lanzamiento-de-nuestro-proyecto-apolo-condominio.png', 'public/web/images/novelties/', '', '2021-08-04 19:56:19', '1'),
+(72, 'DESCUENTO.png', 'png', 'public/web/images/novelties/DESCUENTO.png', 'public/web/images/novelties/', '', '2021-08-04 19:56:19', '1'),
+(73, 'VISITA-GUIADA.png', 'png', 'public/web/images/novelties/VISITA-GUIADA.png', 'public/web/images/novelties/', '', '2021-08-04 19:56:19', '1'),
+(74, 'LA-CAMARA-Y-COMERCIO.png', 'png', 'public/web/images/novelties/LA-CAMARA-Y-COMERCIO.png', 'public/web/images/novelties/', '', '2021-08-04 19:56:19', '1'),
+(75, 'BENEFICIOS-OASIS.png', 'png', 'public/web/images/novelties/BENEFICIOS-OASIS.png', 'public/web/images/novelties/', '', '2021-08-04 19:56:19', '1'),
+(76, 'BENEFICIOS-OLIAR.png', 'png', 'public/web/images/novelties/BENEFICIOS-OLIAR.png', 'public/web/images/novelties/', '', '2021-08-04 19:56:19', '1');
 
 -- --------------------------------------------------------
 
@@ -703,7 +721,7 @@ ALTER TABLE `company`
 -- AUTO_INCREMENT de la tabla `novelties`
 --
 ALTER TABLE `novelties`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT de la tabla `pageseo`
@@ -715,7 +733,7 @@ ALTER TABLE `pageseo`
 -- AUTO_INCREMENT de la tabla `picture`
 --
 ALTER TABLE `picture`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=71;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=77;
 
 --
 -- AUTO_INCREMENT de la tabla `property`
