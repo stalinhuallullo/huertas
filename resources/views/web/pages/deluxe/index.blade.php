@@ -98,19 +98,23 @@
                     </div>
                     <div class="b27-item">
                         <div class="b27-figura-item"><img src="{{asset('public/web/images/proyect-icon/AREA-.png')}}"></div>
-                        <div class="b27-title-item">ZONA DE PARRILLAS</div>
+                        <div class="b27-title-item">AREA</div>
                     </div>
                     <div class="b27-item">
                         <div class="b27-figura-item"><img src="{{asset('public/web/images/proyect-icon/SEGURIDAD-DELUXE.png')}}"></div>
-                        <div class="b27-title-item">CICLOVÍAS</div>
+                        <div class="b27-title-item">SEGURIDAD</div>
                     </div>
                     <div class="b27-item">
                         <div class="b27-figura-item"><img src="{{asset('public/web/images/proyect-icon/PARQUES-Y-JARDINES.png')}}"></div>
-                        <div class="b27-title-item">PARQUES</div>
+                        <div class="b27-title-item">PARQUES Y JARDINES</div>
                     </div>
                     <div class="b27-item">
                         <div class="b27-figura-item"><img src="{{asset('public/web/images/proyect-icon/TITULO-DE-PROPIEDAD-.png')}}"></div>
-                        <div class="b27-title-item">SERVICIOS BÁSICOS</div>
+                        <div class="b27-title-item">TITULO DE PROPIEDAD</div>
+                    </div>
+                    <div class="b27-item">
+                        <div class="b27-figura-item"><img src="{{asset('public/web/images/proyect-icon/ZONA-DE-EJERCICIOS.png')}}"></div>
+                        <div class="b27-title-item">ZONA DE EJERCICIOS</div>
                     </div>
                 </div>
             </div>

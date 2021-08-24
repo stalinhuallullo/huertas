@@ -61,7 +61,6 @@ body {
 }
 
 .menorca-newcard {
-    min-height: 400px;
     display: block;
     margin: 15px 0;
     border-radius: 20px;
@@ -85,6 +84,9 @@ body {
     border-radius: 0 0 20px 0
 }
 */
+.menorca-newcard img{
+    width: 100%;
+}
 .menorca-newcard.nuevo-1 .mini-top {
     top: 60px;
     left: 10px
@@ -644,7 +646,8 @@ html {
     min-height: 100%;
     height: auto!important;
     height: 100%;
-    margin: 0 auto
+    margin: 0 auto;
+    margin-top: 135px;
 }
 
 .scroll {
@@ -877,8 +880,11 @@ html {
 .menu {
     padding: 10px 0;
     background-color: #F3F7F4;
-    position: relative;
-    z-index: 99
+    position: fixed;
+    top: 40px;
+    z-index: 100;
+    width: 100%;
+    box-shadow: 0 1px 6px 0 #20212447;
 }
 
 .menu.scroll {
@@ -959,18 +965,6 @@ html {
     background-color: #158A2F
 }
 
-@media (max-width:768px) {
-    .menu .menu__button span {
-        background-color: #fff
-    }
-}
-
-@media (min-width:769px) and (max-width:992px) {
-    .menu .menu__button span {
-        background-color: #fff
-    }
-}
-
 .menu .menu__button.open {
     z-index: 2
 }
@@ -1001,21 +995,11 @@ html {
     -o-transition: all .5s;
     transition: all .5s
 }
-.menu .menu__brand img.logotipo-blanco {
-    display: none;
-}
 
 @media (max-width:992px) {
     .menu .menu__brand img {
         height: 40px
     }
-    .menu .menu__brand img.logotipo-color {
-        display: none;
-    }
-    .menu .menu__brand img.logotipo-blanco {
-        display: block;
-    }
-
 }
 
 @media (max-width:768px) {
@@ -1049,7 +1033,7 @@ html {
 }
 @media(max-width:992px) {
     .menu .menu__box {
-        background: #158A2F;
+        background: #ffffff;
         position: fixed;
         width: 100%;
         height: 100%;
@@ -1065,7 +1049,6 @@ html {
         -webkit-box-align: center;
         -ms-flex-align: center;
         align-items: center;
-        padding-left: 15px;
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
@@ -1130,12 +1113,7 @@ html {
 .menu .menu__box .menu__item .menu__link svg path{
     fill: #707070;
 }
-@media (min-width:993px) and (max-width:1200px) {
-    .menu .menu__box .menu__item .menu__link {
-        padding: 0 15px 0 0;
-        font-size: 15px
-    }
-}
+
 
 /*.menu .menu__box .menu__item .menu__link:after {
     content: "";
@@ -1191,7 +1169,7 @@ html {
     }
 
     .menu .menu__box .menu__item .menu__link {
-        color: #fff!important;
+        color: #158A2F !important;
         padding: 8px 0;
         display: block;
         font-size: 18px;
@@ -1199,14 +1177,6 @@ html {
     }
 }
 
-@media (min-width:769px) and (max-width:992px) {
-    .menu .menu__box .menu__item .menu__link {
-        color: #fff;
-        padding: 10px 0;
-        display: block;
-        font-size: 18px
-    }
-}
 
 .menu .menu__box .menu__item .menu__link:hover,
 .menu .menu__box .menu__item .menu__link:hover svg path{
@@ -1396,11 +1366,6 @@ html {
     display: none!important
 }
 
-.header-collection-galeria .menu__brand .logotipo-blanco,
-.header-collection-page .menu__brand .logotipo-blanco {
-    display: block!important
-}
-
 .header-edition-page {
     background-color: #F3F7F4
 }
@@ -1494,21 +1459,6 @@ html {
     }
 }
 
-.header-edition-page .menu__brand .logotipo-blanco {
-    display: none!important
-}
-
-@media (max-width:768px) {
-    .header-edition-page .menu__brand .logotipo-blanco {
-        display: block!important
-    }
-}
-
-@media (min-width:769px) and (max-width:992px) {
-    .header-edition-page .menu__brand .logotipo-blanco {
-        display: block!important
-    }
-}
 
 .whatsapp-button {
     cursor: pointer;
@@ -3060,7 +3010,8 @@ footer .footer__links a {
     margin: 10px 0;
     display: block;
     font-weight: 100;
-    line-height: 20px
+    line-height: 20px;
+    word-break: break-word;
 }
 
 footer .footer__links a:hover {
@@ -4734,7 +4685,11 @@ figure.promo-images a {
     display: flex;
     -webkit-box-align: center;
     -ms-flex-align: center;
-    align-items: center
+    align-items: center;
+    position: fixed;
+    z-index: 100;
+    width: 100%;
+    top: 0;
 }
 
 
@@ -5164,8 +5119,14 @@ figure.promo-images a {
 
 @media (max-width:992px) {
     .menu {
-        background-color: #0c6d31;
+        background-color: #ffffff;
     }
+    .wraper{
+        margin-top: 115px;
+    }
+}
+@media (max-width:850px) {
+
 }
 
 
@@ -5249,23 +5210,46 @@ figure.promo-images a {
         min-height: 412px;
     }
 }
-
+@media (max-width: 850px) {
+    .banner__slick .banner__item.banner__promo img {
+        min-height: 360px;
+    }
+}
 @media (max-width:768px) {
     .banner__slick .banner__item.banner__promo img {
         min-height: 340px;
     }
 }
-@media (max-width: 550px) {
+@media (max-width:700px) {
+    .banner__slick .banner__item.banner__promo img {
+        min-height: 300px;
+    }
+}
+@media (max-width:600px) {
     .banner__slick .banner__item.banner__promo img {
         min-height: 270px;
     }
 }
-@media (max-width: 400px) {
+@media (max-width: 550px) {
     .banner__slick .banner__item.banner__promo img {
-        min-height: 215px;
+        min-height: 240px;
     }
 }
-
+@media (max-width:480px) {
+    .banner__slick .banner__item.banner__promo img {
+        min-height: 220px;
+    }
+}
+@media (max-width: 400px) {
+    .banner__slick .banner__item.banner__promo img {
+        min-height: 190px;
+    }
+}
+@media (max-width: 365px) {
+    .banner__slick .banner__item.banner__promo img {
+        min-height: 170px;
+    }
+}
 .banner__slick .banner__item.banner__promo .banner-mobile {
     width: 100%
 }

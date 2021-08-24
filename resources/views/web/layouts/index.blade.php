@@ -159,7 +159,7 @@
     </div>
     @endif
 
-    @include('web.includes.nav-bar.sub-nav')
+      @include('web.includes.nav-bar.sub-nav')
 
     <div class="popup">
         <div class="close-btn">

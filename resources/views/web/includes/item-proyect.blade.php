@@ -1,5 +1,6 @@
 <div class="grid-item col-lg-4 col-md-6 item-0">
-    <a href="{{route('web.proyect.detail', ['slug' => $property->slug])}}" class="menorca-newcard nuevo-1" style="background-image: url('{{asset($property->cover_rute)}}');">
+    <a href="{{route('web.proyect.detail', ['slug' => $property->slug])}}" class="menorca-newcard nuevo-1">
+        <img src="{{asset($property->cover_rute)}}" alt="">
         <!--<div class="menorca-newcard__info--casa">
             <div class="inside">
                 <div class="inside-top">

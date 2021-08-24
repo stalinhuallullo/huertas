@@ -3,7 +3,7 @@
 
         <a href="{{route('web.home.index')}}" class="menu__brand">
             <img class="logotipo-color" src="{{asset('public/web/images/logo-huertas.png')}}" alt="Logotipo">
-            <img class="logotipo-blanco" src="{{asset('public/web/images/logo-huertas-white.png')}}" alt="Logotipo">
+            <!--<img class="logotipo-blanco" src="{{asset('public/web/images/logo-huertas-white.png')}}" alt="Logotipo">-->
         <!--<img class="d-none d-lg-block logotipo-verde" src="{{asset('public/web/images/logotipo.svg')}}" alt="Logotipo ">
             <img class="d-none d-lg-block logotipo-blue" src="{{asset('public/web/images/logotipo-blue.svg')}}" alt="Logotipo ">
             <img class="d-block d-lg-none logotipo-blanco" src="{{asset('public/web/images/logotipo-white.svg')}}" alt="Logotipo ">-->
