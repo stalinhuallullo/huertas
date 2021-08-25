@@ -148,7 +148,7 @@
             <div class="container">
                 <div class="row">
 
-                    @include("web.includes.form-contact-proyect")
+                    @include("web.includes.form-contact-proyect", ["select_form" => $select_form])
                     <div class="col-lg-6 imagen">
                         <div id="map" class="map-h100"></div>
                     </div>

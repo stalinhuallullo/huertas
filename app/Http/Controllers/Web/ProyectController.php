@@ -39,6 +39,7 @@ class ProyectController extends Controller
             "propertys" => $propertys,
             "menu" => PageEnum::Proyect,
             "sub_menu" => "",
+            "select_form" => true,
         ];
         return view('web.pages.proyect.index', $data);
     }
@@ -117,6 +118,7 @@ class ProyectController extends Controller
             "property_gallery" => $property_gallery,
             "menu" => PageEnum::Proyect,
             "sub_menu" => $slug,
+            "select_form" => true,
         ];
         return view('web.pages.proyect.detail', $data);
     }

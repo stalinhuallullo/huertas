@@ -20,6 +20,7 @@ class DeluxeController extends Controller
             "contactFloat" => true,
             "menu" => PageEnum::Deluxe,
             "sub_menu" => "",
+            "select_form" => false,
         ];
         return view('web.pages.deluxe.index', $data);
     }

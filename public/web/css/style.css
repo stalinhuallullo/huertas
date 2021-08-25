@@ -1033,7 +1033,7 @@ html {
 }
 @media(max-width:992px) {
     .menu .menu__box {
-        background: #ffffff;
+        background: #F3F7F4;
         position: fixed;
         width: 100%;
         height: 100%;
@@ -1149,7 +1149,7 @@ html {
 
 @media (max-width:768px) {
     .menu .menu__box .menu__item .menu__link.active {
-        color: #fff
+        color: #054a89 !important;
     }
 }
 
@@ -1175,6 +1175,14 @@ html {
         font-size: 18px;
         line-height: initial
     }
+    /*.menu__item:hover {
+        width: 300px;
+        text-align: center;
+        border-radius: 6px;
+        background: #ffffff;
+        box-shadow:  6px 6px 12px #f0f0f0, -6px -6px 12px #ffffff;
+    }*/
+
 }
 
 
@@ -1184,15 +1192,12 @@ html {
     text-decoration: none;
     fill: #158A2F;
 }
-@media (max-width:768px) {
-    .menu .menu__box .menu__item .menu__link:hover {
-        color: #fff
-    }
-}
+.menu .menu__box .menu__item .menu__link:focus{
 
-@media (min-width:769px) and (max-width:992px) {
+}
+@media (max-width:992px) {
     .menu .menu__box .menu__item .menu__link:hover {
-        color: #fff
+        color: #054a89 !important
     }
 }
 
@@ -1988,7 +1993,7 @@ html {
 .boton-falso:after,
 .btn-menorca-light,
 .btn-popup-heroes {
-    background: #37A13D
+    background: #0f544b;
 }
 
 @media (max-width:768px) {
@@ -3946,7 +3951,7 @@ body.blur:before {
 
 .respaldo {
     padding: 60px 0;
-    background-color: #158A2F;
+    background-color: #10645A;
     background-image: url(../../web/images/textura-iconos.png);
     /*background-blend-mode: multiply;*/
     -webkit-background-size: 50%;
@@ -4020,7 +4025,7 @@ body.blur:before {
 .respaldo .item-respaldo strong {
     font-weight: 600;
     font-size: 23px;
-    color: #acd313;
+    color: #5bd4c5;
     margin-bottom: 10px
 }
 
@@ -4678,7 +4683,7 @@ figure.promo-images a {
 }
 
 .submenu {
-    background-color: #37A13D;
+    background-color: #158A2F;
     min-height: 40px;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -5118,9 +5123,7 @@ figure.promo-images a {
 }
 
 @media (max-width:992px) {
-    .menu {
-        background-color: #ffffff;
-    }
+
     .wraper{
         margin-top: 115px;
     }

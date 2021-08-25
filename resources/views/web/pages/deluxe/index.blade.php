@@ -2,6 +2,7 @@
 
 @section('styles')
     <link rel="stylesheet" href="{{asset('public/web/css/blocks_style.css')}}" />
+    <link rel="stylesheet" href="{{asset('public/web/css/theme-colors/deluxe.css')}}" />
 @endsection
 
 @section('content')
@@ -27,7 +28,7 @@
                 </div>
             </div>
             <div class="b17-wrap-caracteristicas">
-                <div class="wancho proyecto-2">
+                <div class="wancho proyecto-2 wancho-deluxe">
                     <div class="b17-list-wrap">
                         <div class="b17-item-wrap">
                             <div class="b17-texto-item">
@@ -92,27 +93,27 @@
         <section class="b27 terreno" id="sec-areas-comunes">
             <div class="wancho">
                 <div class="b27-list-left">
-                    <div class="b27-item">
+                    <div class="b27-item b27--deluxe">
                         <div class="b27-figura-item"><img src="{{asset('public/web/images/proyect-icon/CLUB-HOUSE-.png')}}"></div>
                         <div class="b27-title-item">CLUB HOUSE</div>
                     </div>
-                    <div class="b27-item">
+                    <div class="b27-item b27--deluxe">
                         <div class="b27-figura-item"><img src="{{asset('public/web/images/proyect-icon/AREA-.png')}}"></div>
                         <div class="b27-title-item">AREA</div>
                     </div>
-                    <div class="b27-item">
+                    <div class="b27-item b27--deluxe">
                         <div class="b27-figura-item"><img src="{{asset('public/web/images/proyect-icon/SEGURIDAD-DELUXE.png')}}"></div>
                         <div class="b27-title-item">SEGURIDAD</div>
                     </div>
-                    <div class="b27-item">
+                    <div class="b27-item b27--deluxe">
                         <div class="b27-figura-item"><img src="{{asset('public/web/images/proyect-icon/PARQUES-Y-JARDINES.png')}}"></div>
                         <div class="b27-title-item">PARQUES Y JARDINES</div>
                     </div>
-                    <div class="b27-item">
+                    <div class="b27-item b27--deluxe">
                         <div class="b27-figura-item"><img src="{{asset('public/web/images/proyect-icon/TITULO-DE-PROPIEDAD-.png')}}"></div>
                         <div class="b27-title-item">TITULO DE PROPIEDAD</div>
                     </div>
-                    <div class="b27-item">
+                    <div class="b27-item b27--deluxe">
                         <div class="b27-figura-item"><img src="{{asset('public/web/images/proyect-icon/ZONA-DE-EJERCICIOS.png')}}"></div>
                         <div class="b27-title-item">ZONA DE EJERCICIOS</div>
                     </div>
@@ -123,14 +124,14 @@
         <section class="b28" id="sec-sobre-proyectos">
             <div class="wancho">
                 <div class="b28-texto">
-                    <h3 class="b28-title">APOLO CONDOMINIO</h3>
+                    <h3 class="b28-title b28--deluxe">APOLO CONDOMINIO</h3>
                     <div class="b28-description">
                         <p>El mejor lugar para gozar del mejor clima todo el año, favorecida con temperaturas cálidas, siempre tendrás una excusa para disfrutar de una parrilla con la familia, o de todo lo que puedes hacer al aire libre. Reserva tu cita hoy y vive la experiencia junto a Huertas Inmobiliaria.</p>
                     </div>
                 </div>
             </div>
             <div class="b7-right" style="background-image: url({{asset('public/web/images/deluxe-banner/hlj.jpg')}})">
-                    <a href="#videoModal" data-toggle="modal" data-target="#videoModal" data-video-id='bQpYV3WZ47I' class="b7-image-button b7-play open-boxlight js-video-button" >
+                    <a href="#videoModal" data-toggle="modal" data-target="#videoModal" data-video-id='Z2CvI34yTZs' class="b7-image-button b7-play open-boxlight js-video-button" >
                     <div class="b30-wrap-zoom video">
                         <div class="b31-zoom"><span class="b30-play"></span></div>
                     </div>
@@ -167,7 +168,7 @@
                         </div>
                     </div>
                     <div class="b22-right" id="formulario">
-                        @include("web.includes.form-contact-proyect", ["size" => 12])
+                        @include("web.includes.form-contact-proyect", ["size" => 12, "select_form" => $select_form])
                     </div>
                 </div>
             </div>
@@ -197,7 +198,11 @@
 
 
     </div>
-
+    <script>
+        var logo = document.getElementsByClassName('logotipo-color')[0];
+        console.log(logo)
+       logo.src = "public/web/images/logo-huertas-white.png";
+    </script>
 @endsection
 
 @section("scripts")

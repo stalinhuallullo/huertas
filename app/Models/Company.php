@@ -24,7 +24,8 @@ class Company extends Model
         'facebook',
         'instagram',
         'tiktok',
-
+        'linkedin',
+        'youtube'
     ];
 
     protected static function boot()

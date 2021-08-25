@@ -1,0 +1,89 @@
+:root {
+    --color-primary: #3F7897;
+    --color-secondary: #DAA500;
+    --color-white: #ffffff;
+
+    --color-blue-dark: #2e617d;
+    --color-blue-opacity-4: #2e617d66;
+
+}
+
+.wancho-deluxe {
+    color: white;
+    background-color: var(--color-primary)!important;
+}
+.wancho-deluxe span {
+    color: white;
+}
+
+
+.b28--deluxe {
+    color: var(--color-primary);
+}
+
+.b27--deluxe:after {
+    background-color: var(--color-secondary);
+}
+
+.header-home {
+    background-color: var(--color-primary);
+}
+
+.header-home .menu__link {;
+    color: white !important;
+}
+
+.menu__link svg path {
+    fill: white !important;
+}
+
+.submenu {
+    background-color: white;
+}
+.submenu a {
+    color: var(--color-primary);
+}
+
+/* top header */
+.menu__sociales svg path {
+    fill: var(--color-primary);
+}
+
+
+/* player */
+.b31-zoom {
+    background: var(--color-primary);
+}
+.b30-wrap-zoom.video:before {
+    border: 2px solid var(--color-primary);
+}
+.b30-wrap-zoom.video:after {
+    border: 2px solid var(--color-primary);
+}
+
+/* menu formulario */
+.menorca-subtitle {
+    color: var(--color-primary);
+}
+
+.btn-menorca-light {
+    background: var(--color-primary);
+}
+
+.contact-buttons{
+    background-color: var(--color-blue-dark) !important;
+    -webkit-box-shadow: -5px 5px 20px var(--color-orange-opacity-4);
+    box-shadow: -5px 5px 20px var(--color-orange-opacity-4);
+}
+footer{
+    background-color: var(--color-primary);
+}
+footer .title__footer{
+    color: var(--color-white);
+}
+.menu .menu__button span{
+    background-color: #ffffff;
+}
+.menu .menu__box .menu__item .menu__link.active, .menu .menu__box .menu__item .menu__link.active svg path{
+    color: #daa501 !important;
+}

@@ -85,6 +85,7 @@ class AppServiceProvider extends ServiceProvider
                         "company.instagram",
                         "company.tiktok",
                         "company.linkedin",
+                        "company.youtube",
                         "cover.name as icon_name",
                         "cover.type as icon_type",
                         "cover.rute as icon_rute",

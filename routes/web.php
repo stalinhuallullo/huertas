@@ -14,6 +14,14 @@ use App\Http\Controllers\Web\ContactController;
 // ADMIN
 use App\Http\Controllers\Admin\LoginAdminController;
 use App\Http\Controllers\Admin\DashboardAdminController;
+use App\Http\Controllers\Admin\InicioAdminController;
+use App\Http\Controllers\Admin\PropertyController;
+
+use App\Http\Controllers\Admin\ServicioAdminController;
+use App\Http\Controllers\Admin\NosotrosAdminController;
+use App\Http\Controllers\Admin\NovedadesAdminController;
+use App\Http\Controllers\Admin\ContactanosAdminController;
+use App\Http\Controllers\Admin\ConfiguracionAdminController;
 
 
 /*
@@ -58,13 +66,18 @@ Route::get('/servicios', [ServicesController::class, 'index'])->name('web.servic
 // ************************************ CONTACT SECTION **********************************************
 Route::get('/contacto', [ContactController::class, 'index'])->name('web.contact.index');
 
-
-
 // ************************************ ADMIN HOME SECTION **********************************************
 Route::get('/admin/iniciar-sesion', [LoginAdminController::class, 'index'])->name('admin.login');
-Route::get('/admin/inicio', [DashboardAdminController::class, 'index'])->name('admin.inicio');
+Route::get('/admin/dashboard', [DashboardAdminController::class, 'index'])->name('admin.dashboard');
+Route::get('/admin/inicio', [InicioAdminController::class, 'index'])->name('admin.inicio');
 
+Route::get('/admin/proyecto', [PropertyController::class, 'index'])->name('admin.proyecto');
 
+Route::get('/admin/servicio', [ServicioAdminController::class, 'index'])->name('admin.servicio');
+Route::get('/admin/nosotros', [NosotrosAdminController::class, 'index'])->name('admin.nosotros');
+Route::get('/admin/novedades', [NovedadesAdminController::class, 'index'])->name('admin.novedades');
+Route::get('/admin/contactanos', [ContactanosAdminController::class, 'index'])->name('admin.contactanos');
+Route::get('/admin/configuracion', [ConfiguracionAdminController::class, 'index'])->name('admin.configuracion');
 
 /*
 Route::group(['middleware'=>'permissions:products'],function(){

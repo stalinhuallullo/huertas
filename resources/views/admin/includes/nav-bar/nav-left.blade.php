@@ -1,8 +1,7 @@
 <nav class="sidebar">
     <div class="sidebar-header">
-        <a href="#" class="sidebar-brand">
-            Noble<span>UI</span>
-        </a>
+
+        <img class="logotipo-color" src="{{asset('public//web/images/logo-huertas-white.png')}}" alt="Logotipo" style="width: 130px"/>
         <div class="sidebar-toggler not-active">
             <span></span>
             <span></span>
@@ -11,33 +10,51 @@
     </div>
     <div class="sidebar-body">
         <ul class="nav">
-            <li class="nav-item nav-category">Principales</li>
+            <li class="nav-item nav-category">Páginas</li>
             <li class="nav-item">
-                <a href="####" class="nav-link">
+                <a href={{ route("admin.inicio") }} class="nav-link">
                     <i class="link-icon" data-feather="box"></i>
-                    <span class="link-title">Dashboard</span>
+                    <span class="link-title">Inicio</span>
                 </a>
             </li>
             <li class="nav-item">
-                <a href="####" class="nav-link">
-                    <i class="link-icon" data-feather="box"></i>
+                <a href={{ route("admin.proyecto") }} class="nav-link">
+                    <i class="link-icon" data-feather="code"></i>
                     <span class="link-title">Proyectos</span>
                 </a>
             </li>
             <li class="nav-item">
-                <a href="####" class="nav-link">
+                <a href={{ route("admin.servicio") }} class="nav-link">
                     <i class="link-icon" data-feather="box"></i>
-                    <span class="link-title">Dashboard</span>
+                    <span class="link-title">Servicios</span>
                 </a>
             </li>
             <li class="nav-item">
-                <a href="####" class="nav-link">
-                    <i class="link-icon" data-feather="box"></i>
-                    <span class="link-title">Dashboard</span>
+                <a href={{ route("admin.nosotros") }} class="nav-link">
+                    <i class="link-icon" data-feather="users"></i>
+                    <span class="link-title">Nosotros</span>
                 </a>
             </li>
-            <li class="nav-item nav-category">Configuración</li>
             <li class="nav-item">
+                <a href={{ route("admin.novedades") }} class="nav-link">
+                    <i class="link-icon" data-feather="clock"></i>
+                    <span class="link-title">Novedades</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href={{ route("admin.contactanos") }} class="nav-link">
+                    <i class="link-icon" data-feather="phone-forwarded"></i>
+                    <span class="link-title">Contactanos</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href={{ route("admin.configuracion") }} class="nav-link">
+                    <i class="link-icon" data-feather="settings"></i>
+                    <span class="link-title">configuración</span>
+                </a>
+            </li>
+            {{-- <li class="nav-item nav-category">Configuración</li> --}}
+            {{-- <li class="nav-item">
                 <a class="nav-link" data-toggle="collapse" href="#emails" role="button" aria-expanded="false" aria-controls="emails">
                     <i class="link-icon" data-feather="mail"></i>
                     <span class="link-title">Email</span>
@@ -56,7 +73,8 @@
                         </li>
                     </ul>
                 </div>
-            </li>
+            </li> --}}
         </ul>
     </div>
 </nav>
+

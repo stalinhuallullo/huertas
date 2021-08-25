@@ -1,10 +1,10 @@
 :root {
-    --color-blue: #93C989;
+    --color-blue: #63872A;
     --color-orange: #F3C164;
     --color-white: #ffffff;
     /*--color-light-blue: #3caae1;*/
 
-    --color-blue-dark: #7eac76;
+    --color-blue-dark: #add273;
 
     --color-white-opacity-4: #ffffff66;
 
@@ -85,5 +85,11 @@ footer .footer__sociales .sociales__link:hover svg path{
     }
     .menu .menu__box{
         background: var(--color-blue-dark);
+    }
+
+    :root {
+
+        --color-blue-dark: #fff;
+
     }
 }

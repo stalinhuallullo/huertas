@@ -60,7 +60,7 @@
         <section id="formulario">
             <div class="container">
                 <div class="row">
-                    @include("web.includes.form-contact-proyect")
+                    @include("web.includes.form-contact-proyect", ["select_form" => $select_form])
                     <div class="col-md-6 imagen" style="background-image: url({{asset('public/web/images/banner-2.jpg')}})">
                     </div>
                 </div>

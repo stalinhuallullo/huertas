@@ -86,4 +86,10 @@ footer .footer__sociales .sociales__link:hover svg path{
     .menu .menu__box{
         background: var(--color-blue-dark);
     }
+
+    :root {
+
+        --color-blue-dark: #fff;
+
+    }
 }

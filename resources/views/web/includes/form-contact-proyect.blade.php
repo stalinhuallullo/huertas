@@ -4,7 +4,7 @@
 
     <form id="contactoproyecto" action="{{ route('web.proyect.coordinateVisit') }}" method="POST">
         @csrf
-        <div class="row">
+        <div class="row" @if(isset($select_form)) style="display: none"@endif>
             <div class="col-md-12">
                 <select class="form-control mb-25" name="proyect">
                     <option value="" selected="">Selecciones un proyecto</option>

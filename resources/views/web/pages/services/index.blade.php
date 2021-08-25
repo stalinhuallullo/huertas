@@ -5,10 +5,10 @@
 
         <div class="banner-interna">
             <div class="top-img" style="background-image: url({{asset('public/web/images/banner/BANNER-CIUDAD.png')}});">
-                <figure class="promo-images">
+                <!--<figure class="promo-images">
                     <h1 class="text-white text-shadow-50">NUESTROS SERVICIOS</h1>
                     <h4 class="text-white text-shadow-50">¡Llevamos tus proyectos inmobiliarios al éxito!</h4>
-                </figure>
+                </figure>-->
             </div>
         </div>
 

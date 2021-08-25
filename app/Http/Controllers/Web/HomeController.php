@@ -50,6 +50,7 @@ class HomeController extends Controller
             "menu" => PageEnum::Home,
             "sub_menu" => "",
             "banners" => $banners,
+            "select_form" => false,
         ];
 
         return view('web.pages.home.index', $data);

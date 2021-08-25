@@ -11,6 +11,7 @@
     <link type="text/css" rel="stylesheet" href="{{asset('public/admin/fonts/feather-font/css/iconfont.css')}}">
     <link type="text/css" rel="stylesheet" href="{{asset('public/admin/vendor/flag-icon-css/css/flag-icon.min.css')}}">
     <link type="text/css" rel="stylesheet" href="{{asset('public/admin/css/style.css')}}">
+    <link type="text/css" rel="stylesheet" href="{{asset('public/admin/css/font-awesome.min.css')}}">
     @yield("style")
 </head>
 <body class="sidebar-dark">
@@ -26,7 +27,7 @@
         </div>
     </div>
 
-
-    @yield("scripts")
+    @include("admin.includes.script")
+    {{-- @yield("scripts") --}}
 </body>
 </html>
