@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: localhost:3306
--- Tiempo de generación: 24-08-2021 a las 05:32:43
+-- Tiempo de generación: 25-08-2021 a las 16:50:26
 -- Versión del servidor: 10.4.16-MariaDB
 -- Versión de PHP: 7.4.12
 
@@ -156,7 +156,8 @@ INSERT INTO `colorstyle` (`id`, `name`, `nameFile`, `url`, `rute`, `dateCreate`,
 (2, 'Olivar', 'olivar.css', 'public/web/css/theme-colors/olivar.css', 'public/web/css/theme-colors/olivar.css', '2021-06-27 13:54:22', '1'),
 (3, 'Planicie Sur', 'planicie-sur.css', 'public/web/css/theme-colors/planicie-sur.css', 'public/web/css/theme-colors/planicie-sur.css', '2021-06-27 13:54:22', '1'),
 (4, 'El Palmar de Surco', 'el-palmar-de-surco.css', 'public/web/css/theme-colors/el-palmar-de-surco.css', 'public/web/css/theme-colors/el-palmar-de-surco.css', '2021-06-27 13:54:22', '1'),
-(5, 'Mercado Santa Rosa', 'mercado-santa-rosa.css', 'public/web/css/theme-colors/mercado-santa-rosa.css', 'public/web/css/theme-colors/mercado-santa-rosa.css', '2021-06-27 13:54:22', '1');
+(5, 'Mercado Santa Rosa', 'mercado-santa-rosa.css', 'public/web/css/theme-colors/mercado-santa-rosa.css', 'public/web/css/theme-colors/mercado-santa-rosa.css', '2021-06-27 13:54:22', '1'),
+(6, 'Condominio Oasis', 'olivar.css', 'public/web/css/theme-colors/olivar.css', 'public/web/css/theme-colors/olivar.css', '2021-08-24 08:42:50', '1');
 
 -- --------------------------------------------------------
 
@@ -174,6 +175,7 @@ CREATE TABLE `company` (
   `instagram` varchar(250) COLLATE utf8mb4_spanish2_ci DEFAULT NULL,
   `tiktok` varchar(250) COLLATE utf8mb4_spanish2_ci DEFAULT NULL,
   `linkedin` varchar(250) COLLATE utf8mb4_spanish2_ci DEFAULT NULL,
+  `youtube` varchar(250) COLLATE utf8mb4_spanish2_ci NOT NULL,
   `office_latitud` varchar(50) COLLATE utf8mb4_spanish2_ci NOT NULL,
   `office_longitud` varchar(50) COLLATE utf8mb4_spanish2_ci NOT NULL,
   `office_address` varchar(250) COLLATE utf8mb4_spanish2_ci NOT NULL
@@ -183,8 +185,8 @@ CREATE TABLE `company` (
 -- Volcado de datos para la tabla `company`
 --
 
-INSERT INTO `company` (`id`, `name`, `icon`, `logo`, `phone`, `facebook`, `instagram`, `tiktok`, `linkedin`, `office_latitud`, `office_longitud`, `office_address`) VALUES
-(1, 'Inmobiliaria Huertas', 46, 1, '+51 984 403 239', 'https://www.facebook.com/huertas.inmobiliaria', 'https://instagram.com/huertas.inmobiliaria?utm_medium=copy_link', 'https://vm.tiktok.com/ZMdogLs77/', 'https://www.linkedin.com/company/huertas-inmobiliaria', '-12.69175', '-76.635918', 'Av. Marchand mz 21 lote 21. A media cuadra del Mercado Principal de Mala.');
+INSERT INTO `company` (`id`, `name`, `icon`, `logo`, `phone`, `facebook`, `instagram`, `tiktok`, `linkedin`, `youtube`, `office_latitud`, `office_longitud`, `office_address`) VALUES
+(1, 'Inmobiliaria Huertas', 46, 1, '+51 984 403 239', 'https://www.facebook.com/huertas.inmobiliaria', 'https://instagram.com/huertas.inmobiliaria?utm_medium=copy_link', 'https://vm.tiktok.com/ZMdogLs77/', 'https://www.linkedin.com/company/huertas-inmobiliaria', 'https://www.youtube.com/channel/UCaBE6aiTJxrOYdtO2AGi8RQ', '-12.69175', '-76.635918', 'Av. Marchand mz 21 lote 21. A media cuadra del Mercado Principal de Mala.');
 
 -- --------------------------------------------------------
 
@@ -314,7 +316,7 @@ INSERT INTO `picture` (`id`, `name`, `type`, `rute`, `nameRute`, `description`, 
 (46, 'ICONO-HUERTAS.png', 'png', 'public/web/images/ICONO-HUERTAS.png', 'public/web/images/', '', '2021-08-04 19:56:19', '1'),
 (47, '1-BANNER.png', 'png', 'public/web/images/banner/1-BANNER.png', 'public/web/images/banner/', '', '2021-08-16 09:51:31', '1'),
 (48, '2-BANNER.png', 'png', 'public/web/images/banner/2-BANNER.png', 'public/web/images/banner/', '', '2021-08-16 09:51:31', '1'),
-(49, '3-BANNER.png', 'png', 'public/web/images/banner/3-BANNER.png', 'public/web/images/banner/', '', '2021-08-16 09:51:31', '1'),
+(49, '3-BANNER-.png', 'png', 'public/web/images/banner/3-BANNER-.png', 'public/web/images/banner/', '', '2021-08-16 09:51:31', '1'),
 (50, '4-BANNER.png', 'png', 'public/web/images/banner/4-BANNER.png', 'public/web/images/banner/', '', '2021-08-16 09:51:31', '1'),
 (51, 'PORTADA-condominio-falcon.png', 'png', 'public/web/images/proyect-banner/PORTADA-condominio-falcon.png', 'public/web/images/proyect-banner/', '', '2021-08-16 10:57:28', '1'),
 (52, 'PORTADA-mercado-santa-rosa.png', 'png', 'public/web/images/proyect-banner/PORTADA-mercado-santa-rosa.png', 'public/web/images/proyect-banner/', '', '2021-08-16 10:57:28', '1'),
@@ -384,7 +386,7 @@ CREATE TABLE `property` (
 INSERT INTO `property` (`id`, `idCategory`, `idUser`, `name`, `slug`, `description`, `youtube`, `idPictureCover`, `initialFeeSoles`, `initialFeeDollars`, `spotPriceSoles`, `cashPriceDollars`, `monthlyFees`, `idNovelty`, `latitude`, `longitude`, `officeAddress`, `projectAddress`, `phone`, `dateCreate`, `status`, `idColor`, `idPictureCoverPage`, `idIconMap`, `province`) VALUES
 (1, 1, 1, 'Condominio Campestre El Olivar', 'condominio-campestre-el-olivar', 'Vivir en un ambiente tranquilo y con increíbles oportunidades para disfrutar en familia es una\r\nde las mejores cosas que se puede invertir y tener: ciclovías, parques temáticos, canchas deportivas, área de ejercicio, club house y mucho más. Todo esto lo encuentras en nuestro Condominio Campestre El Olivar.', 'aprXPqp4D7A', 2, '1500', '650', '300000', '120000', '36', 1, '-12.0476351', '-76.9237588', 'Calle Luis Espejo 1097, Cercado de Lima 15034', 'Av. Camino real con Av. Tres (A 100 metros)', '987654321', '2021-06-26 13:33:02', '1', 2, 63, 65, 'Cañete'),
 (2, 1, 1, 'Condominio Falcon', 'condominio-falcon', 'Un lugar moderno y seguro, ubicado en San Juan de Lurigancho, uno de los distritos con mayor desarrollo comercial y social. Si te inquieta la seguridad, Condominio Falcon posee un pórtico de ingreso y cerco que rodea todo el perímetro, te invitamos a conocer más sobre nuestro proyecto y darte la oportunidad de construir tu hogar con nosotros.', 'bQpYV3WZ47I', 3, '1500', '650', '300000', '120000', '36', 1, '-12.0476351', '-76.9237588', 'Calle Luis Espejo 1097, Cercado de Lima 15034', 'Av. Camino real con Av. Tres (A 100 metros) ffff', '987654321', '2021-06-26 20:16:47', '1', 1, 51, 66, 'Lima'),
-(3, 1, 1, 'Condominio Oasis', 'condominio-oasis', 'Nuestro Oasis Condominio tiene todo lo que buscas de una gran oportunidad de invertir en el mejor lugar.\r\nEl proyecto cuenta con una excelente ubicación cerca de la ciudad de Cañete, donde podrás vivir en armonía con la naturaleza y el mar.\r\nUn proyecto seguro y rentable ¿Qué esperas para cumplir el sueño de la casa propia?', 'OrxWcQB4ueg', 4, '1500', '650', '300000', '150000', '40', 1, '-12.0476351', '-76.9237588', 'Calle Luis Espejo 1097, Cercado de Lima 15034', 'Av. Camino real con Av. Tres (A 100 metros)', '987654321', '2021-06-26 20:16:47', '1', 0, 64, 67, 'Cusco'),
+(3, 1, 1, 'Condominio Oasis', 'condominio-oasis', 'Nuestro Oasis Condominio tiene todo lo que buscas de una gran oportunidad de invertir en el mejor lugar.\r\nEl proyecto cuenta con una excelente ubicación cerca de la ciudad de Cañete, donde podrás vivir en armonía con la naturaleza y el mar.\r\nUn proyecto seguro y rentable ¿Qué esperas para cumplir el sueño de la casa propia?', 'OrxWcQB4ueg', 4, '1500', '650', '300000', '150000', '40', 1, '-12.0476351', '-76.9237588', 'Calle Luis Espejo 1097, Cercado de Lima 15034', 'Av. Camino real con Av. Tres (A 100 metros)', '987654321', '2021-06-26 20:16:47', '1', 6, 64, 67, 'Cusco'),
 (6, 1, 1, 'Planicie Sur', 'planicie-sur', 'Este es el momento indicado. Planicie Sur de Cañete, es el lugar ideal para construir ese hogar que anhelas, respirar aire puro y disfrutar de la tranquilidad y naturaleza. Contamos con lotes ecológicos a precios de súper oferta ¿Qué esperas para cumplir tus sueños?', 'OrxWcQB4ueg', 6, '1500', '650', '300000', '120000', '45', 1, '-12.0476351', '-76.9237588', 'Calle Luis Espejo 1097, Cercado de Lima 15034', 'Av. Camino real con Av. Tres (A 100 metros)', '987654321', '2021-06-26 20:35:05', '1', 3, 53, 68, 'Cañete'),
 (7, 1, 1, 'Mega Mercado Santa Rosa', 'mega-mercado-santa-rosa', 'Diseñado con un estilo totalmente innovador y sorprendente, nuestro mega mercado reúne la más completa oferta comercial del sector, acorde a las preferencias del público de su zona de influencia.\r\nEn el Mega Mercado Santa Rosa podrás encontrar la más amplia gama de ofertas y afines. Cuenta con la mayor cantidad de espacios abiertos y áreas verdes, siguiendo las últimas tendencias mundiales en diseño, arquitectura y construcción.', 'OrxWcQB4ueg', 5, '1500', '650', '350000', '150000', '55', 1, '-12.0476351', '-76.9237588', 'Calle Luis Espejo 1097, Cercado de Lima 15034', 'Av. Camino real con Av. Tres (A 100 metros)', '987654321', '2021-06-26 20:36:52', '1', 5, 52, 69, 'Arequipa'),
 (8, 1, 1, 'El Palmar de Surco', 'el-palmar-de-surco', 'Tu nuevo departamento te espera, El Palmar de Surco ubicado a un paso de la base aérea Las Palmas. Vivirás rodeado de parques, supermercados, colegios, hospitales y más.', 'EszBkjtG7wA', 1, '1500', '650', '350000', '150000', '55', 1, '-12.0476351', '-76.9237588', 'Calle Luis Espejo 1097, Cercado de Lima 15034', 'Av. Camino real con Av. Tres (A 100 metros)', '987654321', '2021-06-27 11:46:30', '1', 4, 7, 70, 'Cañete'),
@@ -709,7 +711,7 @@ ALTER TABLE `clientreferred`
 -- AUTO_INCREMENT de la tabla `colorstyle`
 --
 ALTER TABLE `colorstyle`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT de la tabla `company`
