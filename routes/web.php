@@ -79,6 +79,9 @@ Route::get('/admin/novedades', [NovedadesAdminController::class, 'index'])->name
 Route::get('/admin/contactanos', [ContactanosAdminController::class, 'index'])->name('admin.contactanos');
 Route::get('/admin/configuracion', [ConfiguracionAdminController::class, 'index'])->name('admin.configuracion');
 
+
+// miguel
+
 /*
 Route::group(['middleware'=>'permissions:products'],function(){
     // CREATE SECTION
