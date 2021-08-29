@@ -18,7 +18,7 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a href={{ route("admin.proyecto") }} class="nav-link">
+                <a href={{ route("properties.index") }} class="nav-link">
                     <i class="link-icon" data-feather="code"></i>
                     <span class="link-title">Proyectos</span>
                 </a>
@@ -36,7 +36,7 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a href={{ route("admin.novedades") }} class="nav-link">
+                <a href={{ route("novelties.index") }} class="nav-link">
                     <i class="link-icon" data-feather="clock"></i>
                     <span class="link-title">Novedades</span>
                 </a>

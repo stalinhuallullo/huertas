@@ -19,7 +19,6 @@ use App\Http\Controllers\Admin\PropertyController;
 
 use App\Http\Controllers\Admin\ServicioAdminController;
 use App\Http\Controllers\Admin\NosotrosAdminController;
-use App\Http\Controllers\Admin\NovedadesAdminController;
 use App\Http\Controllers\Admin\ContactanosAdminController;
 use App\Http\Controllers\Admin\ConfiguracionAdminController;
 
@@ -71,11 +70,18 @@ Route::get('/admin/iniciar-sesion', [LoginAdminController::class, 'index'])->nam
 Route::get('/admin/dashboard', [DashboardAdminController::class, 'index'])->name('admin.dashboard');
 Route::get('/admin/inicio', [InicioAdminController::class, 'index'])->name('admin.inicio');
 
-Route::get('/admin/proyecto', [PropertyController::class, 'index'])->name('admin.proyecto');
+//Route::get('/admin/proyecto', [PropertyController::class, 'index'])->name('admin.proyecto');
+
+//Route::get('/admin/proyecto/crear', [PropertyController::class, 'create'])->name('admin.create');
+
+Route::resource('admin/proyecto', PropertyController::class)->names('properties');
+
+Route::resource('admin/novedades', \App\Http\Controllers\Admin\NoveltyController::class)->names('novelties');
+
 
 Route::get('/admin/servicio', [ServicioAdminController::class, 'index'])->name('admin.servicio');
 Route::get('/admin/nosotros', [NosotrosAdminController::class, 'index'])->name('admin.nosotros');
-Route::get('/admin/novedades', [NovedadesAdminController::class, 'index'])->name('admin.novedades');
+//Route::get('/admin/novedades', [NovedadesAdminController::class, 'index'])->name('admin.novedades');
 Route::get('/admin/contactanos', [ContactanosAdminController::class, 'index'])->name('admin.contactanos');
 Route::get('/admin/configuracion', [ConfiguracionAdminController::class, 'index'])->name('admin.configuracion');
 

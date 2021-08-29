@@ -2,85 +2,74 @@
 
 @section('content')
 
-{{--
-    <div class="row">
-        <div class="col-md-12 grid-margin stretch-card">
-            <div class="card">
-                <div class="card-body">
-                    <h6 class="card-title">Numero de Proyectos</h6>
-                    <form>
-                        <div class="row">
-                            <div class="col-sm-6">
-                                <div class="form-group">
-                                    <select class="form-control" id="exampleFormControlSelect1">
-                                        <option selected="" disabled="">Proyectos</option>
-                                        <option>1</option>
-                                        <option>2</option>
-                                        <option>3</option>
-                                        <option>4</option>
-                                        <option>5</option>
-                                        <option>6</option>
-                                        <option>7</option>
-                                    </select>
-                                </div>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="card">
+                    <div class="card-header">
+                        <div style="display: flex; justify-content: space-between; align-items: center;">
+
+                            <span id="card_title">
+                                {{ __('Property') }}
+                            </span>
+
+                            <div class="float-right">
+                                <a href="{{ route('properties.create') }}" class="btn btn-primary btn-sm float-right"  data-placement="left">
+                                    {{ __('Create New') }}
+                                </a>
                             </div>
                         </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div> --}}
+                    </div>
+                    @if ($message = Session::get('success'))
+                        <div class="alert alert-success">
+                            <p>{{ $message }}</p>
+                        </div>
+                    @endif
 
-    <div class="row">
-        <div class="col-md-12 stretch-card">
-            <div class="card">
-                <div class="card-body">
-                    <h6 class="card-title">PROYECTOS</h6>
-
-                    <div class="row">
+                    <div class="card-body">
                         <div class="table-responsive">
-                            <table class="table table-hover mb-0">
-                                <thead>
+                            <table class="table table-striped table-hover">
+                                <thead class="thead">
                                 <tr>
-                                    <th class="pt-0" style="width:70px">#</th>
-                                    <th class="pt-0">NOMBRE</th>
-                                    <th class="pt-0">DESCRIPCION</th>
-                                    <th class="pt-0" style="width:100px">ACCIONES</th>
+                                    <th>#</th>
+                                    <th>Nombre</th>
+                                    <th>Estado </th>
+                                    <th>Acción </th>
                                 </tr>
                                 </thead>
                                 <tbody>
-
-
-                                @if($propertys->count())
-                                    @foreach($propertys as $prop)
-                                        <tr>
-                                    <td>{{$prop->id}}</td>
-                                    <td>{{$prop->name}}</td>
-                                    <td>{{$prop->projectAddress}}</td>
-                                    <td>
-                                        <a href="/editar" class="btn btn-primary shadow btn-xs sharp mr-1"><i class="fa fa-pencil-square-o"></i></a>
-                                        <a href="/elimiar" class="btn btn-danger shadow btn-xs sharp mr-1"><i class="fa fa-remove"></i></a>
-                                    </td>
-                                </tr>
-
-                                    @endforeach
-                                @else
+                                @foreach ($properties as $property)
                                     <tr>
-                                        <td colspan="4">No hay registro !!</td>
-                                    </tr>
-                                @endif
+                                        <td>{{ ++$i }}</td>
 
+                                        <td>{{ $property->name }}</td>
+                                        <td>{{ $property->status }}</td>
+
+
+
+
+
+                                        <td>
+                                            <form action="{{ route('properties.destroy',$property->id) }}" method="POST">
+                                                <a class="btn btn-sm btn-primary " href="{{ route('properties.show',$property->id) }}"><i class="fa fa-fw fa-eye"></i> Ver</a>
+                                                <a class="btn btn-sm btn-success" href="{{ route('properties.edit',$property->id) }}"><i class="fa fa-fw fa-edit"></i> Editar</a>
+                                                @csrf
+                                                @method('DELETE')
+                                                <button type="submit" class="btn btn-danger btn-sm"><i class="fa fa-fw fa-remove"></i> Eliminar</button>
+                                            </form>
+                                        </td>
+                                    </tr>
+                                @endforeach
                                 </tbody>
                             </table>
                         </div>
                     </div>
-
-                    {{-- <button type="button" class="btn btn-primary submit">Submit form</button> --}}
                 </div>
+                {!! $properties->links() !!}
             </div>
         </div>
     </div>
-
 
 
 @endsection
