@@ -27,21 +27,46 @@
 {{--        </div>--}}
 
         <div class="form-group">
-            {{ Form::label('Imagen portada') }}
-            {{Form::file('images', ['class' => 'form-control' . ($errors->has('images') ? ' is-invalid' : ''), 'placeholder' => 'Imagenes', 'accept' => 'image/*'])}}
-            {!! $errors->first('images', '<div class="invalid-feedback">:message</p>') !!}
+            <div class="row">
+                <div class="col-6">
+                    {{ Form::label('Imegenes de Sliders') }}
+                    {{Form::file('sliders[]', ['class' => 'form-control' . ($errors->has('images') ? ' is-invalid' : ''), 'multiple' => true, 'placeholder' => 'Imagenes', 'accept' => 'image/*'])}}
+                    {!! $errors->first('sliders', '<div class="invalid-feedback">:message</p>') !!}
+                </div>
+                <div class="col-6" style="background-color: #f3f3f3;">
+                    @foreach($sliders as $banner)
+                        <div class="banner__item banner__promo">
+                            <img src="{{asset($banner->cover_rute)}}" alt="" width="120px;" style="float:right">
+                        </div>
+                    @endforeach
+                </div>
+            </div>
         </div>
 
         <div class="form-group">
-            {{ Form::label('Banner anuncio') }}
-            {{Form::file('banner', ['class' => 'form-control' . ($errors->has('image') ? ' is-invalid' : ''), 'placeholder' => 'Image', 'accept' => 'image/*'])}}
-            {!! $errors->first('banner', '<div class="invalid-feedback">:message</p>') !!}
+            <div class="row">
+                <div class="col-6">
+                    {{ Form::label('Banner anuncio') }}
+                    {{Form::file('banner', ['class' => 'form-control' . ($errors->has('image') ? ' is-invalid' : ''), 'placeholder' => 'Image', 'accept' => 'image/*'])}}
+                    {!! $errors->first('banner', '<div class="invalid-feedback">:message</p>') !!}
+                </div>
+                <div class="col-6" style="background-color: #f3f3f3;">
+                    <img src="{{ asset('public/'. $home->banner) }}" style="width:100px; float:right"/>
+                </div>
+            </div>
         </div>
 
         <div class="form-group">
-            {{ Form::label('Imagen Formulario') }}
-            {{Form::file('bannerForm', ['class' => 'form-control' . ($errors->has('image') ? ' is-invalid' : ''), 'placeholder' => 'Image', 'accept' => 'image/*'])}}
-            {!! $errors->first('bannerForm', '<div class="invalid-feedback">:message</p>') !!}
+            <div class="row">
+                <div class="col-6">
+                    {{ Form::label('Imagen Formulario') }}
+                    {{Form::file('bannerForm', ['class' => 'form-control' . ($errors->has('image') ? ' is-invalid' : ''), 'placeholder' => 'Image', 'accept' => 'image/*'])}}
+                    {!! $errors->first('bannerForm', '<div class="invalid-feedback">:message</p>') !!}
+                </div>
+                <div class="col-6"  style="background-color: #f3f3f3;">
+                    <img src="{{ asset('public/'. $home->bannerForm) }}" style="width:100px; float:right;"/>
+                </div>
+            </div>
         </div>
 
     </div>

@@ -12,6 +12,7 @@
     <link type="text/css" rel="stylesheet" href="{{asset('public/admin/vendor/flag-icon-css/css/flag-icon.min.css')}}">
     <link type="text/css" rel="stylesheet" href="{{asset('public/admin/css/style.css')}}">
     <link type="text/css" rel="stylesheet" href="{{asset('public/admin/css/font-awesome.min.css')}}">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.0/css/jquery.dataTables.css">
     @yield("style")
 </head>
 <body class="sidebar-dark">

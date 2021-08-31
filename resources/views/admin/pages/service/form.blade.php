@@ -13,12 +13,6 @@
             {!! $errors->first('description', '<div class="invalid-feedback">:message</p>') !!}
         </div>
 
-        <div class="form-group">
-            {{ Form::label('description') }}
-            {{ Form::text('description', $service->description, ['class' => 'form-control' . ($errors->has('description') ? ' is-invalid' : ''), 'placeholder' => 'Description']) }}
-            {!! $errors->first('description', '<div class="invalid-feedback">:message</p>') !!}
-        </div>
-
 {{--        <div class="form-group">--}}
 {{--            {{ Form::label('image') }}--}}
 {{--            {{ Form::text('image', $service->image, ['class' => 'form-control' . ($errors->has('image') ? ' is-invalid' : ''), 'placeholder' => 'Image']) }}--}}

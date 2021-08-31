@@ -43,8 +43,8 @@
                                     <div class="row">
                                         <div class="col-md-12">
 
-                                            <div class="table-responsive">
-                                                <table class="table table-striped table-hover">
+
+                                                <table class="display" id="myTable">
                                                     <thead class="thead">
                                                     <tr>
                                                         <th>No</th>
@@ -64,15 +64,15 @@
 
                                                             <td>{{ $service->title }}</td>
                                                             <td>{{ $service->description }}</td>
-                                                            <td>{{ $service->image }}</td>
+                                                            <td><img src="{{asset('public'.$service->image)}}" style="width:90px"/></td>
 
                                                             <td>
                                                                 <form action="{{ route('services.destroy',$service->id) }}" method="POST">
 {{--                                                                    <a class="btn btn-sm btn-primary " href="{{ route('services.show',$service->id) }}"><i class="fa fa-fw fa-eye"></i> Show</a>--}}
-                                                                    <a class="btn btn-sm btn-success" href="{{ route('services.edit',$service->id) }}"><i class="fa fa-fw fa-edit"></i> Edit</a>
+                                                                    <a class="btn btn-sm btn-success" href="{{ route('services.edit',$service->id) }}"><i class="fa fa-fw fa-edit"></i> </a>
                                                                     @csrf
                                                                     @method('DELETE')
-                                                                    <button type="submit" class="btn btn-danger btn-sm"><i class="fa fa-fw fa-remove"></i> Delete</button>
+                                                                    <button type="submit" class="btn btn-danger btn-sm"><i class="fa fa-fw fa-remove"></i> </button>
                                                                 </form>
                                                             </td>
                                                         </tr>
@@ -80,7 +80,7 @@
                                                     </tbody>
 
                                                 </table>
-                                            </div>
+
 
 
                                         </div>

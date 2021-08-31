@@ -42,7 +42,7 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a href={{ route("admin.contactanos") }} class="nav-link">
+                <a href={{ route("clientreferreds.index") }} class="nav-link">
                     <i class="link-icon" data-feather="phone-forwarded"></i>
                     <span class="link-title">Contactanos</span>
                 </a>

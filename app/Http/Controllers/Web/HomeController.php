@@ -3,10 +3,12 @@
 namespace App\Http\Controllers\Web;
 
 use App\Http\Controllers\Controller;
+use App\Models\Home;
 use App\Models\Property;
 use App\Models\Company;
 use App\Models\Banner;
 use App\Models\PageEnum;
+use DB;
 
 class HomeController extends Controller
 {
@@ -18,6 +20,8 @@ class HomeController extends Controller
 
     public function index()
     {
+        $home = Home::first();
+
         $propertys = Property::select(
                 "property.id",
                 "property.name",
@@ -42,6 +46,8 @@ class HomeController extends Controller
             ->join('picture as cover', 'cover.id', '=', 'banners.idPictureBanner')
             ->get();
 
+
+
         //echo json_encode($banners);
         //exit;
 
@@ -51,6 +57,7 @@ class HomeController extends Controller
             "sub_menu" => "",
             "banners" => $banners,
             "select_form" => false,
+            "home" => $home
         ];
 
         return view('web.pages.home.index', $data);

@@ -23,8 +23,8 @@
         <meta property="og:description" content="{{ $cache_pageseo->description }}">
         <meta property="og:image" content="{{asset($cache_company->logo_rute)}}">
     @else
-        <title>...</title>
-        <meta name="description" content="...">
+        <title>@yield('title')</title>
+        <meta name="description" content="@yield('description')">
     @endif
 
     @if(isset($cache_company))

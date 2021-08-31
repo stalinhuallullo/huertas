@@ -2,7 +2,6 @@
 
 @section('content')
 
-
     <div class="container-fluid">
         <div class="row">
             <div class="col-sm-12">
@@ -44,13 +43,12 @@
                                     <div class="col-md-12">
 
 
-                                        <div class="table-responsive">
-                                            <table class="table table-striped table-hover">
-                                                <thead class="thead">
+                                            <table class="display" id="myTable">
+                                                <thead>
                                                 <tr>
-                                                    <th>#</th>
+                                                    <th># </th>
                                                     <th>Nombre</th>
-                                                    <th>Estado </th>
+                                                    <th>Descripción </th>
                                                     <th>Acción </th>
                                                 </tr>
                                                 </thead>
@@ -60,22 +58,22 @@
                                                         <td>{{ ++$i }}</td>
 
                                                         <td>{{ $property->name }}</td>
-                                                        <td>{{ $property->status }}</td>
+                                                        <td>{{ $property->description }}</td>
 
                                                         <td>
                                                             <form action="{{ route('properties.destroy',$property->id) }}" method="POST">
 {{--                                                                <a class="btn btn-sm btn-primary " href="{{ route('properties.show',$property->id) }}"><i class="fa fa-fw fa-eye"></i> Ver</a>--}}
-                                                                <a class="btn btn-sm btn-success" href="{{ route('properties.edit',$property->id) }}"><i class="fa fa-fw fa-edit"></i> Editar</a>
+                                                                <a class="btn btn-sm btn-success" href="{{ route('properties.edit',$property->id) }}"><i class="fa fa-fw fa-edit"></i></a>
                                                                 @csrf
                                                                 @method('DELETE')
-                                                                <button type="submit" class="btn btn-danger btn-sm"><i class="fa fa-fw fa-remove"></i> Eliminar</button>
+                                                                <button type="submit" class="btn btn-danger btn-sm"><i class="fa fa-fw fa-remove"></i></button>
                                                             </form>
                                                         </td>
                                                     </tr>
                                                 @endforeach
                                                 </tbody>
                                             </table>
-                                        </div>
+
 
 
                                     </div>

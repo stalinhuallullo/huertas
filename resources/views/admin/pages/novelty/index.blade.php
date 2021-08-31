@@ -42,8 +42,8 @@
                                     <div class="col-md-12">
 
 
-                                        <div class="table-responsive">
-                                            <table class="table table-striped table-hover">
+
+                                            <table class="display" id="myTable">
                                                 <thead class="thead">
                                                 <tr>
                                                     <th>#</th>
@@ -66,17 +66,17 @@
                                                         <td>
                                                             <form action="{{ route('novelties.destroy',$novelty->id) }}" method="POST">
 {{--                                                                <a class="btn btn-sm btn-primary " href="{{ route('novelties.show',$novelty->id) }}"><i class="fa fa-fw fa-eye"></i> Show</a>--}}
-                                                                <a class="btn btn-sm btn-success" href="{{ route('novelties.edit',$novelty->id) }}"><i class="fa fa-fw fa-edit"></i> Edit</a>
+                                                                <a class="btn btn-sm btn-success" href="{{ route('novelties.edit',$novelty->id) }}"><i class="fa fa-fw fa-edit"></i></a>
                                                                 @csrf
                                                                 @method('DELETE')
-                                                                <button type="submit" class="btn btn-danger btn-sm"><i class="fa fa-fw fa-remove"></i> Delete</button>
+                                                                <button type="submit" class="btn btn-danger btn-sm"><i class="fa fa-fw fa-remove"></i></button>
                                                             </form>
                                                         </td>
                                                     </tr>
                                                 @endforeach
                                                 </tbody>
                                             </table>
-                                        </div>
+
 
 
                                     </div>

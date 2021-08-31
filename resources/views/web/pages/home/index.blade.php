@@ -1,5 +1,6 @@
 @extends('web.layouts.index')
-
+@section('title', $home->title)
+@section('description', $home->description)
 @section('content')
 
 
@@ -50,7 +51,7 @@
         </section>
 
         <section class="referidos-home">
-            <img class="image-all" src="{{asset('public/web/images/APOLO-.png')}}" style="width: 100%">
+            <img class="image-all" src="{{asset('public'.$home->banner)}}" style="width: 100%">
         </section>
 
         <!--<section class="referidos-home">
@@ -66,7 +67,8 @@
             <div class="container">
                 <div class="row">
                     @include("web.includes.form-contact-proyect", ["select_form" => $select_form])
-                    <div class="col-md-6 imagen" style="background-image: url({{asset('public/web/images/banner-2.jpg')}})">
+
+                    <div class="col-md-6 imagen" style="background-image: url({{asset('public'.$home->bannerForm)}})">
                     </div>
                 </div>
             </div>

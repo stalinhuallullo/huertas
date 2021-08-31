@@ -79,6 +79,9 @@ Route::put('/admin/inicio/{id}', [\App\Http\Controllers\Admin\HomeController::cl
 
 //Route::get('/admin/proyecto/crear', [PropertyController::class, 'create'])->name('admin.create');
 
+Route::resource('admin/contactanos', \App\Http\Controllers\Admin\ClientreferredController::class)->names('clientreferreds');
+
+
 Route::resource('admin/proyecto', PropertyController::class)->names('properties');
 Route::put('admin/servicios/proyecto/{id}', [\App\Http\Controllers\Admin\PropertyController::class, 'parameter'])->name('admin.properties.parameter');
 
@@ -91,7 +94,7 @@ Route::resource('admin/servicios', \App\Http\Controllers\Admin\ServiceController
 //Route::get('/admin/servicio', [ServicioAdminController::class, 'index'])->name('admin.servicio');
 Route::get('/admin/nosotros', [NosotrosAdminController::class, 'index'])->name('admin.nosotros');
 //Route::get('/admin/novedades', [NovedadesAdminController::class, 'index'])->name('admin.novedades');
-Route::get('/admin/contactanos', [ContactanosAdminController::class, 'index'])->name('admin.contactanos');
+//Route::get('/admin/contactanos', [ContactanosAdminController::class, 'index'])->name('admin.contactanos');
 Route::get('/admin/configuracion', [ConfiguracionAdminController::class, 'index'])->name('admin.configuracion');
 
 
