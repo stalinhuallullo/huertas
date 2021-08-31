@@ -10,8 +10,6 @@ class Property extends Model
 {
 
     static $rules = [
-        'idCategory' => 'required',
-        'idUser' => 'required',
         'name' => 'required',
         'slug' => 'required',
         'description' => 'required',

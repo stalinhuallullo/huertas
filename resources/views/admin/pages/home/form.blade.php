@@ -2,8 +2,8 @@
     <div class="box-body">
 
         <div class="form-group">
-            {{ Form::label('title') }}
-            {{ Form::text('title', $home->title, ['class' => 'form-control' . ($errors->has('title') ? ' is-invalid' : ''), 'placeholder' => 'title']) }}
+            {{ Form::label('Título Página') }}
+            {{ Form::text('title', $home->title, ['class' => 'form-control' . ($errors->has('title') ? ' is-invalid' : ''), 'placeholder' => 'Ingrese título Página']) }}
             {!! $errors->first('title', '<div class="invalid-feedback">:message</p>') !!}
         </div>
 
@@ -15,8 +15,8 @@
 
 
         <div class="form-group">
-            {{ Form::label('limit') }}
-            {{ Form::text('limit', $home->limit, ['class' => 'form-control' . ($errors->has('limit') ? ' is-invalid' : ''), 'placeholder' => 'limit']) }}
+            {{ Form::label('Máximo de resultados a mostrar') }}
+            {{ Form::text('limit', $home->limit, ['class' => 'form-control' . ($errors->has('limit') ? ' is-invalid' : ''), 'placeholder' => 'Ingrese número máximo']) }}
             {!! $errors->first('limit', '<div class="invalid-feedback">:message</p>') !!}
         </div>
 
@@ -28,7 +28,7 @@
 
         <div class="form-group">
             {{ Form::label('Imagen portada') }}
-            {{Form::file('images', ['class' => 'form-control' . ($errors->has('image') ? ' is-invalid' : ''), 'placeholder' => 'Imagenes', 'accept' => 'image/*'])}}
+            {{Form::file('images', ['class' => 'form-control' . ($errors->has('images') ? ' is-invalid' : ''), 'placeholder' => 'Imagenes', 'accept' => 'image/*'])}}
             {!! $errors->first('images', '<div class="invalid-feedback">:message</p>') !!}
         </div>
 

@@ -1,24 +1,25 @@
 <div class="box box-info padding-1">
     <div class="box-body">
-        <div class="form-group">
 
+{{--        <div class="form-group">--}}
+{{--            {{ Form::label('idCategory') }}--}}
+{{--            {{ Form::text('idCategory', $property->idCategory, ['class' => 'form-control' . ($errors->has('idCategory') ? ' is-invalid' : ''), 'placeholder' => 'Idcategory']) }}--}}
+{{--            {!! $errors->first('idCategory', '<div class="invalid-feedback">:message</p>') !!}--}}
 
+{{--        </div>--}}
 
-            {{ Form::label('idCategory') }}
-            {{ Form::text('idCategory', $property->idCategory, ['class' => 'form-control' . ($errors->has('idCategory') ? ' is-invalid' : ''), 'placeholder' => 'Idcategory']) }}
-            {!! $errors->first('idCategory', '<div class="invalid-feedback">:message</p>') !!}
+{{--        <div class="form-group">--}}
+{{--            {{ Form::label('idUser') }}--}}
+{{--            {{ Form::text('idUser', $property->idUser, ['class' => 'form-control' . ($errors->has('idUser') ? ' is-invalid' : ''), 'placeholder' => 'Iduser']) }}--}}
+{{--            {!! $errors->first('idUser', '<div class="invalid-feedback">:message</p>') !!}--}}
+{{--        </div>--}}
 
-        </div>
-        <div class="form-group">
-            {{ Form::label('idUser') }}
-            {{ Form::text('idUser', $property->idUser, ['class' => 'form-control' . ($errors->has('idUser') ? ' is-invalid' : ''), 'placeholder' => 'Iduser']) }}
-            {!! $errors->first('idUser', '<div class="invalid-feedback">:message</p>') !!}
-        </div>
         <div class="form-group">
             {{ Form::label('name') }}
             {{ Form::text('name', $property->name, ['class' => 'form-control' . ($errors->has('name') ? ' is-invalid' : ''), 'placeholder' => 'Name']) }}
             {!! $errors->first('name', '<div class="invalid-feedback">:message</p>') !!}
         </div>
+
         <div class="form-group">
             {{ Form::label('slug') }}
             {{ Form::text('slug', $property->slug, ['class' => 'form-control' . ($errors->has('slug') ? ' is-invalid' : ''), 'placeholder' => 'Slug']) }}
@@ -29,21 +30,25 @@
             {{ Form::textArea('description', $property->description, ['class' => 'form-control' . ($errors->has('description') ? ' is-invalid' : ''), 'placeholder' => 'Description']) }}
             {!! $errors->first('description', '<div class="invalid-feedback">:message</p>') !!}
         </div>
+
         <div class="form-group">
             {{ Form::label('youtube') }}
             {{ Form::text('youtube', $property->youtube, ['class' => 'form-control' . ($errors->has('youtube') ? ' is-invalid' : ''), 'placeholder' => 'Youtube']) }}
             {!! $errors->first('youtube', '<div class="invalid-feedback">:message</p>') !!}
         </div>
+
         <div class="form-group">
             {{ Form::label('idPictureCover') }}
             {{ Form::text('idPictureCover', $property->idPictureCover, ['class' => 'form-control' . ($errors->has('idPictureCover') ? ' is-invalid' : ''), 'placeholder' => 'Idpicturecover']) }}
             {!! $errors->first('idPictureCover', '<div class="invalid-feedback">:message</p>') !!}
         </div>
+
         <div class="form-group">
             {{ Form::label('initialFeeSoles') }}
             {{ Form::text('initialFeeSoles', $property->initialFeeSoles, ['class' => 'form-control' . ($errors->has('initialFeeSoles') ? ' is-invalid' : ''), 'placeholder' => 'Initialfeesoles']) }}
             {!! $errors->first('initialFeeSoles', '<div class="invalid-feedback">:message</p>') !!}
         </div>
+
         <div class="form-group">
             {{ Form::label('initialFeeDollars') }}
             {{ Form::text('initialFeeDollars', $property->initialFeeDollars, ['class' => 'form-control' . ($errors->has('initialFeeDollars') ? ' is-invalid' : ''), 'placeholder' => 'Initialfeedollars']) }}

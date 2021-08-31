@@ -58,7 +58,6 @@ class PropertyController extends Controller
     {
         request()->validate(Property::$rules);
 
-
         Property::create($request->all());
 
         return redirect()->route('properties.index')
