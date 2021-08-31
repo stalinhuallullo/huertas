@@ -551,7 +551,7 @@ body {
     .full-buttons a {
         width: 100%;
         text-align: center;
-        min-height: 100px
+        min-height: 180px;
     }
     .full-buttons a strong {
         font-size: 20px;
@@ -9531,7 +9531,7 @@ figure.promo-images a {
 .novedad {
     border-radius: 20px;
     overflow: hidden;
-    max-height: 530px;
+    /*max-height: 530px;*/
     width: calc(33.333% - 15px);
     display: block;
     position: relative;
@@ -9697,12 +9697,12 @@ figure.promo-images a {
     line-height: 24px;
     color: #A7A7A7;
     display: block;
-    display: -webkit-box;
+    /*display: -webkit-box;
     -webkit-line-clamp: 4;
     -webkit-box-orient: vertical;
     overflow: hidden;
     -o-text-overflow: ellipsis;
-    text-overflow: ellipsis
+    text-overflow: ellipsis*/
 }
 
 .novedad .novedad__info a {

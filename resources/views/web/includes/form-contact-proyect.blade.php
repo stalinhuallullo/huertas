@@ -4,7 +4,7 @@
 
     <form id="contactoproyecto" action="{{ route('web.proyect.coordinateVisit') }}" method="POST">
         @csrf
-        <div class="row" @if(isset($select_form)) style="display: none"@endif>
+        <div class="row" @if(isset($select_form) && $select_form) style="display: none"@endif>
             <div class="col-md-12">
                 <select class="form-control mb-25" name="proyect">
                     <option value="" selected="">Selecciones un proyecto</option>
@@ -12,6 +12,7 @@
                     @foreach($cache_nav_propertys as $nav_item)
                         <option value="{{ $nav_item["id"] }}">{{ $nav_item["name"] }}</option>
                     @endforeach
+                    <option value="deluxe">Apolo condominio</option>
                 </select>
             </div>
         </div>

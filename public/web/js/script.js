@@ -29,88 +29,6 @@ var flecha2= '';
 
 $(document).ready(function(){
 
-    var options = {
-		dataType: 'json',
-		type: 'post',
-		clearForm:true,
-     beforeSend: function() {
-       $('#formulario .btn-menorca-light').val('Enviando...');
-       $('#formulario .btn-menorca-light').attr('disabled',true);
-
-         $('#contactoproyecto360 .btn-menorca-light').val('Enviando...');
-         $('#contactoproyecto360 .btn-menorca-light').attr('disabled',true);
-
-    },
-		success: function(res){
-            //alert(res.res);
-
-            $('#formulario .btn-menorca-light').val('Enviar mis datos');
-            $('#formulario .btn-menorca-light').attr('disabled',false);
-
-            $('#contactoproyecto360 .btn-menorca-light').val('Enviar mis datos');
-            $('#contactoproyecto360 .btn-menorca-light').attr('disabled',false);
-            //alert(res.res);
-
-            console.log(res);
-
-
-
-            if(res.res == "ok"){
-
-                //$('#formulario form .sub-res').empty();
-                //$('#formulario form .sub-res').append(respuesta);
-                localStorage.setItem("idlead",res.idlead);
-                $('#success').modal('show');
-
-                datosFormulario(res.datos);
-
-			}
-        },
-    };
-
-    var optionsformulario = {
-        dataType: 'json',
-        type: 'post',
-        clearForm:true,
-        beforeSend: function() {
-            $('#formulario .btn-menorca-light').val('Enviando...');
-            $('#formulario .btn-menorca-light').attr('disabled',true);
-
-        },
-        success: function(res){
-            //alert(res.res);
-
-            $('#formulario .btn-menorca-light').val('Enviar mis datos');
-            $('#formulario .btn-menorca-light').attr('disabled',false);
-
-            console.log(res);
-
-
-
-            if(res.res == "ok"){
-
-                //$('#formulario form .sub-res').empty();
-                //$('#formulario form .sub-res').append(respuesta);
-                console.log('conversion');
-
-
-                localStorage.setItem("idlead",res.idlead);
-                $('#confirmo').modal('show');
-
-                dataLayer.push({
-                  event: 'formulario_enviado',
-                  eventModel: {send_to: 'AW-992151703/Q5gxCO7twbEBEJeRjNkD'},
-                })
-
-                datosFormulario(res.datos);
-
-            }
-        },
-    };
-
-    $("#formulario form").ajaxForm(optionsformulario);
-    $("#informes360modal form").ajaxForm(options);
-
 
     var options = {
 		dataType: 'json',
@@ -215,15 +133,8 @@ $(document).ready(function(){
 
 
 
-
-     if(alias === 'caleta-san-antonio'){
-        flecha1 = 'flecha-5.svg';
-        flecha2 = 'flecha-6.svg';
-     }
-     else{
         flecha1 = 'flecha-1.svg';
         flecha2 = 'flecha-2.svg';
-     }
 
 
 
@@ -285,23 +196,6 @@ $(document).ready(function(){
         franja(page);
 
     },2000);*/
-
-
-    $('.buton-social').click(function(){
-
-        new Request("promocion/contador/",null, function (result) {
-            console.log(result);
-            //$('.franja i').html(count);
-        },'POST');
-
-        new Request("promocion/getContador/",null, function (result) {
-            //console.log(result[0]);
-            $('.franja i').html(result[0].count);
-        },'GET');
-
-
-    });
-
 
 
      $('.conoce-aqui').on('click',function () {

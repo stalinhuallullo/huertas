@@ -98,15 +98,11 @@ function abrirInformacionLegal(){
     $("#legalmodal").modal("show");
 }
 
-function initStreet(pro_coordenada, ofi_coordenada) {
+function initStreet(pro_coordenada) {
     let lat = parseFloat(pro_coordenada[0]);
     let long = parseFloat(pro_coordenada[1]);
 
-    let oflat = parseFloat(ofi_coordenada[0]);
-    let oflong = parseFloat(ofi_coordenada[1]);
-
-    let imageIco = $("#inputHiddenIcon").val();
-
+    let inputHiddenIcon = $("#inputHiddenIcon").val();
 
     //var map = L.map('map').setView([lat,long], 13);
 
@@ -128,32 +124,18 @@ function initStreet(pro_coordenada, ofi_coordenada) {
 
     var myIcon = L.icon({
         //iconUrl: path + "public/web/files/proyecto/marker_" + alias + ".svg",
-        iconUrl: path + "public/web/images/ICONO-HUERTAS.png",
+        //iconUrl: path + "public/web/images/ICONO-HUERTAS.png",
+        iconUrl: path+inputHiddenIcon,
         iconSize: [100, 100], // size of the icon
     });
-
-    var myIcon2 = L.icon({
-        //iconUrl: path + "public/web/images/marker-menorca.svg",
-        iconUrl: path + imageIco,
-        iconSize: [65, 65], // size of the icon
-    });
-
 
     var contentString = '<div class="infowin">' +
         '<p>' + locations[0][0] + '</p>' +
         '</div>';
 
-    var contentString2 = '<div class="infowin">' +
-        '<p>' + locations[1][0] + '</p>' +
-        '</div>';
-
-
     var layergroup = L.featureGroup().addTo(map);
 
-    //var marker = L.marker([lat, long], {icon: myIcon}).addTo(layergroup).bindPopup(contentString);
-
-    var marker2 = L.marker([oflat, oflong], {icon: myIcon2}).addTo(layergroup).bindPopup(contentString2);
-
+    var marker = L.marker([lat, long], {icon: myIcon}).addTo(layergroup).bindPopup(contentString);
 
     map.fitBounds(layergroup.getBounds());
 }

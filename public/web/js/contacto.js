@@ -1,7 +1,7 @@
 locations = [
     ["Av Los Educadores S/N", "-14.0491437", "-75.7341392"],
     ["Av. Javier Prado Este 488 (Torre Orquídeas) San Isidro", "-12.0919094", "-77.0305233"],
-    ["Av. Marchand mz 21 lote 21. A media cuadra del Mercado Principal de Mala. ", "-12.69175", "-76.635918"],
+    ["Av. Marchand mz 21 lote 21. A media cuadra del Mercado Principal de Mala. dddd", "-12.69175", "-76.635918"],
     [" Av. Francisco Bolognesi 159 a 1/2 cdra de la plaza de armas de Pisco.", "-13.7095032", "-76.206692"],
     ["Av. Sanchez Cerro cruce con Av. Marcavelica.", "-5.18311", "-80.65446"],
     ["Av. Victor Malasquez km 8.6", "-12.15619", "-76.86869"],

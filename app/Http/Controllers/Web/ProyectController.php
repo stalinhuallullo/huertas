@@ -83,6 +83,7 @@ class ProyectController extends Controller
             ->where("property.status", "1")
             ->first();
 
+
         $property_color = ColorStyle::select("url")
             ->where("id", $property->idColor)
             ->first();

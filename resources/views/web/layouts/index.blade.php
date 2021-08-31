@@ -37,7 +37,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&amp;display=swap" rel="stylesheet">
     <link href="{{asset('public/web/vendor/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet" />
 
-    <link href="{{asset('public/web/css/style.css?version=1.004')}}" rel="stylesheet" />
+    <link href="{{asset('public/web/css/style.css?version=1.005')}}" rel="stylesheet" />
 
 
 
@@ -45,7 +45,7 @@
         var baseurl = "{{ URL::to('/') }}/";
         var page = 'home';
 
-        var alias = 'san-antonio-de-mala';
+        var alias = '';
         var tipo = 'T';
         var alias_cat = '';
         var alias_tag = '';
@@ -62,14 +62,17 @@
             var pry_id = "{{ $property_single->id}}";
             //var pry_id = "{{ $property_single->id}}";
 
+
+
             // INICIAR MAPS
-            var pro_coordenada = [{{ $property_single->latitude}}, {{ $property_single->latitude}}];
+            var pro_coordenada = [{{ $property_single->latitude}}, {{ $property_single->longitude}}];
             var ofi_coordenada = [{{ $cache_company->office_latitud }}, {{ $cache_company->office_longitud }}];
-
+        console.log("pro_coordenada", pro_coordenada);
             var proyectolatlon = [ "{{ $property_single->projectAddress}}", parseFloat(pro_coordenada[0]), parseFloat(pro_coordenada[1]) ];
-            var oficina = [ "{{ $cache_company->office_address }}", parseFloat(ofi_coordenada[0]), parseFloat(ofi_coordenada[1]) ];
+            //var oficina = [ "{{ $cache_company->office_address }}", parseFloat(ofi_coordenada[0]), parseFloat(ofi_coordenada[1]) ];
 
-            var locations = [proyectolatlon, oficina];
+            var locations = [proyectolatlon];
+        console.log("locations", locations);
         @endif
     </script>
 
@@ -86,7 +89,7 @@
     <link type="text/css" rel="stylesheet" href="{{asset('public/web/vendor/slick/slick-theme.min.css')}}">
     <link type="text/css" rel="stylesheet" href="{{asset('public/web/css/modal-video.min.css')}}">
     <link type="text/css" rel="stylesheet" href="{{asset('public/web/vendor/owl-carousel/owl.carousel.min.css')}}">
-    <link href="{{asset('public/web/css/custom.css?version=1.004')}}" rel="stylesheet" />
+    <link href="{{asset('public/web/css/custom.css?version=1.005')}}" rel="stylesheet" />
     <script src="{{asset('public/web/vendor/jquery/jquery-3.5.1.min.js')}}"></script>
     <script src="{{asset('public/web/vendor/bootstrap/js/bootstrap.min.js')}}"></script>
     @yield('styles')

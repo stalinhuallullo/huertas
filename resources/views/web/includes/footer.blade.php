@@ -44,7 +44,7 @@
                         <ul class="footer__links">
                             @if(isset($cache_company))
                                 <li><a href="tel: (01) 6624437">(01) 6624437</a></li>
-                                <li><a href="tel: +51 984403239">+51 984403239</a></li>
+                                <li><a href="https://api.whatsapp.com/send?phone=+51 984403239&text=" target="_blank">+51 984403239</a></li>
                                 <li><a href="tel: +51 926067496">+51 926067496</a></li>
                             @endif
                         </ul>

@@ -1,8 +1,9 @@
 @extends('web.layouts.index')
 
 @section('styles')
-    <link rel="stylesheet" href="{{asset('public/web/css/blocks_style.css')}}" />
+    <link rel="stylesheet" href="{{asset('public/web/css/blocks_style.css?version=1.001')}}" />
     <link rel="stylesheet" href="{{asset('public/web/css/theme-colors/deluxe.css')}}" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" />
 @endsection
 
 @section('content')
@@ -130,7 +131,7 @@
                     </div>
                 </div>
             </div>
-            <div class="b7-right" style="background-image: url({{asset('public/web/images/deluxe-banner/hlj.jpg')}})">
+            <div class="b7-right" style="background-image: url({{asset('public/web/images/deluxe-banner/DELUX-IMAGEN-VIDEO.png')}})">
                     <a href="#videoModal" data-toggle="modal" data-target="#videoModal" data-video-id='Z2CvI34yTZs' class="b7-image-button b7-play open-boxlight js-video-button" >
                     <div class="b30-wrap-zoom video">
                         <div class="b31-zoom"><span class="b30-play"></span></div>
@@ -139,17 +140,12 @@
             </div>
         </section>
 
-        <!--<section class="b21 terreno" id="sec-ubication">
+        <section class="b21 terreno" id="sec-ubication">
             <div class="wancho b21-main">
                 <h3 class="b21-title">Ubicación del proyecto</h3>
-                <div class="b21-right">
-                    <div class="b21-cnt-tab">
-                        <img src="{{asset('public/web/images/deluxe-banner/desktop-hlj2.jpg')}}" alt="" style="width: 100%">
-                    </div>
-                </div>
+                <div id="map"></div>
             </div>
-        </section>-->
-
+        </section>
 
         <section class="b22 b22-terreno"  id="sec-planos">
             <div class="b22-wrap">
@@ -200,11 +196,11 @@
     </div>
     <script>
         var logo = document.getElementsByClassName('logotipo-color')[0];
-        console.log(logo)
        logo.src = "public/web/images/logo-huertas-white.png";
     </script>
 @endsection
 
 @section("scripts")
-    <script type="text/javascript" src="{{asset('public/web/js/deluxe.js?version=1.0.1')}}"></script>
+    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"></script>
+    <script type="text/javascript" src="{{asset('public/web/js/deluxe.js?version=1.0002')}}"></script>
 @endsection
