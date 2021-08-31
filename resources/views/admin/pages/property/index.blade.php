@@ -28,42 +28,81 @@
                     @endif
 
                     <div class="card-body">
-                        <div class="table-responsive">
-                            <table class="table table-striped table-hover">
-                                <thead class="thead">
-                                <tr>
-                                    <th>#</th>
-                                    <th>Nombre</th>
-                                    <th>Estado </th>
-                                    <th>Acción </th>
-                                </tr>
-                                </thead>
-                                <tbody>
-                                @foreach ($properties as $property)
-                                    <tr>
-                                        <td>{{ ++$i }}</td>
 
-                                        <td>{{ $property->name }}</td>
-                                        <td>{{ $property->status }}</td>
+                        <ul class="nav nav-tabs mb-4 light">
+                            <li class=" nav-item">
+                                <a href="#navpills-1" class="nav-link active" data-toggle="tab" aria-expanded="false">Servicios</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#navpills-2" class="nav-link" data-toggle="tab" aria-expanded="false">Parametros</a>
+                            </li>
+                        </ul>
+
+                        <div class="tab-content">
+                            <div id="navpills-1" class="tab-pane active">
+                                <div class="row">
+                                    <div class="col-md-12">
 
 
+                                        <div class="table-responsive">
+                                            <table class="table table-striped table-hover">
+                                                <thead class="thead">
+                                                <tr>
+                                                    <th>#</th>
+                                                    <th>Nombre</th>
+                                                    <th>Estado </th>
+                                                    <th>Acción </th>
+                                                </tr>
+                                                </thead>
+                                                <tbody>
+                                                @foreach ($properties as $property)
+                                                    <tr>
+                                                        <td>{{ ++$i }}</td>
+
+                                                        <td>{{ $property->name }}</td>
+                                                        <td>{{ $property->status }}</td>
+
+                                                        <td>
+                                                            <form action="{{ route('properties.destroy',$property->id) }}" method="POST">
+{{--                                                                <a class="btn btn-sm btn-primary " href="{{ route('properties.show',$property->id) }}"><i class="fa fa-fw fa-eye"></i> Ver</a>--}}
+                                                                <a class="btn btn-sm btn-success" href="{{ route('properties.edit',$property->id) }}"><i class="fa fa-fw fa-edit"></i> Editar</a>
+                                                                @csrf
+                                                                @method('DELETE')
+                                                                <button type="submit" class="btn btn-danger btn-sm"><i class="fa fa-fw fa-remove"></i> Eliminar</button>
+                                                            </form>
+                                                        </td>
+                                                    </tr>
+                                                @endforeach
+                                                </tbody>
+                                            </table>
+                                        </div>
 
 
+                                    </div>
+                                </div>
+                            </div>
 
-                                        <td>
-                                            <form action="{{ route('properties.destroy',$property->id) }}" method="POST">
-                                                <a class="btn btn-sm btn-primary " href="{{ route('properties.show',$property->id) }}"><i class="fa fa-fw fa-eye"></i> Ver</a>
-                                                <a class="btn btn-sm btn-success" href="{{ route('properties.edit',$property->id) }}"><i class="fa fa-fw fa-edit"></i> Editar</a>
-                                                @csrf
-                                                @method('DELETE')
-                                                <button type="submit" class="btn btn-danger btn-sm"><i class="fa fa-fw fa-remove"></i> Eliminar</button>
-                                            </form>
-                                        </td>
-                                    </tr>
-                                @endforeach
-                                </tbody>
-                            </table>
+                            <div id="navpills-2" class="tab-pane">
+                                <div class="row">
+                                    <div class="col-md-12">
+
+                                        <form method="POST" action="{{ route('admin.properties.parameter', ['id' => $seoPage->id ]) }}"  role="form" enctype="multipart/form-data">
+                                            {{ method_field('PUT') }}
+                                            @csrf
+
+                                            @include('admin.pages.property.fromParameter')
+
+                                        </form>
+
+                                    </div>
+                                </div>
+                            </div>
+
                         </div>
+
+
+
+
                     </div>
                 </div>
                 {!! $properties->links() !!}

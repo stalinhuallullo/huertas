@@ -12,6 +12,15 @@ class PageSeo extends Model
     protected $primaryKey = 'id';
     public $timestamps = false;
 
+    static $rules = [
+        'title' => 'required',
+        'address' => 'required',
+        'description' => 'required',
+        'phone' => 'required',
+//        'image' => 'required|image|max:2048',
+        'status' => 'required',
+    ];
+
     protected $fillable = [
         'id',
         'title',
@@ -19,6 +28,7 @@ class PageSeo extends Model
         'description',
         'phone',
         'status',
+        'image',
         'typePage',
     ];
 

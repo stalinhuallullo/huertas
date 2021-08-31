@@ -4,9 +4,9 @@
 
     <form id="contactoproyecto" action="{{ route('web.proyect.coordinateVisit') }}" method="POST">
         @csrf
-        <div class="row" @if(isset($select_form)) style="display: none"@endif>
+        <div class="row selecthome" @if(isset($select_form)) @endif>
             <div class="col-md-12">
-                <select class="form-control mb-25" name="proyect">
+                <select class="form-control mb-25 rselect" name="proyect">
                     <option value="" selected="">Selecciones un proyecto</option>
 
                     @foreach($cache_nav_propertys as $nav_item)
@@ -15,6 +15,7 @@
                 </select>
             </div>
         </div>
+
         <div class="row">
             <div class="col-md-6">
                 <input class="form-control mb-25" type="text" name="names" value="" placeholder="Nombres *" required>

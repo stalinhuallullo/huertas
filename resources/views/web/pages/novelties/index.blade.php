@@ -2,6 +2,21 @@
 
 @section('styles')
     <!--<link rel="stylesheet" href="{{asset('public/web/vendor/component.css')}}">-->
+    <style>
+        .grid2 {
+            position: relative;
+            display: flex;
+            flex-wrap: wrap;
+            height: auto !important;
+        }
+        .novedad {
+            margin: 7px;
+        }
+        .novedad .novedad__info p {
+            -webkit-line-clamp: inherit;
+            -webkit-box-orient: inherit;
+        }
+    </style>
 @endsection
 
 @section('content')
@@ -19,16 +34,16 @@
 
                 <div class="busqueda"><span></span><i class="fa fa-times"></i></div>
 
-                <div class="empty-blog">
+                <div class="empty-blog" style="display:none;">
                     <strong>¡Lo sentimos!</strong>
                     <p>
                         No se encontraron resultados con tu búsqueda "<span></span>", quizás puedas intentar con otro tipo de palabra.
                     </p>
                 </div>
-                <div class="grid">
+                <div class="grid2">
                     @foreach($novelties as $novelty)
 
-                    <div class="novedad cat-2" data-tipo="1" >
+                    <div class="novedad cat-2" >
                         <figure class="novedad__imagen">
                             <img class="lazyload" src="{{asset($novelty->cover_rute)}}" alt="">
                         </figure>

@@ -27,6 +27,33 @@ SET time_zone = "+00:00";
 -- Estructura de tabla para la tabla `banners`
 --
 
+CREATE TABLE `home` (
+    `id` int NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    `title` varchar(200) NOT NULL,
+    `description` text COLLATE utf8mb4_spanish2_ci NOT NULL,
+    `images` varchar(255) NOT NULL,
+    `limit` int(10) NOT NULL,
+    `banner` varchar(255) NOT NULL,
+    `bannerForm` varchar(255) NOT NULL
+    )ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish2_ci;
+
+INSERT INTO `home` (`title`, `description`, `images`, `limit`, `banner`, `bannerForm`) VALUES
+    ('Lotización de terrenos', 'description', 'image.png', 1, 'imagen.jpg', 'imagen.png');
+
+
+
+CREATE TABLE `services` (
+                   `id` int NOT NULL AUTO_INCREMENT PRIMARY KEY,
+                   `title` varchar(200) NOT NULL,
+                   `description` text COLLATE utf8mb4_spanish2_ci NOT NULL,
+                   `image` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish2_ci;
+
+
+INSERT INTO `services` (`title`, `description`, `image`) VALUES
+            ('Lotización de terrenos', 'description', 'image.png');
+
+
 CREATE TABLE `banners` (
   `id` int(11) NOT NULL,
   `idPictureBanner` int(11) NOT NULL,
@@ -226,25 +253,26 @@ INSERT INTO `novelties` (`id`, `idCategory`, `idCoverImagen`, `title`, `slug`, `
 --
 
 CREATE TABLE `pageseo` (
-  `id` int(11) NOT NULL,
-  `address` varchar(100) COLLATE utf8mb4_spanish2_ci NOT NULL,
-  `status` enum('0','1') COLLATE utf8mb4_spanish2_ci NOT NULL DEFAULT '1',
-  `description` text COLLATE utf8mb4_spanish2_ci NOT NULL,
-  `title` varchar(250) COLLATE utf8mb4_spanish2_ci NOT NULL,
-  `phone` varchar(15) COLLATE utf8mb4_spanish2_ci NOT NULL,
-  `typePage` varchar(50) COLLATE utf8mb4_spanish2_ci NOT NULL
+        `id` int(11) NOT NULL,
+        `address` varchar(100) COLLATE utf8mb4_spanish2_ci NOT NULL,
+        `status` enum('0','1') COLLATE utf8mb4_spanish2_ci NOT NULL DEFAULT '1',
+        `description` text COLLATE utf8mb4_spanish2_ci NOT NULL,
+        `title` varchar(250) COLLATE utf8mb4_spanish2_ci NOT NULL,
+        `phone` varchar(15) COLLATE utf8mb4_spanish2_ci NOT NULL,
+        `typePage` varchar(50) COLLATE utf8mb4_spanish2_ci NOT NULL,
+        `image` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish2_ci;
 
 --
 -- Volcado de datos para la tabla `pageseo`
 --
 
-INSERT INTO `pageseo` (`id`, `address`, `status`, `description`, `title`, `phone`, `typePage`) VALUES
-(1, 'ffff', '1', 'Esto es una descripcion de prueba para posicionamiento SEO', 'Inmobiliaria Huertas - Lo mejor en ofertas inmobiliarias', '+51 992 693 050', 'HOME'),
-(2, '', '1', 'Prueba para lista de servicios', 'LISTA DE PROYECTOS', '', 'PROYECT'),
-(3, '', '1', 'gggggggggg', 'SERVICIOS', '', 'SERVICE'),
-(4, '', '1', 'FFFFFFF', 'NOVEDADES', '', 'NOVELTIES'),
-(5, '', '1', 'WEWQEQWEQW', 'NOSOTROS', '', 'US');
+INSERT INTO `pageseo` (`id`, `address`, `status`, `description`, `title`, `phone`, `typePage`, `image`) VALUES
+(1, 'ffff', '1', 'Esto es una descripcion de prueba para posicionamiento SEO', 'Inmobiliaria Huertas - Lo mejor en ofertas inmobiliarias', '+51 992 693 050', 'HOME', 'page.jpg'),
+(2, '', '1', 'Prueba para lista de servicios', 'LISTA DE PROYECTOS', '', 'PROYECT', ''),
+(3, '', '1', 'gggggggggg', 'SERVICIOS', '', 'SERVICE', ''),
+(4, '', '1', 'FFFFFFF', 'NOVEDADES', '', 'NOVELTIES', ''),
+(5, '', '1', 'WEWQEQWEQW', 'NOSOTROS', '', 'US', '');
 
 -- --------------------------------------------------------
 

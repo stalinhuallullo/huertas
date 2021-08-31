@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\ColorStyle;
+use App\Models\PageSeo;
 use App\Models\Property;
 use Illuminate\Http\Request;
 
@@ -17,9 +18,21 @@ class PropertyController extends Controller
     public function index()
     {
         $properties = Property::paginate();
+        $seoPage = PageSeo::where('typePage', 'PROYECT')->first();
 
-        return view('admin.pages.property.index', compact('properties'))
+        return view('admin.pages.property.index', compact('properties', 'seoPage'))
             ->with('i', (request()->input('page', 1) - 1) * $properties->perPage());
+    }
+
+
+
+
+    public function parameter(Request $request, $id) //Request $request, $id
+    {
+//        request()->validate(PageSeo::$rules);
+
+        PageSeo::find($id)->update($request->all());
+        return redirect()->route('properties.index')->with('success', 'Service updated successfully');
     }
 
     /**

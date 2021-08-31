@@ -7389,6 +7389,7 @@ select:-webkit-autofill:focus {
     line-height: 25px;
     color: #3a3a3a;
     text-align: center;
+    font-family: 'ProximaNova-Bold', sans-serif;
 }
 @media screen and (max-width: 1024px) {
     .b27-title-item {
@@ -7577,8 +7578,9 @@ select:-webkit-autofill:focus {
     font-size: 40px;
     line-height: 96%;
     color: #8dc63f;
-    font-family: 'ProximaNova-Bold', sans-serif;
+    font-family: 'Poppins', sans-serif;
     margin-bottom: 18px;
+    font-weight: 600;
 }
 @media screen and (max-width: 960px) {
     .b28-title {
@@ -7593,7 +7595,7 @@ select:-webkit-autofill:focus {
 .b28-description {
     font-size: 18px;
     line-height: 29px;
-    color: #1c1d2f;
+    color: #403F3F;
     margin-bottom: 50px;
     max-width: 450px;
     padding-right: 25px;

@@ -12,7 +12,7 @@
         <ul class="nav">
             <li class="nav-item nav-category">Páginas</li>
             <li class="nav-item">
-                <a href={{ route("admin.inicio") }} class="nav-link">
+                <a href={{ route("admin.home.index") }} class="nav-link">
                     <i class="link-icon" data-feather="box"></i>
                     <span class="link-title">Inicio</span>
                 </a>
@@ -24,7 +24,7 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a href={{ route("admin.servicio") }} class="nav-link">
+                <a href={{ route("services.index") }} class="nav-link">
                     <i class="link-icon" data-feather="box"></i>
                     <span class="link-title">Servicios</span>
                 </a>

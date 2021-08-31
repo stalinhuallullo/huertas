@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\Novelty;
+use App\Models\PageSeo;
 use Illuminate\Http\Request;
 
 /**
@@ -20,9 +21,19 @@ class NoveltyController extends Controller
     public function index()
     {
         $novelties = Novelty::paginate();
+        $seoPage = PageSeo::where('typePage', 'NOVELTIES')->first();
 
-        return view('admin.pages.novelty.index', compact('novelties'))
+        return view('admin.pages.novelty.index', compact('novelties', 'seoPage'))
             ->with('i', (request()->input('page', 1) - 1) * $novelties->perPage());
+    }
+
+
+    public function parameter(Request $request, $id) //Request $request, $id
+    {
+//        request()->validate(PageSeo::$rules);
+
+        PageSeo::find($id)->update($request->all());
+        return redirect()->route('novelties.index')->with('success', 'Service updated successfully');
     }
 
     /**

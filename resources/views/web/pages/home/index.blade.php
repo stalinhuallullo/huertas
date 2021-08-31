@@ -3,6 +3,11 @@
 @section('content')
 
 
+    <style>
+        .selecthome {
+         display: none;
+        }
+    </style>
     <div class="wraper">
         <section class="banner">
             <div class="banner__slick">
