@@ -132,7 +132,7 @@
                 </div>
             </div>
             <div class="b7-right" style="background-image: url({{asset('public/web/images/deluxe-banner/DELUX-IMAGEN-VIDEO.png')}})">
-                    <a href="#videoModal" data-toggle="modal" data-target="#videoModal" data-video-id='Z2CvI34yTZs' class="b7-image-button b7-play open-boxlight js-video-button" >
+                    <a href="#videoModal" data-toggle="modal" data-target="#videoModal" data-video-id='otPRp_ZnfcQ' class="b7-image-button b7-play open-boxlight js-video-button" >
                     <div class="b30-wrap-zoom video">
                         <div class="b31-zoom"><span class="b30-play"></span></div>
                     </div>

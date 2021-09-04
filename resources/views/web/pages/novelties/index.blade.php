@@ -2,6 +2,21 @@
 
 @section('styles')
     <!--<link rel="stylesheet" href="{{asset('public/web/vendor/component.css')}}">-->
+    <style>
+        .grid2 {
+            position: relative;
+            display: flex;
+            flex-wrap: wrap;
+            height: auto !important;
+        }
+        .novedad {
+            margin: 7px;
+        }
+        .novedad .novedad__info p {
+            -webkit-line-clamp: inherit;
+            -webkit-box-orient: inherit;
+        }
+    </style>
 @endsection
 
 @section('content')
@@ -25,19 +40,21 @@
                         No se encontraron resultados con tu búsqueda "<span></span>", quizás puedas intentar con otro tipo de palabra.
                     </p>
                 </div>
-                <div class="grid">
+                <div class="grid2">
                     @foreach($novelties as $novelty)
 
-                    <div class="novedad cat-2" data-tipo="1" >
+                    <div class="novedad cat-2" >
                         <figure class="novedad__imagen">
-                            <img class="lazyload" src="{{asset($novelty->cover_rute)}}" alt="">
+                            <a href="javascript:;" data-url="{{asset($novelty->cover_rute)}}" class="btn-show-novelties">
+                                <img class="lazyload" src="{{asset($novelty->cover_rute)}}" alt="">
+                            </a>
                         </figure>
                         <div class="novedad__info">
                             <strong>{{ $novelty->category_name  }}</strong>
                             <h4>{{ $novelty->title  }}</h4>
                             <span>{{ date('d-m-Y', strtotime($novelty->dateCreate))  }}</span>
                             <p class="text-justify">{{ $novelty->resume  }}</p>
-                            <a href="javascript:;" data-url="{{asset($novelty->cover_rute)}}" class="btn-show-novelties">Ver más <i class="fas fa-chevron-right"></i></a>
+                            <!--<a href="javascript:;" data-url="{{asset($novelty->cover_rute)}}" class="btn-show-novelties">Ver más <i class="fas fa-chevron-right"></i></a>-->
                         </div>
                     </div>
                     @endforeach
