@@ -41,6 +41,29 @@ use App\Http\Controllers\Admin\ConfiguracionAdminController;
 });
 */
 
+Route::get('/comandos', function () {
+
+    echo Artisan::call('config:clear');
+    echo Artisan::call('config:cache');
+    echo Artisan::call('cache:clear');
+    echo Artisan::call('route:clear');
+
+    //return view('welcome');
+
+    exit;
+});
+
+
+
+Route::get('/link', function () {
+    //Eliminar la carpeta public/storage y luego ejecutar /link
+    Artisan::call('storage:link');
+    //return view('welcome');
+    exit;
+});
+
+
+
 // ************************************ HOME SECTION **********************************************
 Route::get('/', [HomeController::class, 'index'])->name('web.home.index');
 
