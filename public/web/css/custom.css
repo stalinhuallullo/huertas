@@ -385,14 +385,14 @@
     padding: 60px 0 35px;
     min-height: 520px;
 }
-.menorca-title--orange:after, .menorca-title--yellow:after, .menorca-title-light:after, .menorca-title:after {
+/*.menorca-title--orange:after, .menorca-title--yellow:after, .menorca-title-light:after, .menorca-title:after {
     content: "";
     display: block;
     width: 50px;
     height: 3px;
     background: #0e544b;
     margin: 10px auto;
-}
+}*/
 .slick-slider {
     position: relative;
     display: block;

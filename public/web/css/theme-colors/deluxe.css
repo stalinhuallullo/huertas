@@ -43,6 +43,9 @@
 .submenu a {
     color: var(--color-primary);
 }
+.submenu a svg path{
+    fill: var(--color-primary);
+}
 
 /* top header */
 .menu__sociales svg path {
@@ -70,11 +73,6 @@
     background: var(--color-primary);
 }
 
-.contact-buttons{
-    background-color: var(--color-blue-dark) !important;
-    -webkit-box-shadow: -5px 5px 20px var(--color-orange-opacity-4);
-    box-shadow: -5px 5px 20px var(--color-orange-opacity-4);
-}
 footer{
     background-color: var(--color-primary);
 }

@@ -36,7 +36,7 @@
                             <strong>{{ $novelty->category_name  }}</strong>
                             <h4>{{ $novelty->title  }}</h4>
                             <span>{{ date('d-m-Y', strtotime($novelty->dateCreate))  }}</span>
-                            <p>{{ $novelty->resume  }}</p>
+                            <p class="text-justify">{{ $novelty->resume  }}</p>
                             <a href="javascript:;" data-url="{{asset($novelty->cover_rute)}}" class="btn-show-novelties">Ver más <i class="fas fa-chevron-right"></i></a>
                         </div>
                     </div>

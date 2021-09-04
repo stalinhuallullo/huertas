@@ -520,7 +520,7 @@ body {
 
 .full-buttons a {
     width: calc(100% / 3);
-    min-height: 250px;
+    min-height: 200px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1602,7 +1602,7 @@ html {
     display: block;
     width: 50px;
     height: 3px;
-    background: #37A13D;
+    background: #ffffff;
     margin: 10px auto
 }
 
@@ -3951,7 +3951,7 @@ body.blur:before {
 
 .respaldo {
     padding: 60px 0;
-    background-color: #10645A;
+    background-color: #158A2F;
     background-image: url(../../web/images/textura-iconos.png);
     /*background-blend-mode: multiply;*/
     -webkit-background-size: 50%;
@@ -4025,7 +4025,7 @@ body.blur:before {
 .respaldo .item-respaldo strong {
     font-weight: 600;
     font-size: 23px;
-    color: #5bd4c5;
+    color: #ffffff;
     margin-bottom: 10px
 }
 
@@ -5203,6 +5203,26 @@ figure.promo-images a {
 }
 
 
+@media (max-width:1600px) {
+    .banner__slick .banner__item.banner__promo img {
+        min-height: 780px;
+    }
+}
+@media (max-width:1500px) {
+    .banner__slick .banner__item.banner__promo img {
+        min-height: 730px;
+    }
+}
+@media (max-width:1400px) {
+    .banner__slick .banner__item.banner__promo img {
+        min-height: 630px;
+    }
+}
+@media (max-width:1300px) {
+    .banner__slick .banner__item.banner__promo img {
+        min-height: 580px;
+    }
+}
 @media (max-width:1200px) {
     .banner__slick .banner__item.banner__promo img {
         min-height: 512px;
@@ -8958,7 +8978,7 @@ figure.promo-images a {
 .page-tipo-2 .menorca-title--yellow:after,
 .page-tipo-2 .menorca-title-light:after,
 .page-tipo-2 .menorca-title:after {
-    background-color: #293C67
+    background-color: #ffffff
 }
 
 .page-tipo-2 .blog-strong {
