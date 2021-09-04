@@ -39,7 +39,7 @@ $(document).ready(function(){
 		type: 'post',
 		clearForm:true,
      beforeSend: function() {
-       $('#formulario .btn-menorca-light').val('Enviando...');
+       $('#formulario .btn-menorca-light').val('Enviando..5.');
        $('#formulario .btn-menorca-light').attr('disabled',true);
 
          $('#contactoproyecto360 .btn-menorca-light').val('Enviando...');

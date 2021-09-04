@@ -9,11 +9,11 @@
                         <div style="display: flex; justify-content: space-between; align-items: center;">
 
                             <span id="card_title">
-                                {{ __('Clientreferred') }}
+                                {{ __('Inbox') }}
                             </span>
 
                              <div class="float-right">
-                                <a href="{{ route('clientreferreds.create') }}" class="btn btn-primary btn-sm float-right"  data-placement="left">
+                                <a href="{{ route('inboxes.create') }}" class="btn btn-primary btn-sm float-right"  data-placement="left">
                                   {{ __('Create New') }}
                                 </a>
                               </div>
@@ -27,36 +27,40 @@
 
                     <div class="card-body">
 
-                            <table class="display" id="myTable">
+                            <table  class="display" id="myTable">
                                 <thead class="thead">
                                     <tr>
                                         <th>No</th>
+
+										<th>Typepage</th>
 										<th>Name</th>
-										<th>Firstsurname</th>
-										<th>Lastsurname</th>
-										<th>Phone</th>
+										<th>Lastname</th>
 										<th>Email</th>
-										<th>pagina</th>
+										<th>Movil</th>
+										<th>Message</th>
+
+                                        <th>Acción</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    @foreach ($clientreferreds as $clientreferred)
+                                    @foreach ($inboxes as $inbox)
                                         <tr>
                                             <td>{{ ++$i }}</td>
-											<td>{{ $clientreferred->name }}</td>
-											<td>{{ $clientreferred->firstSurname }}</td>
-											<td>{{ $clientreferred->lastSurname }}</td>
-											<td>{{ $clientreferred->phone }}</td>
-											<td>{{ $clientreferred->email }}</td>
-											<td>{{ $clientreferred->typepage }}</td>
+
+											<td>{{ $inbox->typepage }}</td>
+											<td>{{ $inbox->name }}</td>
+											<td>{{ $inbox->lastname }}</td>
+											<td>{{ $inbox->email }}</td>
+											<td>{{ $inbox->movil }}</td>
+											<td>{{ $inbox->message }}</td>
 
                                             <td>
-                                                <form action="{{ route('clientreferreds.destroy',$clientreferred->id) }}" method="POST">
-{{--                                                    <a class="btn btn-sm btn-primary " href="{{ route('clientreferreds.show',$clientreferred->id) }}"><i class="fa fa-fw fa-eye"></i></a>--}}
-                                                    <a class="btn btn-sm btn-success" href="{{ route('clientreferreds.edit',$clientreferred->id) }}"><i class="fa fa-fw fa-edit"></i></a>
-                                                    @csrf
-                                                    @method('DELETE')
-                                                    <button type="submit" class="btn btn-danger btn-sm"><i class="fa fa-fw fa-remove"></i></button>
+                                                <form action="{{ route('inboxes.destroy',$inbox->id) }}" method="POST">
+                                                    <a class="btn btn-sm btn-primary " href="{{ route('inboxes.show',$inbox->id) }}"><i class="fa fa-fw fa-eye"></i></a>
+{{--                                                    <a class="btn btn-sm btn-success" href="{{ route('inboxes.edit',$inbox->id) }}"><i class="fa fa-fw fa-edit"></i> Edit</a>--}}
+{{--                                                    @csrf--}}
+{{--                                                    @method('DELETE')--}}
+{{--                                                    <button type="submit" class="btn btn-danger btn-sm"><i class="fa fa-fw fa-trash"></i> Delete</button>--}}
                                                 </form>
                                             </td>
                                         </tr>
@@ -66,7 +70,7 @@
 
                     </div>
                 </div>
-                {!! $clientreferreds->links() !!}
+                {!! $inboxes->links() !!}
             </div>
         </div>
     </div>

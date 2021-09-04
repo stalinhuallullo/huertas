@@ -23,6 +23,14 @@
                     <span class="link-title">Proyectos</span>
                 </a>
             </li>
+
+            <li class="nav-item">
+                <a href={{ route("admin.deluxes.index") }} class="nav-link">
+                    <i class="link-icon" data-feather="users"></i>
+                    <span class="link-title">Deluxe</span>
+                </a>
+            </li>
+
             <li class="nav-item">
                 <a href={{ route("services.index") }} class="nav-link">
                     <i class="link-icon" data-feather="box"></i>
@@ -30,7 +38,7 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a href={{ route("admin.nosotros") }} class="nav-link">
+                <a href={{ route("admin.us.index") }} class="nav-link">
                     <i class="link-icon" data-feather="users"></i>
                     <span class="link-title">Nosotros</span>
                 </a>
@@ -41,16 +49,12 @@
                     <span class="link-title">Novedades</span>
                 </a>
             </li>
+
+
             <li class="nav-item">
-                <a href={{ route("clientreferreds.index") }} class="nav-link">
+                <a href={{ route("inboxes.index") }} class="nav-link">
                     <i class="link-icon" data-feather="phone-forwarded"></i>
                     <span class="link-title">Contactanos</span>
-                </a>
-            </li>
-            <li class="nav-item">
-                <a href={{ route("admin.configuracion") }} class="nav-link">
-                    <i class="link-icon" data-feather="settings"></i>
-                    <span class="link-title">configuración</span>
                 </a>
             </li>
             {{-- <li class="nav-item nav-category">Configuración</li> --}}

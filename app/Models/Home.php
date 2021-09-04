@@ -15,7 +15,7 @@ class Home extends Model
         'id',
         'title',
         'description',
-        'images',
+//        'images',
         'limit',
         'banner',
         'bannerForm'

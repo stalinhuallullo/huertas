@@ -20,6 +20,8 @@ class PropertyController extends Controller
         $properties = Property::paginate();
         $seoPage = PageSeo::where('typePage', 'PROYECT')->first();
 
+
+
         return view('admin.pages.property.index', compact('properties', 'seoPage'))
             ->with('i', (request()->input('page', 1) - 1) * $properties->perPage());
     }

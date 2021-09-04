@@ -23,8 +23,6 @@ class Clientreferred extends Model
 {
 
     static $rules = [
-		'idClient' => 'required',
-		'idProperty' => 'required',
 		'name' => 'required',
 		'firstSurname' => 'required',
 		'lastSurname' => 'required',
@@ -41,7 +39,8 @@ class Clientreferred extends Model
      *
      * @var array
      */
-    protected $fillable = ['idClient','idProperty','name','firstSurname','lastSurname','phone','email'];
+
+    protected $fillable = ['idClient','idProperty','name','firstSurname','lastSurname','phone','email', 'typepage'];
 
 
 

@@ -37,7 +37,7 @@ $(document).ready(function(){
        $('#formulario .btn-menorca-light').val('Enviando...');
        $('#formulario .btn-menorca-light').attr('disabled',true);
 
-         $('#contactoproyecto360 .btn-menorca-light').val('Enviando...');
+         $('#contactoproyecto360 .btn-menorca-light').val('Enviando.1..');
          $('#contactoproyecto360 .btn-menorca-light').attr('disabled',true);
 
     },
@@ -156,7 +156,7 @@ $(document).ready(function(){
        $('.contacto-sec form .btn-menorca-light').val('Enviando...');
         $('.contacto-sec form .btn-menorca-light').attr('disabled',true);
 
-        $('#contactoproyecto360 .btn-menorca-light').val('Enviando...');
+        $('#contactoproyecto360 .btn-menorca-light').val('Enviando.2..');
         $('#contactoproyecto360 .btn-menorca-light').attr('disabled',true);
 
     },

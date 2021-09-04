@@ -12,10 +12,87 @@ START TRANSACTION;
 SET time_zone = "+00:00";
 
 
+
+
+
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
 /*!40101 SET NAMES utf8mb4 */;
+
+CREATE TABLE `inbox` (
+                           `id` int NOT NULL AUTO_INCREMENT PRIMARY KEY,
+                           `typepage` varchar(200) COLLATE utf8mb4_spanish2_ci NOT NULL,
+                           `name` varchar(200) COLLATE utf8mb4_spanish2_ci NOT NULL,
+                           `movil` varchar(20) COLLATE utf8mb4_spanish2_ci NOT NULL,
+                           `lastname` varchar(200) COLLATE utf8mb4_spanish2_ci NOT NULL,
+                           `email` varchar(200) COLLATE utf8mb4_spanish2_ci NOT NULL,
+                           `message` text COLLATE utf8mb4_spanish2_ci NOT NULL
+
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish2_ci;
+INSERT INTO `inbox` (`typepage`, `name`, `movil`, `lastname`, `email`, `message`) VALUES
+    ('HOME', 'americo', '9994861', 'americo rojas', 'hola@hotmail.com', 'quiero un consulta de precio');
+
+
+
+CREATE TABLE `gallery` (
+                           `id` int NOT NULL AUTO_INCREMENT PRIMARY KEY,
+                           `name` varchar(200) COLLATE utf8mb4_spanish2_ci NOT NULL,
+                           `type` varchar(200) COLLATE utf8mb4_spanish2_ci NOT NULL,
+                           `rute` varchar(200) COLLATE utf8mb4_spanish2_ci NOT NULL,
+                           `nameRute` varchar(200) COLLATE utf8mb4_spanish2_ci NOT NULL,
+                           `typepage` varchar(200) COLLATE utf8mb4_spanish2_ci NOT NULL,
+                           `description` varchar(200) COLLATE utf8mb4_spanish2_ci NOT NULL,
+                           `dateCreate` datetime NOT NULL,
+                           `status` enum('0','1') COLLATE utf8mb4_spanish2_ci DEFAULT '1'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish2_ci;
+INSERT INTO `gallery` (`name`, `type`, `rute`, `nameRute`, `typepage`, `description`, `dateCreate`, `status`) VALUES
+    ('EL PALMAR DEL SUR.png', 'png', 'public/web/images/proyect/EL PALMAR DEL SUR.png', 'public/web/images/proyect/', 'MYPAGE', 'Imagen de proyecto', '2021-06-26 13:33:05', '1');
+
+
+
+CREATE TABLE `deluxe` (
+                      `id` int NOT NULL AUTO_INCREMENT PRIMARY KEY,
+                      `title` varchar(200) NOT NULL,
+                      `description` text COLLATE utf8mb4_spanish2_ci NOT NULL,
+                      `location` varchar(200) NOT NULL,
+                      `cover_image` varchar(200) NOT NULL,
+                      `from` varchar(200) NOT NULL,
+                      `until` varchar(200) NOT NULL,
+                      `images_ready` varchar(200) NOT NULL,
+                      `condo_title` varchar(200) NOT NULL,
+                      `condo_description` text COLLATE utf8mb4_spanish2_ci NOT NULL,
+                      `youtube` varchar(200) NOT NULL,
+                      `youtube_image` varchar(200) NOT NULL,
+                      `form_image` varchar(200) NOT NULL
+)ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish2_ci;
+
+INSERT INTO `deluxe` (`title`, `description`, `location`, `cover_image`, `from`, `until`, `images_ready`, `condo_title`, `condo_description`, `youtube`, `youtube_image`, `form_image`) VALUES
+    ('deluxe', 'descripcion deluxe', 'Asia - Chocaya', 'imagen.jpg', '120 m²', '180 m²', 'id imagne', 'APOLO CONDOMINIO', 'El mejor lugar para gozar del mejor clima todo', 'ererEREEEWw', 'imagen.jpg', 'imagenformulario.jpg');
+
+
+
+
+CREATE TABLE `us` (
+    `id` int NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    `longitude` varchar(200) NOT NULL,
+    `latitude` varchar(200) NOT NULL,
+    `description` text COLLATE utf8mb4_spanish2_ci NOT NULL,
+    `trust_year` varchar(200) NOT NULL,
+    `trust_dev` varchar(255) NOT NULL,
+    `trust_benefits` varchar(255) NOT NULL,
+    `trust_areas` varchar(255) NOT NULL,
+    `contact_mission` text COLLATE utf8mb4_spanish2_ci NOT NULL,
+    `contact_mission_img` varchar(255) NOT NULL,
+    `contact_vision` text COLLATE utf8mb4_spanish2_ci NOT NULL,
+    `contact_vision_img` varchar(255) NOT NULL
+)ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish2_ci;
+
+
+INSERT INTO `us` (`longitude`, `latitude`, `description`, `trust_year`, `trust_dev`, `trust_benefits`, `trust_areas`, `contact_mission`, `contact_mission_img`, `contact_vision`, `contact_vision_img` ) VALUES
+    ('23432432433', '23432432433', 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit.', '+ 20', '+ 20', '+ 21 mil', '+ 2 millones', 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit.', 'imagen.jpg', 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit.', 'imagen.jpg');
+
+
 
 --
 -- Base de datos: `inmobiliariahuertas`
@@ -52,6 +129,11 @@ CREATE TABLE `services` (
 
 INSERT INTO `services` (`title`, `description`, `image`) VALUES
             ('Lotización de terrenos', 'description', 'image.png');
+
+
+
+
+
 
 
 CREATE TABLE `banners` (

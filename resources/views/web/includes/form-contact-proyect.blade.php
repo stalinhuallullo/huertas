@@ -2,7 +2,7 @@
     <h3 class="menorca-subtitle">¿Deseas que te contactemos?</h3>
     <span>Déjanos tus datos y un asesor se contactará contigo lo antes posible.</span>
 
-    <form id="contactoproyecto" action="{{ route('web.proyect.coordinateVisit') }}" method="POST">
+    <form id="contactoproyecto" action="{{ route('web.contact.send') }}" method="POST">
         @csrf
         <div class="row selecthome" @if(isset($select_form)) @endif>
             <div class="col-md-12">
@@ -14,28 +14,25 @@
                     @endforeach
                 </select>
             </div>
+    </div>
+
+        <div class="row">
+            <div class="col-md-6">
+                <input class="form-control mb-25" type="text" name="name" value="" placeholder="Nombres *" required>
+            </div>
+            <div class="col-md-6">
+                <input class="form-control mb-25" type="text" name="lastname" value="" placeholder="Apellidos *" required>
+            </div>
         </div>
 
         <div class="row">
             <div class="col-md-6">
-                <input class="form-control mb-25" type="text" name="names" value="" placeholder="Nombres *" required>
-            </div>
-            <div class="col-md-6">
-                <input class="form-control mb-25" type="text" name="surnames" value="" placeholder="Apellidos *" required>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-md-6">
-                <input class="form-control mb-25" type="text" name="phone" value="" placeholder="Celular *" pattern="[0-9]{9}" maxlength="9" required>
+                <input class="form-control mb-25" type="text" name="movil" value="" placeholder="Celular *" pattern="[0-9]{9}" maxlength="9" required>
             </div>
             <div class="col-md-6">
                 <input class="form-control mb-25" type="email" name="email" value="" placeholder="Email *" required>
             </div>
         </div>
-
-
-
 
         <textarea class="form-control mb-25" name="message" rows="5"placeholder="Mensaje"></textarea>
 

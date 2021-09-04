@@ -47,16 +47,6 @@
             </div>
         </section>
 
-        @php
-            $listDeluxe = [
-                                "APOLO-DELEX-01.png",
-                                "APOLO-DELEX-02.png",
-                                "APOLO-DELEX-03.png",
-                                "APOLO-DELEX-04.png",
-                                "APOLO-DELEX-05.png",
-                            ];
-
-        @endphp
 
         <section class="b24 terreno" id="sec-galeria">
             <div class="b24-left">

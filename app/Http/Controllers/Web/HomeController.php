@@ -4,11 +4,13 @@ namespace App\Http\Controllers\Web;
 
 use App\Http\Controllers\Controller;
 use App\Models\Home;
+use App\Models\Inbox;
 use App\Models\Property;
 use App\Models\Company;
 use App\Models\Banner;
 use App\Models\PageEnum;
 use DB;
+use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
@@ -63,4 +65,14 @@ class HomeController extends Controller
         return view('web.pages.home.index', $data);
         //return view('front.index', compact('ps','sliders','top_small_banners','feature_products'));
     }
+
+
+    public function contactanos(Request $request){
+        request()->validate(Inbox::$rules);
+
+        $inbox = Inbox::create($request->all());
+        return $inbox;
+    }
+
+
 }

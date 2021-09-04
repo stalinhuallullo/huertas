@@ -60,13 +60,9 @@ class HomeController extends Controller
             }
         }
 
-
-
         $imput = $request->all();
 
-
         foreach ($request->file() as $index => $item) {
-            var_dump($index);
             if($index != 'sliders') {
                 $image = $request->file($index)->store('public/imagenes');
                 $url = Storage::url($image);

@@ -20,7 +20,9 @@
                 <div class="row">
                     <div class="col-lg-10 offset-lg-1">
                         <p class="text-nosotros">
-                            Somos una empresa 100% peruana, caracterizados por nuestro profesionalismo y compromiso a la hora de encontrar las mejores oportunidades del sector inmobiliario. Para que encuentres el inmueble que buscas o vendas, tu propiedad al mejor valor.
+
+                            {{$us->description}}
+
                         </p>
                     </div>
                 </div>
@@ -42,7 +44,7 @@
                                 <div class="item-respaldo">
                                     <img src="{{asset('public/web/images/EXPERIENCIA.png')}}">
                                     <div>
-                                        <strong>+ 20</strong>
+                                        <strong>{{$us->trust_year}}</strong>
                                         <p>Años de experiencia</p>
                                     </div>
                                 </div>
@@ -51,7 +53,7 @@
                                 <div class="item-respaldo">
                                     <img src="{{asset('public/web/images/PROYECTOS.png')}}">
                                     <div>
-                                        <strong>+ 20</strong>
+                                        <strong>{{$us->trust_dev}}</strong>
                                         <p>Proyectos desarrollados</p>
                                     </div>
                                 </div>
@@ -60,7 +62,7 @@
                                 <div class="item-respaldo">
                                     <img src="{{asset('public/web/images/FAMILIA.png')}}">
                                     <div>
-                                        <strong>+ 21 mil</strong>
+                                        <strong>{{$us->trust_benefits}}</strong>
                                         <p>Familias beneficiadas</p>
                                     </div>
                                 </div>
@@ -69,7 +71,7 @@
                                 <div class="item-respaldo">
                                     <img src="{{asset('public/web/images/AREAS-VERDES.png')}}">
                                     <div>
-                                        <strong>+ 2 millones</strong>
+                                        <strong>{{$us->trust_areas}}</strong>
                                         <p>De m² de áreas verdes</p>
                                     </div>
                                 </div>
@@ -91,23 +93,23 @@
 
                 <div class="big-cards">
                     <div class="card-item">
-                        <img src="{{asset('public/web/images/mision.png')}}" alt="">
+                        <img src="{{asset('public/'. $us->contact_mission_img)}}" alt="">
 
                         <div class="card-info">
                             <h3>Misión</h3>
                             <p>
-                                Encontrar las mejores oportunidades del sector inmobiliario para ofertarlas. De manera oportuna mediante los diversos sistemas tecnológicos, de construcción que existen en el mercado. Garantizando una comunicación efectiva.
+                                {{$us->contact_mission}}
                             </p>
                         </div>
                     </div>
 
                     <div class="card-item item-b">
-                        <img src="{{asset('public/web/images/vision.png')}}" alt="">
+                        <img src="{{asset('public/'. $us->contact_vision_img)}}" alt="">
 
                         <div class="card-info">
                             <h3>Visión</h3>
                             <p>
-                                Nuestra meta es posicionarnos como la inmobiliaria líder que garantice los proyectos en la oferta y demanda dentro del país, generando grandes oportunidades de desarrollo y empleo.
+                                {{$us->contact_vision}}
                             </p>
                         </div>
                     </div>

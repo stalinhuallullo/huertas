@@ -36,9 +36,9 @@ class ServiceController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
     public function create()
     {
-
         $service = new Service();
         return view('admin.pages.service.create', compact('service'));
     }
@@ -82,7 +82,6 @@ class ServiceController extends Controller
     public function show($id)
     {
         $service = Service::find($id);
-
         return view('admin.pages.service.show', compact('service'));
     }
 
@@ -108,13 +107,13 @@ class ServiceController extends Controller
      */
     public function update(Request $request, $id)
     {
+
         request()->validate(Service::$rules);
 
         $image =  $request->file('image')->store('public/imagenes');
         $url = Storage::url($image);
         $imput = $request->all();
         $imput['image'] = $url;
-
 
         Service::find($id)->update($imput);
 //        $service->update($request->all());
@@ -128,6 +127,7 @@ class ServiceController extends Controller
      * @return \Illuminate\Http\RedirectResponse
      * @throws \Exception
      */
+
     public function destroy($id)
     {
         $service = Service::find($id)->delete();
@@ -135,4 +135,5 @@ class ServiceController extends Controller
         return redirect()->route('services.index')
             ->with('success', 'Service deleted successfully');
     }
+
 }
