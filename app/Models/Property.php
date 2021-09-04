@@ -9,35 +9,33 @@ use Illuminate\Database\Eloquent\Model;
 class Property extends Model
 {
 
+    protected $table = 'property';
+    protected $primaryKey = 'id';
+    public $timestamps = false;
+
     static $rules = [
         'name' => 'required',
         'slug' => 'required',
         'description' => 'required',
         'youtube' => 'required',
-        'idPictureCover' => 'required',
         'initialFeeSoles' => 'required',
         'initialFeeDollars' => 'required',
         'spotPriceSoles' => 'required',
         'cashPriceDollars' => 'required',
         'monthlyFees' => 'required',
-        'idNovelty' => 'required',
         'latitude' => 'required',
         'longitude' => 'required',
         'officeAddress' => 'required',
         'projectAddress' => 'required',
-        'phone' => 'required',
         'dateCreate' => 'required',
-        'status' => 'required',
         'idColor' => 'required',
-        'idPictureCoverPage' => 'required',
-        'idIconMap' => 'required',
         'province' => 'required',
+        'imagetop' => 'required',
+        'imagebot' => 'required',
     ];
 
 
-    protected $table = 'property';
-    protected $primaryKey = 'id';
-    public $timestamps = false;
+
 
     protected $fillable = [
         'id',
@@ -63,6 +61,9 @@ class Property extends Model
         'status',
         'idColor',
         'province',
+        'imagetop',
+        'imagebot'
+
     ];
 
 //    public static function create(array $all)

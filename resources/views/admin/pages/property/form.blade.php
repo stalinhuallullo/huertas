@@ -20,6 +20,39 @@
             {!! $errors->first('name', '<div class="invalid-feedback">:message</p>') !!}
         </div>
 
+
+        <div class="form-group">
+            <div class="row">
+                <div class="col-6">
+                    {{ Form::label('Imegenes de Sliders') }}
+                    {{Form::file('sliders[]', ['class' => 'form-control' . ($errors->has('images') ? ' is-invalid' : ''), 'multiple' => true, 'placeholder' => 'Imagenes', 'accept' => 'image/*'])}}
+                    {!! $errors->first('sliders', '<div class="invalid-feedback">:message</p>') !!}
+                </div>
+                <div class="col-6" style="background-color: #f3f3f3;">
+
+                    @foreach($sliders as $banner)
+                        <div class="banner__item banner__promo">
+                            <img src="{{asset($banner->cover_rute)}}" alt="" width="120px;" style="float:right">
+                        </div>
+                    @endforeach
+                </div>
+            </div>
+        </div>
+
+
+        <div class="form-group">
+            <div class="row">
+                <div class="col-6">
+                    {{ Form::label('Banner top') }}
+                    {{Form::file('imagetop', ['class' => 'form-control' . ($errors->has('imagetop') ? ' is-invalid' : ''), 'placeholder' => 'Image', 'accept' => 'image/*'])}}
+                    {!! $errors->first('imagetop', '<div class="invalid-feedback">:message</p>') !!}
+                </div>
+                <div class="col-6" style="background-color: #f3f3f3;">
+                    <img src="{{ asset('public/'. $property->imagetop) }}" style="width:100px; float:right"/>
+                </div>
+            </div>
+        </div>
+
         <div class="form-group">
             {{ Form::label('slug') }}
             {{ Form::text('slug', $property->slug, ['class' => 'form-control' . ($errors->has('slug') ? ' is-invalid' : ''), 'placeholder' => 'Slug']) }}
@@ -114,16 +147,32 @@
             {{ Form::select('idColor',$colorStyle,  $property->idColor ?? null, ['class' => 'form-control' . ($errors->has('idColor') ? ' is-invalid' : ''), 'placeholder' => 'Seleccione estilo de color']) }}
             {!! $errors->first('idColor', '<div class="invalid-feedback">:message</p>') !!}
         </div>
+
+{{--        <div class="form-group">--}}
+{{--            {{ Form::label('idPictureCoverPage') }}--}}
+{{--            {{ Form::text('idPictureCoverPage', $property->idPictureCoverPage, ['class' => 'form-control' . ($errors->has('idPictureCoverPage') ? ' is-invalid' : ''), 'placeholder' => 'Idpicturecoverpage']) }}--}}
+{{--            {!! $errors->first('idPictureCoverPage', '<div class="invalid-feedback">:message</p>') !!}--}}
+{{--        </div>--}}
+
         <div class="form-group">
-            {{ Form::label('idPictureCoverPage') }}
-            {{ Form::text('idPictureCoverPage', $property->idPictureCoverPage, ['class' => 'form-control' . ($errors->has('idPictureCoverPage') ? ' is-invalid' : ''), 'placeholder' => 'Idpicturecoverpage']) }}
-            {!! $errors->first('idPictureCoverPage', '<div class="invalid-feedback">:message</p>') !!}
+            <div class="row">
+                <div class="col-6">
+                    {{ Form::label('Banner bot') }}
+                    {{Form::file('imagebot', ['class' => 'form-control' . ($errors->has('imagebot') ? ' is-invalid' : ''), 'placeholder' => 'Image', 'accept' => 'image/*'])}}
+                    {!! $errors->first('imagebot', '<div class="invalid-feedback">:message</p>') !!}
+                </div>
+                <div class="col-6" style="background-color: #f3f3f3;">
+                    <img src="{{ asset('public/'. $property->imagebot) }}" style="width:100px; float:right"/>
+                </div>
+            </div>
         </div>
-        <div class="form-group">
-            {{ Form::label('idIconMap') }}
-            {{ Form::text('idIconMap', $property->idIconMap, ['class' => 'form-control' . ($errors->has('idIconMap') ? ' is-invalid' : ''), 'placeholder' => 'Idiconmap']) }}
-            {!! $errors->first('idIconMap', '<div class="invalid-feedback">:message</p>') !!}
-        </div>
+
+{{--        <div class="form-group">--}}
+{{--            {{ Form::label('idIconMap') }}--}}
+{{--            {{ Form::text('idIconMap', $property->idIconMap, ['class' => 'form-control' . ($errors->has('idIconMap') ? ' is-invalid' : ''), 'placeholder' => 'Idiconmap']) }}--}}
+{{--            {!! $errors->first('idIconMap', '<div class="invalid-feedback">:message</p>') !!}--}}
+{{--        </div>--}}
+
         <div class="form-group">
             {{ Form::label('province') }}
             {{ Form::text('province', $property->province, ['class' => 'form-control' . ($errors->has('province') ? ' is-invalid' : ''), 'placeholder' => 'Province']) }}

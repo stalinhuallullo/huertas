@@ -3,10 +3,14 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\Banner;
 use App\Models\ColorStyle;
 use App\Models\PageSeo;
+use App\Models\Picture;
 use App\Models\Property;
+use App\Models\PropertyGaller;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class PropertyController extends Controller
 {
@@ -17,10 +21,10 @@ class PropertyController extends Controller
      */
     public function index()
     {
+
+
         $properties = Property::paginate();
         $seoPage = PageSeo::where('typePage', 'PROYECT')->first();
-
-
 
         return view('admin.pages.property.index', compact('properties', 'seoPage'))
             ->with('i', (request()->input('page', 1) - 1) * $properties->perPage());
@@ -44,11 +48,14 @@ class PropertyController extends Controller
      */
     public function create()
     {
+
+        $sliders = [];
+
         $property = new Property();
 
         $colorStyle = ColorStyle::all()->pluck('name', 'id');
 
-        return view('admin.pages.property.create', compact('property','colorStyle'));
+        return view('admin.pages.property.create', compact('property','colorStyle', 'sliders'));
     }
     /**
      * Store a newly created resource in storage.
@@ -60,7 +67,38 @@ class PropertyController extends Controller
     {
         request()->validate(Property::$rules);
 
-        Property::create($request->all());
+        $input = $request->all();
+        foreach ($request->file() as $index => $item) {
+            if($index != 'sliders') {
+                $image = $request->file($index)->store('public/imagenes');
+                $url = Storage::url($image);
+                $input[$index] = $url;
+            }
+        }
+        $pro = Property::create($input);
+
+        $sliders = $request->file('sliders');
+
+        if( $sliders && count($sliders) > 0)
+        {
+            foreach ($sliders as $file) {
+                $image = $file->store('public/imagenes');
+                $url = "/public".Storage::url($image);
+
+                $pi = new Picture();
+                $pi->name = "bbb";
+                $pi->type = "any";
+                $pi->rute = $url;
+                $pi->nameRute = "/public/storage/imagenes/";
+                $pi->description = '';
+                $pi->status = 1;
+                $pi->save();
+
+            PropertyGaller::create(["idPicture" => $pi->id, "status" => 1, "idProperty" => $pro->id]);
+            }
+        }
+
+
 
         return redirect()->route('properties.index')
             ->with('success', 'Property created successfully.');
@@ -88,10 +126,23 @@ class PropertyController extends Controller
      */
     public function edit($id)
     {
+
+
+        $sliders = PropertyGaller::select(
+            "propertygallery.id",
+            "cover.name as cover_name",
+            "cover.type as cover_type",
+            "cover.rute as cover_rute",
+        )
+            ->join('picture as cover', 'cover.id', '=', 'propertygallery.idPicture')
+            ->where('propertygallery.id', $id)
+            ->get();
+
+
         $property = Property::find($id);
         $colorStyle = ColorStyle::all()->pluck('name', 'id');
 
-        return view('admin.pages.property.edit', compact('property','colorStyle'));
+        return view('admin.pages.property.edit', compact('property','colorStyle', 'sliders'));
     }
 
     /**
@@ -105,12 +156,49 @@ class PropertyController extends Controller
     {
         request()->validate(Property::$rules);
 
+        $input =  $request->all();
 
-        Property::find($id)->update($request->all());
-        //$property->update($request->all());
 
-        return redirect()->route('properties.index')
-            ->with('success', 'Property updated successfully');
+        foreach ($request->file() as $index => $item) {
+            if($index != 'sliders') {
+                $image = $request->file($index)->store('public/imagenes');
+                $url = Storage::url($image);
+                $input[$index] = $url;
+            }
+        }
+
+
+       Property::find($id)->update($input);
+
+        $pro = Property::findOrFail($id);
+
+
+                $sliders = $request->file('sliders');
+
+                if( $sliders && count($sliders) > 0)
+                {
+                    foreach ($sliders as $file) {
+                        $image = $file->store('public/imagenes');
+                        $url = "/public".Storage::url($image);
+
+                        $pi = new Picture();
+                        $pi->name = "bbb";
+                        $pi->type = "any";
+                        $pi->rute = $url;
+                        $pi->nameRute = "/public/storage/imagenes/";
+                        $pi->description = '';
+                        $pi->status = 1;
+                        $pi->save();
+
+                        PropertyGaller::create(["idPicture" => $pi->id, "status" => 1, "idProperty" => $pro->id]);
+                    }
+                }
+
+
+                //$property->update($request->all());
+
+                return redirect()->route('properties.index')
+                    ->with('success', 'Property updated successfully');
     }
 
     /**
