@@ -28,13 +28,25 @@
                     {{Form::file('sliders[]', ['class' => 'form-control' . ($errors->has('images') ? ' is-invalid' : ''), 'multiple' => true, 'placeholder' => 'Imagenes', 'accept' => 'image/*'])}}
                     {!! $errors->first('sliders', '<div class="invalid-feedback">:message</p>') !!}
                 </div>
-                <div class="col-6" style="background-color: #f3f3f3;">
+                <div class="col-6">
 
-                    @foreach($sliders as $banner)
-                        <div class="banner__item banner__promo">
-                            <img src="{{asset($banner->cover_rute)}}" alt="" width="120px;" style="float:right">
+{{--                    @foreach($sliders as $banner)--}}
+{{--                        <div class="banner__item banner__promo">--}}
+{{--                            <img src="{{asset($banner->cover_rute)}}" alt="" width="120px;" style="float:right">--}}
+{{--                        </div>--}}
+{{--                    @endforeach--}}
+
+                        <div class="bgupdateimg">
+                            @foreach($sliders as $banner)
+                                <div class="banner__item banner__promo imagenclose">
+                                    <div class="icoremove" id="{{$banner->cover_id}}">
+                                        <a href="#" class="lnk-eliminar"><p class="styleremove"><i class="fa fa-fw fa-remove"></i></p></a>
+                                    </div>
+                                    <img src="{{asset($banner->cover_rute)}}" id="{{$banner->cover_id}}" alt="" class="imagenrsrc" >
+                                </div>
+                            @endforeach
                         </div>
-                    @endforeach
+
                 </div>
             </div>
         </div>
@@ -47,8 +59,10 @@
                     {{Form::file('imagetop', ['class' => 'form-control' . ($errors->has('imagetop') ? ' is-invalid' : ''), 'placeholder' => 'Image', 'accept' => 'image/*'])}}
                     {!! $errors->first('imagetop', '<div class="invalid-feedback">:message</p>') !!}
                 </div>
-                <div class="col-6" style="background-color: #f3f3f3;">
-                    <img src="{{ asset('public/'. $property->imagetop) }}" style="width:100px; float:right"/>
+                <div class="col-6">
+                    <div class="bgupdateimg">
+                    <img src="{{ asset('public/'. $property->imagetop) }}"/>
+                    </div>
                 </div>
             </div>
         </div>
@@ -70,11 +84,11 @@
             {!! $errors->first('youtube', '<div class="invalid-feedback">:message</p>') !!}
         </div>
 
-        <div class="form-group">
-            {{ Form::label('idPictureCover') }}
-            {{ Form::text('idPictureCover', $property->idPictureCover, ['class' => 'form-control' . ($errors->has('idPictureCover') ? ' is-invalid' : ''), 'placeholder' => 'Idpicturecover']) }}
-            {!! $errors->first('idPictureCover', '<div class="invalid-feedback">:message</p>') !!}
-        </div>
+{{--        <div class="form-group">--}}
+{{--            {{ Form::label('idPictureCover') }}--}}
+{{--            {{ Form::text('idPictureCover', $property->idPictureCover, ['class' => 'form-control' . ($errors->has('idPictureCover') ? ' is-invalid' : ''), 'placeholder' => 'Idpicturecover']) }}--}}
+{{--            {!! $errors->first('idPictureCover', '<div class="invalid-feedback">:message</p>') !!}--}}
+{{--        </div>--}}
 
         <div class="form-group">
             {{ Form::label('initialFeeSoles') }}
@@ -161,8 +175,10 @@
                     {{Form::file('imagebot', ['class' => 'form-control' . ($errors->has('imagebot') ? ' is-invalid' : ''), 'placeholder' => 'Image', 'accept' => 'image/*'])}}
                     {!! $errors->first('imagebot', '<div class="invalid-feedback">:message</p>') !!}
                 </div>
-                <div class="col-6" style="background-color: #f3f3f3;">
-                    <img src="{{ asset('public/'. $property->imagebot) }}" style="width:100px; float:right"/>
+                <div class="col-6">
+                    <div class="bgupdateimg">
+                    <img src="{{ asset('public/'. $property->imagebot) }}"/>
+                    </div>
                 </div>
             </div>
         </div>
@@ -181,6 +197,31 @@
 
     </div>
     <div class="box-footer mt20">
-        <button type="submit" class="btn btn-primary">Actulizar</button>
+        <button type="submit" class="btn btn-primary">Aceptar</button>
     </div>
+
+    <script>
+        $(document).ready(function(){
+            // $('.bgupdateimg')
+            $('.lnk-eliminar').on('click', function(e){
+                $(this).parent().parent().css("display", "none");
+                $.ajax({
+                    url: "{{route('admin.home.removeimage', '')}}/"+$(this).parent().attr('id') ,
+                    type: 'DELETE',
+                    data:{
+                        'id': $(this).parent().attr('id'),
+                        '_token': '{{ csrf_token() }}',
+                    },
+                    success: function(result) {
+
+                        console.log($(this).parent(".imagenclose"))
+                    }
+                });
+
+                e.preventDefault();
+                e.stopPropagation();
+
+            });
+        });
+    </script>
 </div>

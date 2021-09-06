@@ -101,6 +101,8 @@ Route::get('/admin/dashboard', [DashboardAdminController::class, 'index'])->name
 Route::get('/admin/inicio', [\App\Http\Controllers\Admin\HomeController::class, 'index'])->name('admin.home.index');
 Route::put('/admin/inicio/{id}', [\App\Http\Controllers\Admin\HomeController::class, 'update'])->name('admin.home.update');
 
+Route::delete('/admin/inicio/remove/{id}', [\App\Http\Controllers\Admin\HomeController::class, 'removeimage'])->name('admin.home.removeimage');
+
 //Route::get('/admin/proyecto', [PropertyController::class, 'index'])->name('admin.proyecto');
 //Route::get('/admin/proyecto/crear', [PropertyController::class, 'create'])->name('admin.create');
 

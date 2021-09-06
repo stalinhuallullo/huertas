@@ -21,11 +21,17 @@ class HomeController extends Controller
             "cover.name as cover_name",
             "cover.type as cover_type",
             "cover.rute as cover_rute",
+            "cover.id as cover_id",
         )
             ->join('picture as cover', 'cover.id', '=', 'banners.idPictureBanner')
             ->get();
 
         return view('admin.pages.home.index', compact('home','sliders'));
+    }
+
+    public function removeimage($id) {
+        Picture::find($id)->delete();
+        return;
     }
 
     public function update(Request $request, $id)

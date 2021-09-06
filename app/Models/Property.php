@@ -30,8 +30,8 @@ class Property extends Model
         'dateCreate' => 'required',
         'idColor' => 'required',
         'province' => 'required',
-        'imagetop' => 'required',
-        'imagebot' => 'required',
+        'imagetop' => 'image|max:2048',
+        'imagebot' => 'image|max:2048',
     ];
 
 

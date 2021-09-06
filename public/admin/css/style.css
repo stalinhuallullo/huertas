@@ -4,6 +4,48 @@
  * Copyright 2011-2020 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
+
+
+.bgupdateimg {
+    background-color: #fafafa;
+    border: 1px solid #e8ebf1;
+    padding: 10px;
+    border-radius: 2px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.bgupdateimg img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    margin-right: 10px;
+
+}
+.imagenclose {
+    position: relative;
+}
+.icoremove {
+    position: absolute;
+    top: 3px;
+    right: 5px;
+}
+
+.styleremove {
+    background: red;
+    display: block;
+    border-radius: 30px;
+    color: white;
+    width: 20px;
+    padding-left: 1px;
+}
+.styleremove:hover {
+    background: white;
+    color: red;
+}
+
+
+
 :root {
   --blue: #5E50F9;
   --indigo: #6610f2;

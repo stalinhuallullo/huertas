@@ -9,7 +9,7 @@
 
                 <div class="card card-default">
                     <div class="card-header">
-                        <span class="card-title">Create Novelty</span>
+                        <span class="card-title">INICIO</span>
                     </div>
                     <div class="card-body">
                         <form method="POST" action="{{ route('admin.home.update', ['id' => $home->id ]) }}"  role="form" enctype="multipart/form-data">

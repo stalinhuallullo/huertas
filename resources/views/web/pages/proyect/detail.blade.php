@@ -13,7 +13,7 @@
 
     <div class="wraper">
         <div class="banner-interna">
-            <div class="top-img" style="background-image: url({{asset($property_single->coverPage_rute)}});"></div>
+            <div class="top-img" style="background-image: url({{asset('public/'.$property_single->imagetop)}});"></div>
 
             <div class="container pt-5 pb-5">
                 <h1 class="menorca-title--yellow">Respira paz rodeado de áreas verdes</h1>
@@ -64,7 +64,7 @@
 
         </section>
 
-        <section class="descuentos" style="background-image: url({{asset('public/web/files/proyecto/bann_por-altopiura13.jpg')}}); min-height: 350px">
+        <section class="descuentos" style="background-image: url({{asset('public/'.$property_single->imagebot)}}); min-height: 350px">
 
         </section>
 

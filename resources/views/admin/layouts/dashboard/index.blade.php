@@ -14,6 +14,9 @@
     <link type="text/css" rel="stylesheet" href="{{asset('public/admin/css/font-awesome.min.css')}}">
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.0/css/jquery.dataTables.css">
     @yield("style")
+
+    @include("admin.includes.script")
+    {{-- @yield("scripts") --}}
 </head>
 <body class="sidebar-dark">
     <div class="main-wrapper">
@@ -28,7 +31,6 @@
         </div>
     </div>
 
-    @include("admin.includes.script")
-    {{-- @yield("scripts") --}}
+
 </body>
 </html>

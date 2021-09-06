@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Web;
 
 use App\Http\Controllers\Controller;
+use App\Models\Deluxe;
 use App\Models\PageEnum;
 
 
@@ -24,12 +25,15 @@ class DeluxeController extends Controller
             "APOLO-DELEX-05.png",
         ];
 
+        $deluxe = Deluxe::find(1);
+
         $data = [
             "contactFloat" => true,
             "menu" => PageEnum::Deluxe,
             "sub_menu" => "",
             "select_form" => false,
-            'listDeluxe' => $listDeluxe
+            'listDeluxe' => $listDeluxe,
+            "deluxe" => $deluxe
         ];
         return view('web.pages.deluxe.index', $data);
     }

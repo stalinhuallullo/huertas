@@ -44,6 +44,7 @@ class HomeController extends Controller
                 "cover.name as cover_name",
                 "cover.type as cover_type",
                 "cover.rute as cover_rute",
+                "cover.id as cover_id",
             )
             ->join('picture as cover', 'cover.id', '=', 'banners.idPictureBanner')
             ->get();
@@ -61,6 +62,7 @@ class HomeController extends Controller
             "select_form" => false,
             "home" => $home
         ];
+
 
         return view('web.pages.home.index', $data);
         //return view('front.index', compact('ps','sliders','top_small_banners','feature_products'));

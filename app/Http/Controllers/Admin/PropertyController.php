@@ -133,9 +133,10 @@ class PropertyController extends Controller
             "cover.name as cover_name",
             "cover.type as cover_type",
             "cover.rute as cover_rute",
+            "cover.id as cover_id",
         )
             ->join('picture as cover', 'cover.id', '=', 'propertygallery.idPicture')
-            ->where('propertygallery.id', $id)
+            ->where('propertygallery.idProperty', $id)
             ->get();
 
 
