@@ -116,6 +116,7 @@ Route::put('admin/nosotros/update', [\App\Http\Controllers\Admin\UsController::c
 ////////////////////////////////////  deluxe
 Route::get('admin/deluxe', [\App\Http\Controllers\Admin\DeluxeController::class, 'index'])->name('admin.deluxes.index');
 Route::put('admin/deluxe/update', [\App\Http\Controllers\Admin\DeluxeController::class, 'update'])->name('admin.deluxes.update');
+Route::delete('admin/deluxe/remove/{id}', [\App\Http\Controllers\Admin\DeluxeController::class, 'removeimage'])->name('admin.deluxes.removeimage');
 
 
 Route::resource('admin/contactanos', \App\Http\Controllers\Admin\InboxController::class)->names('inboxes');

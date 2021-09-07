@@ -38,15 +38,11 @@ class Deluxe extends Model
 		'title' => 'required',
 		'description' => 'required',
 		'location' => 'required',
-		'cover_image' => 'required',
 		'from' => 'required',
 		'until' => 'required',
-		'images_ready' => 'required',
 		'condo_title' => 'required',
 		'condo_description' => 'required',
 		'youtube' => 'required',
-		'youtube_image' => 'required',
-		'form_image' => 'required',
     ];
 
     protected $perPage = 20;

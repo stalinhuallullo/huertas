@@ -33,6 +33,10 @@ class DeluxeController extends Controller
         return view('admin.pages.deluxe.edit', compact('deluxe', 'sliders'));
     }
 
+    public function removeimage($id) {
+        Gallery::find($id)->delete();
+    }
+
     /**
      * Show the form for creating a new resource.
      *

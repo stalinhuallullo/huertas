@@ -9,6 +9,7 @@
 
     <div class="wraper">
         <section class="b17 b17-terreno">
+
             <div class="b17-container">
                 <div class="b17-left">
                     <div class="b17-left-wrap">
@@ -19,12 +20,13 @@
                         </div>
                         <div class="b17-direccion">
                             <div class="b17-figura-direccion"><img src="{{asset('public/web/images/ubicacion.png')}}" width="22" height="25"></div>
-                            <p class="b17-ubicacion">Asia - Chocaya</p>
+                            <p class="b17-ubicacion">{{$deluxe->from}}</p>
                         </div>
                     </div>
                 </div>
+
                 <div class="b17-right">
-                    <div class="b17-inner" style="background-image: url({{asset('public/web/images/prueba/APOLO.jpg')}})"></div>
+                    <div class="b17-inner" style="background-image: url({{asset('public/'.$deluxe->cover_image)}})"></div>
                 </div>
             </div>
             <div class="b17-wrap-caracteristicas">
@@ -39,7 +41,7 @@
                         <div class="b17-item-wrap">
                             <div class="b17-texto-item">
                                 <p>Hasta</p>
-                                <span>180 m²</span>
+                                <span>{{$deluxe->until}}</span>
                             </div>
                         </div>
                     </div>
@@ -53,9 +55,9 @@
                 <div class="b24-slider-carousel">
                     <div class="b24-slider">
                         <ul class="b24-ctn-slider">
-                            @foreach($listDeluxe as $item2)
+                            @foreach($sliders as $item2)
                             <li class="b24-slider-item">
-                                <a class="b24-big-img" style="background-image: url({{asset('public/web/images/prueba/'.$item2)}})">
+                                <a class="b24-big-img" style="background-image: url({{asset($item2->rute)}})">
                                     <div class="wancho">
                                         <h3 class="b24-title"></h3>
                                     </div>
@@ -67,9 +69,9 @@
                     <div class="wancho">
                         <div class="b24-carousel">
                             <ul class="b24-ctn-carousel">
-                                @foreach($listDeluxe as $item)
+                                @foreach($sliders as $item)
                                     <li class="b24-carousel-item">
-                                        <div class="b24-figura-small"><img src="{{asset('public/web/images/prueba/'.$item)}}" width="214" height="99"></div>
+                                        <div class="b24-figura-small"><img src="{{asset($item->rute)}}" width="214" height="99"></div>
                                     </li>
                                 @endforeach
                             </ul>
@@ -114,13 +116,13 @@
         <section class="b28" id="sec-sobre-proyectos">
             <div class="wancho">
                 <div class="b28-texto">
-                    <h3 class="b28-title b28--deluxe">APOLO CONDOMINIO</h3>
+                    <h3 class="b28-title b28--deluxe">{{$deluxe->condo_title}}</h3>
                     <div class="b28-description">
-                        <p>El mejor lugar para gozar del mejor clima todo el año, favorecida con temperaturas cálidas, siempre tendrás una excusa para disfrutar de una parrilla con la familia, o de todo lo que puedes hacer al aire libre. Reserva tu cita hoy y vive la experiencia junto a Huertas Inmobiliaria.</p>
+                        <p>{{$deluxe->condo_description}}</p>
                     </div>
                 </div>
             </div>
-            <div class="b7-right" style="background-image: url({{asset('public/web/images/deluxe-banner/hlj.jpg')}})">
+            <div class="b7-right" style="background-image: url({{asset('public/'.$deluxe->cover_image)}})">
                     <a href="#videoModal" data-toggle="modal" data-target="#videoModal" data-video-id='Z2CvI34yTZs' class="b7-image-button b7-play open-boxlight js-video-button" >
                     <div class="b30-wrap-zoom video">
                         <div class="b31-zoom"><span class="b30-play"></span></div>
@@ -149,8 +151,8 @@
                             <div class="b22-slider">
                                 <ul class="b22-ctn-slider">
                                     <li class="b22-slider-item">
-                                        <a href="{{asset('public/web/images/prueba/4.jpg')}}" target="_blank" class="b22-big-img b22-gallery">
-                                            <img src="{{asset('public/web/images/prueba/4.jpg')}}" style="width: 100%">
+                                        <a href="{{asset('public/'.$deluxe->cover_image)}}" target="_blank" class="b22-big-img b22-gallery">
+                                            <img src="{{asset('public/'.$deluxe->cover_image)}}" style="width: 100%">
                                         </a>
                                     </li>
                                 </ul>

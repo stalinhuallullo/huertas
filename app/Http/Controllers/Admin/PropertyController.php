@@ -21,8 +21,6 @@ class PropertyController extends Controller
      */
     public function index()
     {
-
-
         $properties = Property::paginate();
         $seoPage = PageSeo::where('typePage', 'PROYECT')->first();
 

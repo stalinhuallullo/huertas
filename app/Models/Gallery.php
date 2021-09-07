@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Gallery extends Model
 {
     protected $table = 'gallery';
-    protected $primaryKey = 'id';
+protected $primaryKey = 'id';
     public $timestamps = false;
 
     protected $fillable = [

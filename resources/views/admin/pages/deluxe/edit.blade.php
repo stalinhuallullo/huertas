@@ -9,7 +9,7 @@
 
                 <div class="card card-default">
                     <div class="card-header">
-                        <span class="card-title">Update Deluxe</span>
+                        <span class="card-title">Actulizar Deluxe</span>
                     </div>
                     <div class="card-body">
                         <form method="POST" action="{{ route('admin.deluxes.update') }}"  role="form" enctype="multipart/form-data">

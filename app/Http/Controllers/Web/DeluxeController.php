@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Web;
 
 use App\Http\Controllers\Controller;
 use App\Models\Deluxe;
+use App\Models\Gallery;
 use App\Models\PageEnum;
 
 
@@ -16,6 +17,9 @@ class DeluxeController extends Controller
 
     public function index()
     {
+
+        $sliders = Gallery::where('typepage', PageEnum::Deluxe)->get();
+
 
         $listDeluxe = [
             "APOLO-DELEX-01.png",
@@ -33,8 +37,10 @@ class DeluxeController extends Controller
             "sub_menu" => "",
             "select_form" => false,
             'listDeluxe' => $listDeluxe,
-            "deluxe" => $deluxe
+            "deluxe" => $deluxe,
+            "sliders" => $sliders
         ];
+
         return view('web.pages.deluxe.index', $data);
     }
 

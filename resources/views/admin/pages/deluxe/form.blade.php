@@ -8,7 +8,7 @@
         </div>
         <div class="form-group">
             {{ Form::label('description') }}
-            {{ Form::text('description', $deluxe->description, ['class' => 'form-control' . ($errors->has('description') ? ' is-invalid' : ''), 'placeholder' => 'Description']) }}
+            {{ Form::textArea('description', $deluxe->description, ['class' => 'form-control' . ($errors->has('description') ? ' is-invalid' : ''), 'placeholder' => 'Description']) }}
             {!! $errors->first('description', '<div class="invalid-feedback">:message</p>') !!}
         </div>
         <div class="form-group">
@@ -17,55 +17,33 @@
             {!! $errors->first('location', '<div class="invalid-feedback">:message</p>') !!}
         </div>
 
-        <div class="form-group">
-            <div class="row">
-                <div class="col-6">
-                    {{ Form::label('Imagen Formulario') }}
-                    {{Form::file('cover_image', ['class' => 'form-control' . ($errors->has('cover_image') ? ' is-invalid' : ''), 'placeholder' => 'Image', 'accept' => 'image/*'])}}
-                    {!! $errors->first('cover_image', '<div class="invalid-feedback">:message</p>') !!}
-                </div>
-                <div class="col-6"  style="background-color: #f3f3f3;">
-                    <img src="{{ asset('public/'. $deluxe->cover_image) }}" style="width:100px; float:right;"/>
-                </div>
-            </div>
-        </div>
+
 
 {{--        <div class="form-group">--}}
 {{--            {{ Form::label('cover_image') }}--}}
 {{--            {{ Form::text('cover_image', $deluxe->cover_image, ['class' => 'form-control' . ($errors->has('cover_image') ? ' is-invalid' : ''), 'placeholder' => 'Cover Image']) }}--}}
 {{--            {!! $errors->first('cover_image', '<div class="invalid-feedback">:message</p>') !!}--}}
 {{--        </div>--}}
+        <div class="row">
 
-
-
+        <div class="col-sm-6">
         <div class="form-group">
             {{ Form::label('from') }}
             {{ Form::text('from', $deluxe->from, ['class' => 'form-control' . ($errors->has('from') ? ' is-invalid' : ''), 'placeholder' => 'From']) }}
             {!! $errors->first('from', '<div class="invalid-feedback">:message</p>') !!}
         </div>
+
+        </div>
+        <div class="col-sm-6">
         <div class="form-group">
             {{ Form::label('until') }}
             {{ Form::text('until', $deluxe->until, ['class' => 'form-control' . ($errors->has('until') ? ' is-invalid' : ''), 'placeholder' => 'Until']) }}
             {!! $errors->first('until', '<div class="invalid-feedback">:message</p>') !!}
         </div>
-
-        <div class="form-group">
-            <div class="row">
-                <div class="col-6">
-                    {{ Form::label('Imegenes de images_ready') }}
-                    {{Form::file('images_ready[]', ['class' => 'form-control' . ($errors->has('images_ready') ? ' is-invalid' : ''), 'multiple' => true, 'placeholder' => 'images_ready', 'accept' => 'image/*'])}}
-                    {!! $errors->first('images_ready', '<div class="invalid-feedback">:message</p>') !!}
-                </div>
-
-                <div class="col-6" style="background-color: #f3f3f3;">
-                    @foreach($sliders as $banner)
-                        <div class="banner__item banner__promo">
-                            <img src="{{asset($banner->rute)}}" alt="" width="120px;" style="float:right">
-                        </div>
-                    @endforeach
-                </div>
-            </div>
         </div>
+        </div>
+
+
 
 {{--        <div class="form-group">--}}
 {{--            {{ Form::label('images_ready') }}--}}
@@ -80,7 +58,7 @@
         </div>
         <div class="form-group">
             {{ Form::label('condo_description') }}
-            {{ Form::text('condo_description', $deluxe->condo_description, ['class' => 'form-control' . ($errors->has('condo_description') ? ' is-invalid' : ''), 'placeholder' => 'Condo Description']) }}
+            {{ Form::textArea('condo_description', $deluxe->condo_description, ['class' => 'form-control' . ($errors->has('condo_description') ? ' is-invalid' : ''), 'placeholder' => 'Condo Description']) }}
             {!! $errors->first('condo_description', '<div class="invalid-feedback">:message</p>') !!}
         </div>
         <div class="form-group">
@@ -89,35 +67,74 @@
             {!! $errors->first('youtube', '<div class="invalid-feedback">:message</p>') !!}
         </div>
 
-
         <div class="form-group">
             <div class="row">
-                <div class="col-6">
-                    {{ Form::label('Imagen Formulario') }}
+                <div class="col-sm-6">
+                    {{ Form::label('Imagen youtube') }}
                     {{Form::file('youtube_image', ['class' => 'form-control' . ($errors->has('youtube_image') ? ' is-invalid' : ''), 'placeholder' => 'Image', 'accept' => 'image/*'])}}
                     {!! $errors->first('youtube_image', '<div class="invalid-feedback">:message</p>') !!}
                 </div>
-                <div class="col-6"  style="background-color: #f3f3f3;">
-                    <img src="{{ asset('public/'. $deluxe->youtube_image) }}" style="width:100px; float:right;"/>
+                <div class="col-sm-6">
+                    <div class="bgupdateimg">
+                        <img src="{{ asset('public/'. $deluxe->youtube_image) }}" />
+                    </div>
                 </div>
             </div>
         </div>
 
-{{--        <div class="form-group">--}}
-{{--            {{ Form::label('youtube_image') }}--}}
-{{--            {{ Form::text('youtube_image', $deluxe->youtube_image, ['class' => 'form-control' . ($errors->has('youtube_image') ? ' is-invalid' : ''), 'placeholder' => 'Youtube Image']) }}--}}
-{{--            {!! $errors->first('youtube_image', '<div class="invalid-feedback">:message</p>') !!}--}}
-{{--        </div>--}}
+        <div class="form-group">
+            <div class="row">
+                <div class="col-sm-6">
+                    {{ Form::label('Imegenes de images_ready') }}
+                    {{Form::file('images_ready[]', ['class' => 'form-control' . ($errors->has('images_ready') ? ' is-invalid' : ''), 'multiple' => true, 'placeholder' => 'images_ready', 'accept' => 'image/*'])}}
+                    {!! $errors->first('images_ready', '<div class="invalid-feedback">:message</p>') !!}
+                </div>
+
+                <div class="col-sm-6">
+                    <div class="bgupdateimg">
+                        @foreach($sliders as $banner)
+                            <div class="banner__item banner__promo imagenclose">
+                                <div class="icoremove" id="{{$banner->id}}">
+                                    <a href="#" class="lnk-eliminar"><p class="styleremove"><i class="fa fa-fw fa-remove"></i></p></a>
+                                </div>
+                                <img src="{{asset($banner->rute)}}" id="{{$banner->id}}" alt="" class="imagenrsrc" >
+                            </div>
+                        @endforeach
+                    </div>
+
+                </div>
+
+
+            </div>
+        </div>
 
         <div class="form-group">
             <div class="row">
-                <div class="col-6">
+                <div class="col-sm-6">
+                    {{ Form::label('Imagen portada') }}
+                    {{Form::file('cover_image', ['class' => 'form-control' . ($errors->has('cover_image') ? ' is-invalid' : ''), 'placeholder' => 'Image', 'accept' => 'image/*'])}}
+                    {!! $errors->first('cover_image', '<div class="invalid-feedback">:message</p>') !!}
+                </div>
+                <div class="col-sm-6">
+                    <div class="bgupdateimg">
+                        <img src="{{ asset('public/'. $deluxe->cover_image) }}"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="form-group">
+            <div class="row">
+                <div class="col-sm-6">
                     {{ Form::label('Imagen Formulario') }}
                     {{Form::file('form_image', ['class' => 'form-control' . ($errors->has('form_image') ? ' is-invalid' : ''), 'placeholder' => 'Image', 'accept' => 'image/*'])}}
                     {!! $errors->first('form_image', '<div class="invalid-feedback">:message</p>') !!}
                 </div>
-                <div class="col-6"  style="background-color: #f3f3f3;">
-                    <img src="{{ asset('public/'. $deluxe->form_image) }}" style="width:100px; float:right;"/>
+                <div class="col-sm-6">
+                    <div class="bgupdateimg">
+                    <img src="{{ asset('public/'. $deluxe->form_image) }}" />
+                    </div>
                 </div>
             </div>
         </div>
@@ -130,6 +147,32 @@
 
     </div>
     <div class="box-footer mt20">
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="submit" class="btn btn-primary">Aceptar</button>
     </div>
+
+    <script>
+        $(document).ready(function(){
+            $('.lnk-eliminar').on('click', function(e){
+                $(this).parent().parent().css("display", "none");
+                $.ajax({
+                    url: "{{route('admin.deluxes.removeimage', '')}}/"+$(this).parent().attr('id') ,
+                    type: 'DELETE',
+                    data:{
+                        'id': $(this).parent().attr('id'),
+                        '_token': '{{ csrf_token() }}',
+                    },
+                    success: function(result) {
+
+                        console.log($(this).parent(".imagenclose"))
+                    }
+                });
+
+                e.preventDefault();
+                e.stopPropagation();
+
+            });
+        });
+    </script>
+
+
 </div>
