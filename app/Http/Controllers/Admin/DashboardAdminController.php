@@ -3,11 +3,15 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use Session;
 
 class DashboardAdminController extends Controller
 {
+
     public function __construct()
     {
+
+        if(!Session::has('usr_id')) return redirect()->route('admin.login.index')->send();
 
     }
 

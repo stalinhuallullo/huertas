@@ -12,6 +12,7 @@ use App\Models\Picture;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
 use Illuminate\Support\Facades\Storage;
+use Session;
 
 /**
  * Class DeluxeController
@@ -19,6 +20,12 @@ use Illuminate\Support\Facades\Storage;
  */
 class DeluxeController extends Controller
 {
+    public function __construct()
+    {
+
+        if(!Session::has('usr_id')) return redirect()->route('admin.login.index')->send();
+
+    }
     /**
      * Display a listing of the resource.
      *

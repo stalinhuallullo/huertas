@@ -11,9 +11,16 @@ use App\Models\Property;
 use App\Models\PropertyGaller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
+use Session;
 
 class PropertyController extends Controller
 {
+    public function __construct()
+    {
+
+        if(!Session::has('usr_id')) return redirect()->route('admin.login.index')->send();
+
+    }
     /**
      * Display a listing of the resource.
      *

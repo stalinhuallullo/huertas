@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Novelty;
 use App\Models\PageSeo;
 use Illuminate\Http\Request;
+use Session;
 
 /**
  * Class NoveltyController
@@ -13,6 +14,12 @@ use Illuminate\Http\Request;
  */
 class NoveltyController extends Controller
 {
+    public function __construct()
+    {
+
+        if(!Session::has('usr_id')) return redirect()->route('admin.login.index')->send();
+
+    }
     /**
      * Display a listing of the resource.
      *

@@ -94,7 +94,18 @@ Route::post('/contactanos', [ContactController::class, 'contactanos'])->name('we
 
 
 // ************************************ ADMIN HOME SECTION **********************************************
-Route::get('/admin/iniciar-sesion', [LoginAdminController::class, 'index'])->name('admin.login');
+Route::get('/admin/iniciar-sesion', [LoginAdminController::class, 'index'])->name('admin.login.index');
+Route::post('/admin/login', [LoginAdminController::class, 'login'])->name('admin.login.auth');
+Route::get('/admin/out', [LoginAdminController::class, 'signOut'])->name('admin.login.out');
+
+//Route::get('dashboard', [CustomAuthController::class, 'dashboard']);
+//Route::get('/admin/login', [\App\Http\Controllers\Admin\CustomAuthController::class, 'index'])->name('login');
+//Route::post('/admin/custom-login', [\App\Http\Controllers\Admin\CustomAuthController::class, 'customLogin'])->name('login.custom');
+//Route::get('/admin/registration', [\App\Http\Controllers\Admin\CustomAuthController::class, 'registration'])->name('register-user');
+//Route::post('/admin/custom-registration', [\App\Http\Controllers\Admin\CustomAuthController::class, 'customRegistration'])->name('register.custom');
+//Route::get('/admin/signout', [\App\Http\Controllers\Admin\CustomAuthController::class, 'signOut'])->name('signout');
+
+
 Route::get('/admin/dashboard', [DashboardAdminController::class, 'index'])->name('admin.dashboard');
 
 

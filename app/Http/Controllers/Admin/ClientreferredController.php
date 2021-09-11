@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Models\Clientreferred;
 use Illuminate\Http\Request;
+use Session;
 
 /**
  * Class ClientreferredController
@@ -12,6 +13,12 @@ use Illuminate\Http\Request;
  */
 class ClientreferredController extends Controller
 {
+    public function __construct()
+    {
+
+        if(!Session::has('usr_id')) return redirect()->route('admin.login.index')->send();
+
+    }
     /**
      * Display a listing of the resource.
      *

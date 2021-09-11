@@ -122,7 +122,7 @@
                     </div>
                 </div>
             </div>
-            <div class="b7-right" style="background-image: url({{asset('public/'.$deluxe->cover_image)}})">
+            <div class="b7-right" style="background-image: url({{asset('public/'.$deluxe->youtube_image)}})">
                     <a href="#videoModal" data-toggle="modal" data-target="#videoModal" data-video-id='Z2CvI34yTZs' class="b7-image-button b7-play open-boxlight js-video-button" >
                     <div class="b30-wrap-zoom video">
                         <div class="b31-zoom"><span class="b30-play"></span></div>
@@ -151,8 +151,8 @@
                             <div class="b22-slider">
                                 <ul class="b22-ctn-slider">
                                     <li class="b22-slider-item">
-                                        <a href="{{asset('public/'.$deluxe->cover_image)}}" target="_blank" class="b22-big-img b22-gallery">
-                                            <img src="{{asset('public/'.$deluxe->cover_image)}}" style="width: 100%">
+                                        <a href="{{asset('public/'.$deluxe->form_image)}}" target="_blank" class="b22-big-img b22-gallery">
+                                            <img src="{{asset('public/'.$deluxe->form_image)}}" style="width: 100%">
                                         </a>
                                     </li>
                                 </ul>

@@ -10,9 +10,17 @@ use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
 use Illuminate\Support\Facades\Storage;
 use App\Models\Banner;
+use Session;
 
 class HomeController extends Controller
 {
+    public function __construct()
+    {
+
+        if(!Session::has('usr_id')) return redirect()->route('admin.login.index')->send();
+
+    }
+
     public function index()
     {
         $home = Home::find(1);

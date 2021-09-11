@@ -49,8 +49,18 @@
 {{--        </div>--}}
 
         <div class="form-group">
-            {{Form::file('contact_mission_img', ['class' => 'form-control' . ($errors->has('contact_mission_img') ? ' is-invalid' : ''), 'placeholder' => 'contact_mission_img', 'accept' => 'image/*'])}}
-            {!! $errors->first('contact_mission_img', '<div class="invalid-feedback">:message</p>') !!}
+            <div class="row">
+                <div class="col-md-6">
+                    {{Form::file('contact_mission_img', ['class' => 'form-control' . ($errors->has('contact_mission_img') ? ' is-invalid' : ''), 'placeholder' => 'contact_mission_img', 'accept' => 'image/*'])}}
+                    {!! $errors->first('contact_mission_img', '<div class="invalid-feedback">:message</p>') !!}
+                </div>
+                <div class="col-md-6">
+                    <div class="bgupdateimg">
+                        <img src="{{ asset('public/'. $us->contact_mission_img) }}"/>
+                    </div>
+                </div>
+
+            </div>
         </div>
 
         <div class="form-group">
@@ -65,9 +75,21 @@
 {{--        </div>--}}
 
         <div class="form-group">
-            {{Form::file('contact_vision_img', ['class' => 'form-control' . ($errors->has('contact_vision_img') ? ' is-invalid' : ''), 'placeholder' => 'contact_vision_img', 'accept' => 'image/*'])}}
-            {!! $errors->first('contact_vision_img', '<div class="invalid-feedback">:message</p>') !!}
+            <div class="row">
+                <div class="col-md-6">
+                    {{Form::file('contact_vision_img', ['class' => 'form-control' . ($errors->has('contact_vision_img') ? ' is-invalid' : ''), 'placeholder' => 'contact_vision_img', 'accept' => 'image/*'])}}
+                    {!! $errors->first('contact_vision_img', '<div class="invalid-feedback">:message</p>') !!}
+                </div>
+                <div class="col-md-6" >
+                    <div class="bgupdateimg">
+                        <img src="{{ asset('public/'. $us->contact_vision_img) }}"/>
+                    </div>
+                </div>
+            </div>
+
         </div>
+
+
 
     </div>
     <div class="box-footer mt20">

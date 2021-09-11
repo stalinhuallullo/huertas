@@ -1,39 +1,30 @@
 <div class="box box-info padding-1">
     <div class="box-body">
-        
-        <div class="form-group">
-            {{ Form::label('idCategory') }}
-            {{ Form::text('idCategory', $novelty->idCategory, ['class' => 'form-control' . ($errors->has('idCategory') ? ' is-invalid' : ''), 'placeholder' => 'Idcategory']) }}
-            {!! $errors->first('idCategory', '<div class="invalid-feedback">:message</p>') !!}
-        </div>
-        <div class="form-group">
-            {{ Form::label('idCoverImagen') }}
-            {{ Form::text('idCoverImagen', $novelty->idCoverImagen, ['class' => 'form-control' . ($errors->has('idCoverImagen') ? ' is-invalid' : ''), 'placeholder' => 'Idcoverimagen']) }}
-            {!! $errors->first('idCoverImagen', '<div class="invalid-feedback">:message</p>') !!}
-        </div>
+
+
         <div class="form-group">
             {{ Form::label('title') }}
             {{ Form::text('title', $novelty->title, ['class' => 'form-control' . ($errors->has('title') ? ' is-invalid' : ''), 'placeholder' => 'Title']) }}
             {!! $errors->first('title', '<div class="invalid-feedback">:message</p>') !!}
         </div>
-        <div class="form-group">
-            {{ Form::label('slug') }}
-            {{ Form::text('slug', $novelty->slug, ['class' => 'form-control' . ($errors->has('slug') ? ' is-invalid' : ''), 'placeholder' => 'Slug']) }}
-            {!! $errors->first('slug', '<div class="invalid-feedback">:message</p>') !!}
-        </div>
-        <div class="form-group">
-            {{ Form::label('resume') }}
-            {{ Form::text('resume', $novelty->resume, ['class' => 'form-control' . ($errors->has('resume') ? ' is-invalid' : ''), 'placeholder' => 'Resume']) }}
-            {!! $errors->first('resume', '<div class="invalid-feedback">:message</p>') !!}
-        </div>
-        <div class="form-group">
-            {{ Form::label('youtube') }}
-            {{ Form::text('youtube', $novelty->youtube, ['class' => 'form-control' . ($errors->has('youtube') ? ' is-invalid' : ''), 'placeholder' => 'Youtube']) }}
-            {!! $errors->first('youtube', '<div class="invalid-feedback">:message</p>') !!}
-        </div>
+{{--        <div class="form-group">--}}
+{{--            {{ Form::label('slug') }}--}}
+{{--            {{ Form::text('slug', $novelty->slug, ['class' => 'form-control' . ($errors->has('slug') ? ' is-invalid' : ''), 'placeholder' => 'Slug']) }}--}}
+{{--            {!! $errors->first('slug', '<div class="invalid-feedback">:message</p>') !!}--}}
+{{--        </div>--}}
+{{--        <div class="form-group">--}}
+{{--            {{ Form::label('resume') }}--}}
+{{--            {{ Form::text('resume', $novelty->resume, ['class' => 'form-control' . ($errors->has('resume') ? ' is-invalid' : ''), 'placeholder' => 'Resume']) }}--}}
+{{--            {!! $errors->first('resume', '<div class="invalid-feedback">:message</p>') !!}--}}
+{{--        </div>--}}
+{{--        <div class="form-group">--}}
+{{--            {{ Form::label('youtube') }}--}}
+{{--            {{ Form::text('youtube', $novelty->youtube, ['class' => 'form-control' . ($errors->has('youtube') ? ' is-invalid' : ''), 'placeholder' => 'Youtube']) }}--}}
+{{--            {!! $errors->first('youtube', '<div class="invalid-feedback">:message</p>') !!}--}}
+{{--        </div>--}}
         <div class="form-group">
             {{ Form::label('text') }}
-            {{ Form::text('text', $novelty->text, ['class' => 'form-control' . ($errors->has('text') ? ' is-invalid' : ''), 'placeholder' => 'Text']) }}
+            {{ Form::textArea('text', $novelty->text, ['class' => 'form-control' . ($errors->has('text') ? ' is-invalid' : ''), 'placeholder' => 'Text']) }}
             {!! $errors->first('text', '<div class="invalid-feedback">:message</p>') !!}
         </div>
         <div class="form-group">

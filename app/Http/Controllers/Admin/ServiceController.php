@@ -7,12 +7,19 @@ use App\Models\PageSeo;
 use App\Models\Service;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
+use Session;
 /**
  * Class ServiceController
  * @package App\Http\Controllers
  */
 class ServiceController extends Controller
 {
+    public function __construct()
+    {
+
+        if(!Session::has('usr_id')) return redirect()->route('admin.login.index')->send();
+
+    }
     /**
      * Display a listing of the resource.
      *

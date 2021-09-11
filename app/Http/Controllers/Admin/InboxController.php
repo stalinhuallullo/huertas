@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Models\Inbox;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
+use Session;
 
 /**
  * Class InboxController
@@ -12,6 +13,12 @@ use Illuminate\Routing\Controller;
  */
 class InboxController extends Controller
 {
+    public function __construct()
+    {
+
+        if(!Session::has('usr_id')) return redirect()->route('admin.login.index')->send();
+
+    }
     /**
      * Display a listing of the resource.
      *
